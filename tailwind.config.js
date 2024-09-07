@@ -16,6 +16,15 @@ module.exports = {
       secondery: "#EC7626",
       navyBlue: "#0A043C",
       green:"#a1c181",
+      textWhite :"#ffffff",
+      backgroundWhite : "#FDFDFD",
+      textGray:"rgb(136, 136, 136)",
+      textBlack:"#000000",
+    },
+    fontSize: {
+      titleFontSize: '1.2rem',
+      mainTitleFontSize : '2.2rem',
+      subTitle:"1.5rem"
     },
     extend: {
       // backgroundImage: {
