@@ -46,7 +46,7 @@ function MainOurProject() {
               <span>محل کار هوشمند</span>
             </div>
           </div>
-          <div className="w-full md:w-1/4 flex flex-col items-center px-5">
+          <div className="w-full md:w-1/4 flex flex-col items-center px-5">.js
             <Image src="/image/main/main-our-project/img-3.jpg" width={1000} height={700} alt="img"/>
             <div className="bg-secondery md:bg-textWhite md:hover:bg-secondery md:hover:text-textWhite text-textWhite md:text-textBlack text-center w-[70%] py-10 -mt-14 shadow-sm ">
               <span>آپارتمان هوشمند</span>
