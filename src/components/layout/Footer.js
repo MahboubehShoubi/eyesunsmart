@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <div>
-      <h2>فوتر همه صفحات</h2>
+      <h3>footer</h3>
     </div>
   )
 }

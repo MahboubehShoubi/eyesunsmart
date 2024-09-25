@@ -1,16 +1,26 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import "animate.css";
 
 function MainOurProject() {
+
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
+  const [show4, setShow4] = useState(false);
+
   return (
-    <div className=" relative w-full h-screen md:h-fit">
-      <Image
-        className=" absolute z-[-10] w-full h-full object-cover"
+    <div className=" relative w-full h-fit">
+      {/* <Image
+        className=" absolute z-[-10] w-full h-screen md:h-full object-cover brightness-[90%]"
         src="/image/main/main-our-project/background.jpg"
         width={1000}
         height={800}
         alt="background"
-      />
+      /> */}
       <div className=" container md:max-w-screen-xl py-20">
         <div className="flex flex-col px-5 md:flex-row">
           <div className="w-full md:w-1/2">
@@ -20,7 +30,7 @@ function MainOurProject() {
             </h4>
           </div>
           <div className="w-full md:w-1/2">
-            <p className="text-textGray">
+            <p>
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
               استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
               در ستون و سطرآنچنان که لازم است
@@ -33,29 +43,124 @@ function MainOurProject() {
             </Link>
           </div>
         </div>
-        <div className=" flex flex-col md:flex-row md:justify-between md:gap-x-5 gap-y-8  mt-10">
-          <div className="w-full md:w-1/4 flex flex-col items-center px-5">
-            <Image src="/image/main/main-our-project/img-1.jpg" width={1000} height={700} alt="img"/>
-            <div className="bg-textWhite text-center w-[70%] py-10 -mt-14 shadow-sm">
-              <span>هتل هوشمند</span>
+        <div className="flex flex-col px-10 md:flex-row md:justify-between md:gap-x-5 gap-y-8 mt-10">
+          <div
+            onMouseOver={() => setShow1(true)}
+            onMouseOut={() => setShow1(false)}
+            className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
+            style={{
+              backgroundImage: `linear-gradient(to top , #EC7626,transparent 80% ) , url(/image/main/main-our-project/imag-1.jpg)`,
+            }}
+          >
+            <div
+              className={
+                show1
+                  ? " row-start-3 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInUp"
+                  : " row-start-5 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInDown"
+              }
+            >
+              <h4 className="text-textWhite text-subTitle ">امنیت هوشمند</h4>
+              <p
+                className={
+                  show1
+                    ? " text-textWhite text-[12px]"
+                    : "animate__animated animate__fadeOutDown text-textWhite text-[12px]"
+                }
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است
+              </p>
             </div>
           </div>
-          <div className="w-full md:w-1/4 flex flex-col items-center px-5">
-            <Image src="/image/main/main-our-project/img-2.jpg" width={1000} height={700} alt="img"/>
-            <div className="bg-textWhite text-center w-[70%] py-10 -mt-14 shadow-sm">
-              <span>محل کار هوشمند</span>
+
+          <div
+            onMouseOver={() => setShow2(true)}
+            onMouseOut={() => setShow2(false)}
+            className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
+            style={{
+              backgroundImage: `linear-gradient(to top , #EC7626 ,transparent 80%) , url(/image/main/main-our-project/imag-2.jpg)`,
+            }}
+          >
+            <div
+              className={
+                show2
+                  ? " row-start-3 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInUp"
+                  : " row-start-5 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInDown"
+              }
+            >
+              <h4 className="text-textWhite text-subTitle ">امنیت هوشمند</h4>
+              <p
+                className={
+                  show2
+                    ? " text-textWhite text-[12px]"
+                    : "animate__animated animate__fadeOutDown text-textWhite text-[12px]"
+                }
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است
+              </p>
             </div>
           </div>
-          <div className="w-full md:w-1/4 flex flex-col items-center px-5">.js
-            <Image src="/image/main/main-our-project/img-3.jpg" width={1000} height={700} alt="img"/>
-            <div className="bg-secondery md:bg-textWhite md:hover:bg-secondery md:hover:text-textWhite text-textWhite md:text-textBlack text-center w-[70%] py-10 -mt-14 shadow-sm ">
-              <span>آپارتمان هوشمند</span>
+
+          <div
+            onMouseOver={() => setShow3(true)}
+            onMouseOut={() => setShow3(false)}
+            className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
+            style={{
+              backgroundImage: `linear-gradient(to top , #EC7626 ,transparent 80%) , url(/image/main/main-our-project/imag-3.jpg)`,
+            }}
+          >
+            <div
+              className={
+                show3
+                  ? " row-start-3 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInUp"
+                  : " row-start-5 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInDown"
+              }
+            >
+              <h4 className="text-textWhite text-subTitle ">امنیت هوشمند</h4>
+              <p
+                className={
+                  show3
+                    ? " text-textWhite text-[12px]"
+                    : "animate__animated animate__fadeOutDown text-textWhite text-[12px]"
+                }
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است
+              </p>
             </div>
           </div>
-          <div className="w-full md:w-1/4 flex flex-col items-center px-5">
-            <Image src="/image/main/main-our-project/img-4.jpg" width={1000} height={700} alt="img"/>
-            <div className="bg-textWhite text-center w-[70%] py-10 -mt-14 shadow-sm">
-              <span>ویلا هوشمند</span>
+
+          <div
+            onMouseOver={() => setShow4(true)}
+            onMouseOut={() => setShow4(false)}
+            className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
+            style={{
+              backgroundImage: `linear-gradient(to top , #EC7626 ,transparent 80% ) , url(/image/main/main-our-project/imag-4.jpg)`,
+            }}
+          >
+            <div
+              className={
+                show4
+                  ? " row-start-3 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInUp"
+                  : " row-start-5 row-end-6 flex flex-col justify-center items-center px-3 animate__animated animate__fadeInDown"
+              }
+            >
+              <h4 className="text-textWhite text-subTitle ">امنیت هوشمند</h4>
+              <p
+                className={
+                  show4
+                    ? " text-textWhite text-[12px]"
+                    : "animate__animated animate__fadeOutDown text-textWhite text-[12px]"
+                }
+              >
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است
+              </p>
             </div>
           </div>
         </div>

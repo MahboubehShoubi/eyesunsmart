@@ -1,6 +1,6 @@
 function MainSettingUp() {
   return (
-    <div className="h-fit py-24">
+    <div className="h-fit py-36">
       <div className=" container md:max-w-screen-xl flex flex-col items-center">
         <div className="w-full text-center px-5">
           <h2 className=" text-secondery">راه اندازی دستگاه های هوشمند</h2>
