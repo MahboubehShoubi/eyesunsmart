@@ -6,7 +6,6 @@ import Image from "next/image";
 import "animate.css";
 
 function MainOurProject() {
-
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
@@ -37,7 +36,8 @@ function MainOurProject() {
             </p>
             <Link
               href="/project"
-              className="text-textWhite bg-secondery inline-block px-10 py-3 rounded-full mt-5"
+              className="text-textWhite bg-secondery inline-block px-10 py-3 rounded-full mt-5 
+              hover:scale-[90%] hover:bg-navyBlue duration-700"
             >
               ادامه مطلب
             </Link>

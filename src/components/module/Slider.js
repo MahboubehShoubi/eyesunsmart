@@ -1,8 +1,7 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import 'animate.css';
-
+import "animate.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -15,6 +14,9 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import Link from "next/link";
 
 export default function Slider({ silderInfo }) {
+
+  // const infoLengthce = silderInfo.;
+
   return (
     <>
       <Swiper
@@ -43,13 +45,13 @@ export default function Slider({ silderInfo }) {
               width={1000}
               height={700}
               alt="bg-image"
-              className="h-full w-full object-cover absolute z-[-1] brightness-75"
+              className="h-full w-full object-cover absolute z-[-1] "
             />
             <div className="w-full h-full flex flex-col justify-center items-center">
               <div className="w-full h-fit flex flex-col justify-start px-20 gap-y-3 md:gap-y-5">
-                <h1 className="text-textWhite text-[14px] md:text-[1.2rem] animate__animated animate__fadeInDown animate__delay-1s">{slider.title}</h1>
-                <p className="text-textWhite text-[1.5rem] md:text-[3rem] animate__animated animate__fadeInRight animate__delay-2s	">{slider.text}</p>
-                <Link href={slider.link} className=" text-textWhite text-[14px] md:text-[1rem] bg-secondery w-fit inline-block px-8 py-2 md:px-10 md:py-3 rounded-full animate__animated animate__zoomIn animate__delay-3s	">ادامه مطلب</Link>
+                {/* <h1 className="text-textWhite text-[14px] md:text-[1.2rem] animate__animated animate__fadeInDown animate__delay-1s">{slider.title}</h1> */}
+                {/* <p className="text-textWhite text-[1.5rem] md:text-[3rem] animate__animated animate__fadeInRight animate__delay-2s	">{slider.text}</p> */}
+                {/* <Link href={slider.link} className=" text-textWhite text-[14px] md:text-[1rem] bg-secondery w-fit inline-block px-8 py-2 md:px-10 md:py-3 rounded-full animate__animated animate__zoomIn animate__delay-3s	">ادامه مطلب</Link> */}
               </div>
             </div>
           </SwiperSlide>

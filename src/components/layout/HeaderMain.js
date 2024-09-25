@@ -21,7 +21,7 @@ function HeaderMain() {
 
   return (
     <div className="flex flex-col justify-center items-center h-fit">
-      <div className="hidden md:block md:w-full md:h-20 md:bg-primaryBlue md:items-center">
+      <div className="hidden md:block md:w-full md:h-20 md:bg-secondery md:items-center">
         <div className="container md:max-w-screen-xl flex md:justify-between md:items-center h-full">
           <div>
             <p className="text-textWhite">محل قرار گیری تاریخ و ساعت</p>
@@ -33,7 +33,7 @@ function HeaderMain() {
         </div>
       </div>
 
-      <div className="w-full md:h-[120px] md:w-[90%] lg:max-w-screen-xl bg-primaryBlue md:mt-16 z-[2]">
+      <div className="w-full md:h-[120px] md:w-[90%] lg:max-w-screen-xl bg-navyBlue md:mt-10 z-[2]">
         <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full px-5 py-3">
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
@@ -82,10 +82,10 @@ function HeaderMain() {
               </li>
             </ul>
           </div>
-          <div className="w-fit">
+          <div className="w-fit ml-10">
             <Link href="/">
               <Image
-                className=" w-[150px] md:w-[200px]"
+                className=" w-[80px] md:w-[120px]"
                 src="/image/logo/logo.png"
                 width={1000}
                 height={700}
@@ -147,22 +147,34 @@ function HeaderMain() {
           <Slider
             silderInfo={[
               {
-                title: "تیتر اول",
-                text: "یک متن کوتاه بذای تیتر اول",
+                // title: "تیتر اول",
+                // text: "یک متن کوتاه بذای تیتر اول",
                 src: "/image/slider/slider-1.jpg",
-                link: "/about",
+                // link: "/about",
               },
               {
-                title: "تیتر دوم",
-                text: "یک متن کوتاه برای تیتر دوم",
+                // title: "تیتر دوم",
+                // text: "یک متن کوتاه برای تیتر دوم",
                 src: "/image/slider/slider-2.jpg",
-                link: "/project",
+                // link: "/project",
               },
               {
-                title: "تیتر سوم",
-                text: "یک متن کوتاه برای تیتر سوم",
+                // title: "تیتر سوم",
+                // text: "یک متن کوتاه برای تیتر سوم",
                 src: "/image/slider/slider-3.jpg",
-                link: "/",
+                // link: "/",
+              },
+              {
+                // title: "تیتر سوم",
+                // text: "یک متن کوتاه برای تیتر سوم",
+                src: "/image/slider/slider-4.jpg",
+                // link: "/",
+              },
+              {
+                // title: "تیتر سوم",
+                // text: "یک متن کوتاه برای تیتر سوم",
+                src: "/image/slider/slider-5.jpg",
+                // link: "/",
               },
             ]}
           />
