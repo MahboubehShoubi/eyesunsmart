@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
+import SignInUpPage from "@/module/SignUserPage";
 
 // Icons
 import { FaUserAlt } from "react-icons/fa";
@@ -13,7 +14,6 @@ import { RiMenuFold2Fill } from "react-icons/ri";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 import Slider from "@/module/Slider";
-import SignInUpPage from "@/template/SignUserPage";
 
 import "animate.css";
 
