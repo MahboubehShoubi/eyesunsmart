@@ -21,6 +21,7 @@ module.exports = {
       backgroundWhite : "#FDFDFD",
       textGray:"rgb(136, 136, 136)",
       textBlack:"#000000",
+      backgroundBlack:"#00000091"
     },
     fontSize: {
       titleFontSize: '1.2rem',

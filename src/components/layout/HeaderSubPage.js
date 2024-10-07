@@ -12,26 +12,13 @@ import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { RiMenuFold2Fill } from "react-icons/ri";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
-import Slider from "@/module/Slider";
-import SignInUpPage from "@/template/SignUserPage";
-
-import "animate.css";
-
-function HeaderMain() {
+function HeaderSubPage() {
   const [isShow, setIsShow] = useState(false);
-  const [showSignup, setShowSignup] = useState(false);
 
   const { data } = useSession();
-  // console.log(data);
 
   return (
-    <div className="relative w-full h-fit">
-      {showSignup && (
-        <div className="w-full h-full flex justify-center items-center absolute z-[100]">
-          <SignInUpPage showSignup={showSignup} setShowSignup={setShowSignup} />
-        </div>
-      )}
-
+    <div className="flex flex-col justify-center items-center h-fit">
       <div className="hidden md:block md:w-full md:h-16 md:bg-orangeColor md:items-center">
         <div className="container md:max-w-screen-xl flex md:justify-between md:items-center h-full">
           <div>
@@ -41,12 +28,13 @@ function HeaderMain() {
             {data ? (
               <div className="flex items-center gap-x-2">
                 <span className="text-textWhite">خوش آمدید</span>
-                <Link href="/dashboard"
+                <Link
+                  href="/dashboard"
                   className="flex items-baseline gap-1 cursor-pointer bg-textWhite p-2 rounded-full"
                   onClick={(e) => setShowSignup(true)}
                   title="پنل کاربری"
                 >
-                  <FaUserAlt className="w-[25px] h-[25px] text-secondery"/>
+                  <FaUserAlt className="w-[25px] h-[25px] text-secondery" />
                 </Link>
               </div>
             ) : (
@@ -62,7 +50,7 @@ function HeaderMain() {
         </div>
       </div>
 
-      <div className="w-full md:h-[100px]">
+      <div className="w-full md:h-[100px] md:max-w-screen-xl">
         <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full">
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
@@ -176,7 +164,7 @@ function HeaderMain() {
         </div>
       </div>
 
-      <div className=" w-full h-[50vh] md:h-[80vh] flex md:items-center relative">
+      <div className=" w-full h-[50vh] md:h-fit flex md:items-center relative">
         <div
           className={
             isShow
@@ -250,40 +238,9 @@ function HeaderMain() {
             </li>
           </ul>
         </div>
-
-        <div className="h-full w-full" onClick={() => setIsShow(false)}>
-          <Slider
-            silderInfo={[
-              {
-                // title: "تیتر دوم",
-                // text: "یک متن کوتاه برای تیتر دوم",
-                src: "/image/slider/slider-2.jpg",
-                // link: "/project",
-              },
-              {
-                // title: "تیتر سوم",
-                // text: "یک متن کوتاه برای تیتر سوم",
-                src: "/image/slider/slider-3.jpg",
-                // link: "/",
-              },
-              {
-                // title: "تیتر سوم",
-                // text: "یک متن کوتاه برای تیتر سوم",
-                src: "/image/slider/slider-4.jpg",
-                // link: "/",
-              },
-              {
-                // title: "تیتر سوم",
-                // text: "یک متن کوتاه برای تیتر سوم",
-                src: "/image/slider/slider-5.jpg",
-                // link: "/",
-              },
-            ]}
-          />
-        </div>
       </div>
     </div>
   );
 }
 
-export default HeaderMain;
+export default HeaderSubPage;

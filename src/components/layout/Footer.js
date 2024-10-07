@@ -35,8 +35,8 @@ function Footer() {
               </div>
               <div className=" flex flex-col items-center">
                 <span className="text-secondery">تلفن</span>
-                <span className="text-textWhite">02222222</span>
-                <span className="text-textWhite">03333333</span>
+                <span className="text-textWhite">09112223333</span>
+                <span className="text-textWhite">09114445555</span>
               </div>
             </div>
             <div className="w-1/3 flex items-center justify-center gap-x-4">
@@ -45,8 +45,8 @@ function Footer() {
               </div>
               <div className=" flex flex-col items-center">
                 <span className="text-secondery">ایمیل</span>
-                <span className="text-textWhite">02222222</span>
-                <span className="text-textWhite">03333333</span>
+                <span className="text-textWhite">Email-1@gmail.com</span>
+                <span className="text-textWhite">Email-1@gmail.com</span>
               </div>
             </div>
             <div className="w-1/3 flex items-center justify-center gap-x-4">
@@ -55,8 +55,8 @@ function Footer() {
               </div>
               <div className=" flex flex-col items-center">
                 <span className="text-secondery">آدرس</span>
-                <span className="text-textWhite">02222222</span>
-                <span className="text-textWhite">03333333</span>
+                <span className="text-textWhite">ساری-خیابان قارن</span>
+                <span className="text-textWhite">سرخرود-خط اول دریا</span>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ function Footer() {
                 دسترسی سریع
               </p>
               <p className="text-secondery text-titleFontSize w-2/3 text-center">
-                آدرس
+                آدرس دفتر مرکزی : سرخرود
               </p>
             </div>
             <div className="w-full h-[220px] flex mt-5">

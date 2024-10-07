@@ -8,6 +8,7 @@ import MainSettingUp from "@/module/mainpage/MainSettingUp";
 function MainPage() {
   return (
     <>
+      
       <MainServicess />
       <MainAbout />
       <MainSettingUp />
@@ -15,7 +16,7 @@ function MainPage() {
       <MainOurProject />
       <MainProduct />
     </>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;

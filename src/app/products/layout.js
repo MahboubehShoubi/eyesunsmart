@@ -1,10 +1,10 @@
-import Footer from "@/layout/Footer"
-import HeaderMain from "@/layout/HeaderMain"
+import HeaderSubPage from "@/layout/HeaderSubPage";
+import Footer from "@/layout/Footer";
 
 function layout({children}) {
   return (
     <>
-    <HeaderMain />
+    <HeaderSubPage />
     <div>{children}</div>
     <Footer />
     </>
