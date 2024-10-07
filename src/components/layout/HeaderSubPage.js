@@ -14,11 +14,19 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 function HeaderSubPage() {
   const [isShow, setIsShow] = useState(false);
+  const [showSignup, setShowSignup] = useState(false);
+  const [subMenu, setSubMenu] = useState(false);
 
   const { data } = useSession();
 
   return (
     <div className="flex flex-col justify-center items-center h-fit">
+      {showSignup && (
+        <div className="w-full h-full flex justify-center items-center absolute z-[100]">
+          <SignInUpPage showSignup={showSignup} setShowSignup={setShowSignup} />
+        </div>
+      )}
+
       <div className="hidden md:block md:w-full md:h-16 md:bg-orangeColor md:items-center">
         <div className="container md:max-w-screen-xl flex md:justify-between md:items-center h-full">
           <div>
@@ -80,58 +88,71 @@ function HeaderSubPage() {
                 <Link href="/">صفحه اصلی</Link>
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem] relative">
-                <Link href="/products" className="flex items-center">
-                  محصولات{" "}
+                <Link
+                  href="/products"
+                  className="flex items-center"
+                  onMouseEnter={() => setSubMenu(true)}
+                  onMouseLeave={() => setSubMenu(false)}
+                >
+                  محصولات
                   <MdKeyboardDoubleArrowDown className=" mr-1 text-secondery" />
                 </Link>
-                <div className=" hidden absolute w-[200px] h-fit top-[70px] right-[70px] z-[10]">
-                  <ul className=" flex flex-col w-full h-full items-center gap-y-2 bg-textWhite">
-                    <li>
-                      <Link href="/products/tis-air">
-                        <Image
-                          className="w-[150px]"
-                          src="/image/tis-group/air.png"
-                          width={1000}
-                          height={700}
-                          alt="brandImg"
-                        />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/tis-bee">
-                        <Image
-                          className="w-[150px]"
-                          src="/image/tis-group/bee.png"
-                          width={1000}
-                          height={700}
-                          alt="brandImg"
-                        />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/tis-bus">
-                        <Image
-                          className="w-[150px]"
-                          src="/image/tis-group/bus.png"
-                          width={1000}
-                          height={700}
-                          alt="brandImg"
-                        />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/products/tis-lock">
-                        <Image
-                          className="w-[150px]"
-                          src="/image/tis-group/tis-lock.png"
-                          width={1000}
-                          height={700}
-                          alt="brandImg"
-                        />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                {/* <div className=" hidden absolute w-[200px] h-fit top-[70px] right-[70px] z-[10]"> */}
+                <ul
+                  className={
+                    subMenu
+                      ? "absolute w-[200px] h-fit top-[65px] right-[0px] z-[10] flex flex-col items-center gap-y-2 bg-textWhite"
+                      : "hidden"
+                  }
+                  onMouseEnter={() => setSubMenu(true)}
+                  onMouseLeave={() => setSubMenu(false)}
+                >
+                  <li>
+                    <Link href="/products/tis-air">
+                      <Image
+                        className="w-[150px]"
+                        src="/image/tis-group/air.png"
+                        width={1000}
+                        height={700}
+                        alt="brandImg"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/tis-bee">
+                      <Image
+                        className="w-[150px]"
+                        src="/image/tis-group/bee.png"
+                        width={1000}
+                        height={700}
+                        alt="brandImg"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/tis-bus">
+                      <Image
+                        className="w-[150px]"
+                        src="/image/tis-group/bus.png"
+                        width={1000}
+                        height={700}
+                        alt="brandImg"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/tis-lock">
+                      <Image
+                        className="w-[150px]"
+                        src="/image/tis-group/tis-lock.png"
+                        width={1000}
+                        height={700}
+                        alt="brandImg"
+                      />
+                    </Link>
+                  </li>
+                </ul>
+                {/* </div> */}
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/education">آموزش</Link>
