@@ -23,7 +23,7 @@ function MainOurProject() {
       <div className=" container md:max-w-screen-xl py-20">
         <div className="flex flex-col px-5 md:flex-row">
           <div className="w-full md:w-1/2">
-            <h3 className="text-secondery text-titleFontSize">پروژه ها</h3>
+            <h3 className="text-bgRed text-titleFontSize">پروژه ها</h3>
             <h4 className="text-mainTitleFontSize mt-5">
               زندگی خود را با پروژه های هوشمند توانمند کنید
             </h4>
@@ -36,7 +36,7 @@ function MainOurProject() {
             </p>
             <Link
               href="/project"
-              className="text-textWhite bg-secondery inline-block px-10 py-3 rounded-full mt-5 
+              className="text-textWhite bg-bgRed inline-block px-10 py-3 rounded-full mt-5 
               hover:scale-[90%] hover:bg-navyBlue duration-700"
             >
               ادامه مطلب
@@ -49,7 +49,7 @@ function MainOurProject() {
             onMouseOut={() => setShow1(false)}
             className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
             style={{
-              backgroundImage: `linear-gradient(to top , #EC7626,transparent 80% ) , url(/image/main/main-our-project/imag-1.jpg)`,
+              backgroundImage: `linear-gradient(to top , #E51B20,transparent 80% ) , url(/image/main/main-our-project/imag-1.jpg)`,
             }}
           >
             <div
@@ -79,7 +79,7 @@ function MainOurProject() {
             onMouseOut={() => setShow2(false)}
             className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
             style={{
-              backgroundImage: `linear-gradient(to top , #EC7626 ,transparent 80%) , url(/image/main/main-our-project/imag-2.jpg)`,
+              backgroundImage: `linear-gradient(to top , #0A043C ,transparent 80%) , url(/image/main/main-our-project/imag-2.jpg)`,
             }}
           >
             <div
@@ -109,7 +109,7 @@ function MainOurProject() {
             onMouseOut={() => setShow3(false)}
             className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
             style={{
-              backgroundImage: `linear-gradient(to top , #EC7626 ,transparent 80%) , url(/image/main/main-our-project/imag-3.jpg)`,
+              backgroundImage: `linear-gradient(to top , #E51B20 ,transparent 80%) , url(/image/main/main-our-project/imag-3.jpg)`,
             }}
           >
             <div

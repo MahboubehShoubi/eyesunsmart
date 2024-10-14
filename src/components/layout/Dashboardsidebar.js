@@ -2,20 +2,35 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
+import LogoutButton from "../element/LogoutButton";
 
 async function Dashboardsidebar({ children }) {
-
   const session = await getServerSession(authOptions);
+  
   return (
-    <div className="w-full ">
-      <div className=" container w-full md:max-w-screen-xl flex">
-        <div className="w-2/12 flex flex-col gap-y-5 items-center shadow-2xl shadow-secondery rounded-xl py-10">
+    <div className="w-full py-[50px]">
+      <div className=" container w-full md:max-w-screen-xl flex gap-x-5">
+        <div className="w-2/12 flex flex-col gap-y-5 items-center shadow-2xl shadow-secondery rounded-xl py-10 px-5">
           <CgProfile className="text-[3rem] text-secondery" />
-          <span className="text-navyBlue">{session.user.email}</span>
-          <Link href="/dashboard" className="text-navyBlue hover:text-secondery">پنل کاربری</Link>
-          <Link href="/dashboard/my-educatin-film" className="text-navyBlue hover:text-secondery">آموزش های من</Link>
+          <span className="text-navyBlue">{session?.user.email}</span>
+          <span className="bg-textGray w-full h-[1px]"></span>
+          <div className="flex flex-col gap-y-4">
+            <Link
+              href="/dashboard"
+              className="text-navyBlue hover:text-secondery"
+            >
+              پنل کاربری
+            </Link>
+            <Link
+              href="/dashboard/my-educatin-film"
+              className="text-navyBlue hover:text-secondery"
+            >
+              آموزش های من
+            </Link>
+            <LogoutButton />
+          </div>
         </div>
-        <div className="w-10/12 h-[300px] flex items-center justify-center">
+        <div className="w-10/12 h-[300px] flex items-center justify-center shadow-2xl">
           {children}
         </div>
       </div>

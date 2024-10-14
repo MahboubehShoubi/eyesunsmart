@@ -36,12 +36,15 @@ function HeaderSubPage() {
           <div>
             {data ? (
               <div className="flex items-center gap-x-2">
-                <span className="text-textWhite">خوش آمدید</span>
+                <div className="flex flex-col">
+                  <span className="text-textWhite">خوش آمدید</span>
+                  <span className="text-textWhite text-[14px]">
+                    {data.user.email}
+                  </span>
+                </div>
                 <Link
                   href="/dashboard"
                   className="flex items-baseline gap-1 cursor-pointer bg-textWhite p-2 rounded-full"
-                  onClick={(e) => setShowSignup(true)}
-                  title="پنل کاربری"
                 >
                   <FaUserAlt className="w-[25px] h-[25px] text-secondery" />
                 </Link>
@@ -162,7 +165,7 @@ function HeaderSubPage() {
                 <Link href="/servicess">خدمات</Link>
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
-                <Link href="/projects">پروژه ها</Link>
+                <Link href="/project">پروژه ها</Link>
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/about">درباره ما</Link>

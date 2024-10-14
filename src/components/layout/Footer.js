@@ -30,43 +30,43 @@ function Footer() {
         <div className="md:w-3/4">
           <div className="w-full flex justify-between items-center border-b-2 border-textGray pb-5">
             <div className="w-1/3 flex items-center justify-center gap-x-4">
-              <div className="text-secondery text-[2.5rem]">
+              <div className="text-bgRed text-[2.5rem]">
                 <FaPhone />
               </div>
               <div className=" flex flex-col items-center">
-                <span className="text-secondery">تلفن</span>
+                <span className="text-bgRed">تلفن</span>
                 <span className="text-textWhite">09112223333</span>
                 <span className="text-textWhite">09114445555</span>
               </div>
             </div>
             <div className="w-1/3 flex items-center justify-center gap-x-4">
-              <div className="text-secondery text-[2.5rem]">
+              <div className="text-bgRed text-[2.5rem]">
                 <TfiEmail />
               </div>
               <div className=" flex flex-col items-center">
-                <span className="text-secondery">ایمیل</span>
+                <span className="text-bgRed">ایمیل</span>
                 <span className="text-textWhite">Email-1@gmail.com</span>
                 <span className="text-textWhite">Email-1@gmail.com</span>
               </div>
             </div>
             <div className="w-1/3 flex items-center justify-center gap-x-4">
-              <div className="text-secondery text-[2.5rem]">
+              <div className="text-bgRed text-[2.5rem]">
                 <FaMapLocationDot />
               </div>
               <div className=" flex flex-col items-center">
-                <span className="text-secondery">آدرس</span>
-                <span className="text-textWhite">ساری-خیابان قارن</span>
-                <span className="text-textWhite">سرخرود-خط اول دریا</span>
+                <span className="text-bgRed">آدرس</span>
+                <span className="text-textWhite">ساری - خیابان 15 خرداد</span>
+                <span className="text-textWhite">سرخرود-خط دریا</span>
               </div>
             </div>
           </div>
           <div className="w-full h-fit flex flex-col justify-between items-center mt-5">
             <div className="w-full flex">
-              <p className="w-1/3 text-secondery text-titleFontSize text-center">
+              <p className="w-1/3 text-bgRed text-titleFontSize text-center">
                 دسترسی سریع
               </p>
-              <p className="text-secondery text-titleFontSize w-2/3 text-center">
-                آدرس دفتر مرکزی : سرخرود
+              <p className="text-bgRed text-titleFontSize w-2/3 text-center">
+                آدرس دفتر مرکزی : ساری
               </p>
             </div>
             <div className="w-full h-[220px] flex mt-5">
@@ -74,51 +74,51 @@ function Footer() {
                 <div className="w-fit h-full flex flex-col justify-between">
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     صفحه اصلی
                   </Link>
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     محصولات
                   </Link>
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     اموزش
                   </Link>
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     خدمات
                   </Link>
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     پروژه ها
                   </Link>
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     درباره ما
                   </Link>
                   <Link
                     href="/"
-                    className="text-textWhite text-[14px] hover:text-secondery w-full flex items-center gap-x-2"
+                    className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
-                    <BiSolidLeftArrow className="text-secondery" />
+                    <BiSolidLeftArrow className="text-bgRed" />
                     ارتباط با ما
                   </Link>
                 </div>

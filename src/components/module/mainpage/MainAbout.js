@@ -14,7 +14,7 @@ function MainAbout() {
       <div className="container md:max-w-screen-xl md:h-screen flex flex-col md:flex-row">
         <div className=" relative w-screen md:w-[50%] h-full">
           <div className="absolute z-[-2] w-full h-full flex justify-center items-center">
-            <div className="bg-secondery w-[60%] h-[50%] rounded-3xl"></div>
+            <div className="bg-bgRed w-[60%] h-[50%] rounded-3xl"></div>
           </div>
           <div className="md:w-full md:h-full grid  w-full grid-cols-12 grid-rows-[10vh_30vh_20vh_30vh_10vh] px-5">
             <div className="col-start-6 col-end-13 row-start-2 row-end-4 rounded-3xl
@@ -40,7 +40,7 @@ function MainAbout() {
           </div>
         </div>
         <div className="w-screen md:w-[50%] h-full px-5 md:py-[15vh] ">
-          <h3 className="md:text-[1.2rem] text-secondery">درباره‌ی ما</h3>
+          <h3 className="md:text-[1.2rem] text-bgRed">درباره‌ی ما</h3>
           <h4 className=" text-[2.5rem] md:text-[3rem] mt-[30px]">
             پیشگام در آینده زندگی هوشمند
           </h4>
@@ -62,7 +62,7 @@ function MainAbout() {
               <span>پروژهای در حال بررسی</span>
             </div>
           </div>
-          <Link href="/about" className="text-textWhite bg-secondery inline-block px-10 py-4 rounded-full mt-10
+          <Link href="/about" className="text-textWhite bg-bgRed inline-block px-10 py-4 rounded-full mt-10
            hover:bg-navyBlue hover:scale-[90%] duration-700">ادامه مطلب</Link>
         </div>
       </div>

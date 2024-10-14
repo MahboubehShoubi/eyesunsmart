@@ -15,7 +15,7 @@ function MainServicess() {
     <div className=" relative w-full mt-[50px] md:mt-[100px] ">
       <div className=" container md:max-w-screen-xl relative md:h-[115vh] grid md:grid-rows-5">
         <div className="w-full  grid grid-cols-1 md:grid-cols-12 md:grid-rows-[5vh_50vh_40vh_20vh]">
-          <div className=" md:col-start-1 md:col-end-8 md:row-start-2 md:row-end-3 rounded-[60px] md:rounded-l-[0] bg-secondery p-[40px]">
+          <div className=" md:col-start-1 md:col-end-8 md:row-start-2 md:row-end-3 rounded-[60px] md:rounded-l-[0] bg-bgRed p-[40px]">
             <span className="text-textWhite text-[1.1rem] md:text-titleFontSize ">خدمات ما</span>
             <h2 className=" text-[1.5rem] md:text-mainTitleFontSize text-textWhite">
               Smart Solutions, Seamless Living.
