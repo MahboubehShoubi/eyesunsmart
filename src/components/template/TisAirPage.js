@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import TisAirPanel from "@/module/tisairpage/TisAirPanel";
 import TisAirControllers from "@/module/tisairpage/TisAirControllers";
+import TisAirSensor from "@/module/tisairpage/TisAirSensor";
 
 function TisAirPage() {
   const [tisAir, setTisAir] = useState("panel");
@@ -43,13 +44,13 @@ function TisAirPage() {
           </button>
           <button
             className={
-              tisAir === "sensore"
+              tisAir === "sensors"
                 ? "py-4  bg-blueTisAir text-navyBlue w-[150px] rounded-full"
                 : "py-4 bg-grayTisAir w-[150px] rounded-full hover:bg-blueTisAir text-navyBlue"
             }
-            onClick={(e) => setTisAir("sensore")}
+            onClick={(e) => setTisAir("sensors")}
           >
-            Sensore
+            Sensors
           </button>
           <button
             className={
@@ -75,7 +76,7 @@ function TisAirPage() {
         <div className="w-full flex justify-center">
           {tisAir === "panel" ? <TisAirPanel /> : null}
           {tisAir === "controllers" ? <TisAirControllers /> : null}
-          {tisAir === "sensore" ? <div>sensore</div> : null}
+          {tisAir === "sensors" ? <TisAirSensor /> : null}
           {tisAir === "intercon" ? <div>intercon</div> : null}
           {tisAir === "gateways" ? <div>gateways</div> : null}
         </div>
