@@ -28,7 +28,7 @@ function HeaderSubPage() {
         </div>
       )}
 
-      <div className="hidden md:block md:w-full md:h-16 md:bg-orangeColor md:items-center">
+      <div className="hidden md:block md:w-full md:h-16 md:bg-bgRed md:items-center">
         <div className="container md:max-w-screen-xl flex md:justify-between md:items-center h-full">
           <div>
             <p className="text-textWhite">محل قرار گیری تاریخ و ساعت</p>
@@ -101,12 +101,11 @@ function HeaderSubPage() {
                   محصولات
                   <MdKeyboardDoubleArrowDown className=" mr-1 text-secondery" />
                 </Link>
-                {/* <div className=" hidden absolute w-[200px] h-fit top-[70px] right-[70px] z-[10]"> */}
                 <ul
                   className={
                     subMenu
-                      ? "absolute w-[200px] h-fit top-[65px] right-[0px] z-[10] flex flex-col items-center gap-y-2 bg-textWhite"
-                      : "hidden"
+                      ? "absolute w-[1250px] h-fit top-[65px] right-[-100px] z-[10] flex items-center justify-between bg-textWhite py-10 px-6 shadow-2xl"
+                      : " hidden"
                   }
                   onMouseEnter={() => setSubMenu(true)}
                   onMouseLeave={() => setSubMenu(false)}
@@ -114,7 +113,7 @@ function HeaderSubPage() {
                   <li>
                     <Link href="/products/tis-air">
                       <Image
-                        className="w-[150px]"
+                        className="w-[250px]"
                         src="/image/tis-group/air.png"
                         width={1000}
                         height={700}
@@ -125,7 +124,7 @@ function HeaderSubPage() {
                   <li>
                     <Link href="/products/tis-bee">
                       <Image
-                        className="w-[150px]"
+                        className="w-[250px]"
                         src="/image/tis-group/bee.png"
                         width={1000}
                         height={700}
@@ -136,7 +135,7 @@ function HeaderSubPage() {
                   <li>
                     <Link href="/products/tis-bus">
                       <Image
-                        className="w-[150px]"
+                        className="w-[250px]"
                         src="/image/tis-group/bus.png"
                         width={1000}
                         height={700}
@@ -147,7 +146,7 @@ function HeaderSubPage() {
                   <li>
                     <Link href="/products/tis-lock">
                       <Image
-                        className="w-[150px]"
+                        className="w-[250px]"
                         src="/image/tis-group/tis-lock.png"
                         width={1000}
                         height={700}
@@ -156,7 +155,6 @@ function HeaderSubPage() {
                     </Link>
                   </li>
                 </ul>
-                {/* </div> */}
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/education">آموزش</Link>
