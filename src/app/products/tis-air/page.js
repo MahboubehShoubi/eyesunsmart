@@ -1,8 +1,10 @@
+import TisAirPage from "@/template/TisAirPage";
+
+
+
 function TisAir() {
   return (
-    <div>
-      <h2>TIS AIR</h2>
-    </div>
+    <TisAirPage />
   );
 }
 
