@@ -114,6 +114,17 @@ function HeaderMain() {
                   onMouseEnter={() => setSubMenu(true)}
                   onMouseLeave={() => setSubMenu(false)}
                 >
+                   <li>
+                    <Link href="/products/tis-bus">
+                      <Image
+                        className="w-[250px]"
+                        src="/image/tis-group/bus.png"
+                        width={1000}
+                        height={700}
+                        alt="brandImg"
+                      />
+                    </Link>
+                  </li>
                   <li>
                     <Link href="/products/tis-air">
                       <Image
@@ -136,17 +147,7 @@ function HeaderMain() {
                       />
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/products/tis-bus">
-                      <Image
-                        className="w-[250px]"
-                        src="/image/tis-group/bus.png"
-                        width={1000}
-                        height={700}
-                        alt="brandImg"
-                      />
-                    </Link>
-                  </li>
+                 
                   <li>
                     <Link href="/products/tis-lock">
                       <Image
