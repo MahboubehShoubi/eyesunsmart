@@ -6,6 +6,7 @@ import TisAirPanel from "@/module/tisairpage/TisAirPanel";
 import TisAirControllers from "@/module/tisairpage/TisAirControllers";
 import TisAirSensor from "@/module/tisairpage/TisAirSensor";
 import TisAirIntercom from "@/module/tisairpage/TisAirIntercom";
+import TisAirGateways from "@/module/tisairpage/TisAirGateways";
 
 function TisAirPage() {
   const [tisAir, setTisAir] = useState("panel");
@@ -79,7 +80,7 @@ function TisAirPage() {
           {tisAir === "controllers" ? <TisAirControllers /> : null}
           {tisAir === "sensors" ? <TisAirSensor /> : null}
           {tisAir === "intercom" ? <TisAirIntercom /> : null}
-          {tisAir === "gateways" ? <div>gateways</div> : null}
+          {tisAir === "gateways" ? <TisAirGateways /> : null}
         </div>
       </div>
     </div>
