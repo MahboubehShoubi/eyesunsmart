@@ -5,6 +5,7 @@ import Image from "next/image";
 import TisAirPanel from "@/module/tisairpage/TisAirPanel";
 import TisAirControllers from "@/module/tisairpage/TisAirControllers";
 import TisAirSensor from "@/module/tisairpage/TisAirSensor";
+import TisAirIntercom from "@/module/tisairpage/TisAirIntercom";
 
 function TisAirPage() {
   const [tisAir, setTisAir] = useState("panel");
@@ -54,13 +55,13 @@ function TisAirPage() {
           </button>
           <button
             className={
-              tisAir === "intercon"
+              tisAir === "intercom"
                 ? "w-[150px] py-4 rounded-full bg-grayTisAir text-navyBlue "
                 : "w-[150px] py-4 rounded-full bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
-            onClick={(e) => setTisAir("intercon")}
+            onClick={(e) => setTisAir("intercom")}
           >
-            Intercon
+            Intercom
           </button>
           <button
             className={
@@ -77,7 +78,7 @@ function TisAirPage() {
           {tisAir === "panel" ? <TisAirPanel /> : null}
           {tisAir === "controllers" ? <TisAirControllers /> : null}
           {tisAir === "sensors" ? <TisAirSensor /> : null}
-          {tisAir === "intercon" ? <div>intercon</div> : null}
+          {tisAir === "intercom" ? <TisAirIntercom /> : null}
           {tisAir === "gateways" ? <div>gateways</div> : null}
         </div>
       </div>

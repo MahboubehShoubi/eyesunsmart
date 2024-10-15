@@ -1,70 +1,58 @@
 import Image from "next/image";
 
-function TisAirControllers() {
+function TisAirIntercom() {
   return (
     <div className=" w-fit p-10 flex">
       <div className="w-fit p-5 flex flex-col items-center hover:cursor-pointer">
         <div className="w-[150px] h-[250px] flex justify-center items-center">
           <Image
-            src="/image/tis-group/tis-air/controllers/ADS-Controller.jpg"
+            src="/image/tis-group/tis-air/intercom/7-Touch-Screen.jpg"
             className="w-full hover:scale-150 transition-all duration-700"
             width={1000}
             height={700}
             alt="panel-img"
           />
         </div>
-        <p>ADS-Controller</p>
+        <p>7-Touch Screen</p>
       </div>
       <div className="w-fit p-5 flex flex-col items-center hover:cursor-pointer">
         <div className="w-[150px] h-[250px] flex justify-center items-center">
           <Image
-            src="/image/tis-group/tis-air/controllers/ACM-Switch.jpg"
+            src="/image/tis-group/tis-air/intercom/Outdoor-Tower.jpg"
             className="w-full hover:scale-150 transition-all duration-700"
             width={1000}
             height={700}
             alt="panel-img"
           />
         </div>
-        <p>ACM Switch</p>
+        <p>Outdoor Tower</p>
       </div>
       <div className="w-fit p-5 flex flex-col items-center hover:cursor-pointer">
         <div className="w-[150px] h-[250px] flex justify-center items-center">
           <Image
-            src="/image/tis-group/tis-air/controllers/AIR-Socket.jpg"
+            src="/image/tis-group/tis-air/intercom/Outdoor-Building.jpg"
             className="w-full hover:scale-150 transition-all duration-700"
             width={1000}
             height={700}
             alt="panel-img"
           />
         </div>
-        <p>AIR Socket</p>
+        <p>Outdoor Building</p>
       </div>
       <div className="w-fit p-5 flex flex-col items-center hover:cursor-pointer">
         <div className="w-[150px] h-[250px] flex justify-center items-center">
           <Image
-            src="/image/tis-group/tis-air/controllers/AIR-IR-Emitter.jpg"
+            src="/image/tis-group/tis-air/intercom/Outdoor-Unit.jpg"
             className="w-full hover:scale-150 transition-all duration-700"
             width={1000}
             height={700}
             alt="panel-img"
           />
         </div>
-        <p>AIR IR Emitter</p>
-      </div>
-      <div className="w-fit p-5 flex flex-col items-center hover:cursor-pointer">
-        <div className="w-[150px] h-[250px] flex justify-center items-center">
-          <Image
-            src="/image/tis-group/tis-air/controllers/TRV-Controller.jpg"
-            className="w-full hover:scale-150 transition-all duration-700"
-            width={1000}
-            height={700}
-            alt="panel-img"
-          />
-        </div>
-        <p>TRV Controller</p>
+        <p>Outdoor Unit</p>
       </div>
     </div>
   );
 }
 
-export default TisAirControllers;
+export default TisAirIntercom;
