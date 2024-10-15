@@ -25,8 +25,8 @@ function TisAirPage() {
           <button
             className={
               tisAir === "panel"
-                ? "py-4  bg-blueTisAir text-navyBlue w-[150px] rounded-full"
-                : "py-4 bg-grayTisAir w-[150px] rounded-full hover:bg-blueTisAir text-navyBlue"
+                ? "w-[150px] py-4 rounded-full bg-grayTisAir text-navyBlue "
+                : "w-[150px] py-4 rounded-full bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir("panel")}
           >
@@ -35,8 +35,8 @@ function TisAirPage() {
           <button
             className={
               tisAir === "controllers"
-                ? "py-4  bg-blueTisAir text-navyBlue w-[150px] rounded-full"
-                : "py-4 bg-grayTisAir w-[150px] rounded-full hover:bg-blueTisAir text-navyBlue"
+                ? "w-[150px] py-4 rounded-full bg-grayTisAir text-navyBlue "
+                : "w-[150px] py-4 rounded-full bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir("controllers")}
           >
@@ -45,8 +45,8 @@ function TisAirPage() {
           <button
             className={
               tisAir === "sensors"
-                ? "py-4  bg-blueTisAir text-navyBlue w-[150px] rounded-full"
-                : "py-4 bg-grayTisAir w-[150px] rounded-full hover:bg-blueTisAir text-navyBlue"
+                ? "w-[150px] py-4 rounded-full bg-grayTisAir text-navyBlue "
+                : "w-[150px] py-4 rounded-full bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir("sensors")}
           >
@@ -55,8 +55,8 @@ function TisAirPage() {
           <button
             className={
               tisAir === "intercon"
-                ? "py-4  bg-blueTisAir text-navyBlue w-[150px] rounded-full"
-                : "py-4 bg-grayTisAir w-[150px] rounded-full hover:bg-blueTisAir text-navyBlue"
+                ? "w-[150px] py-4 rounded-full bg-grayTisAir text-navyBlue "
+                : "w-[150px] py-4 rounded-full bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir("intercon")}
           >
@@ -65,8 +65,8 @@ function TisAirPage() {
           <button
             className={
               tisAir === "gateways"
-                ? "py-4  bg-blueTisAir text-navyBlue w-[150px] rounded-full"
-                : "py-4 bg-grayTisAir w-[150px] rounded-full hover:bg-blueTisAir text-navyBlue"
+                ? "w-[150px] py-4 rounded-full bg-grayTisAir text-navyBlue "
+                : "w-[150px] py-4 rounded-full bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir("gateways")}
           >
