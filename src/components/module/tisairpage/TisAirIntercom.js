@@ -21,6 +21,7 @@ function TisAirIntercom() {
       Image: "/image/tis-group/tis-air/intercom/Outdoor-Unit.jpg",
     },
   ];
+
   return (
     <div className=" w-fit p-10 flex animate__animated animate__zoomIn">
       {IntercomList.map((item) => (
