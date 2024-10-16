@@ -1,9 +1,8 @@
+import TisBusPage from "@/template/TisBusPage";
 
 function TisBus() {
   return (
-    <div>
-      <h2>TIS BUS</h2>
-    </div>
+    <TisBusPage />
   )
 }
 
