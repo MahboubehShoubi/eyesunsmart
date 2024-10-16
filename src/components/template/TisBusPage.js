@@ -25,8 +25,8 @@ function TisBusPage() {
             {TisBusList.map(item => (<button
             className={
               tisBus === `${item}`
-                ? "w-[200px] py-4 rounded-full bg-grayTisAir text-navyBlue "
-                : "w-[200px] py-4 rounded-full bg-bgRed text-textWhite hover:bg-grayTisAir hover:text-navyBlue transition duration-700"
+                ? "w-[200px] py-4 rounded-full bg-bgRed text-textWhite "
+                : "w-[200px] py-4 rounded-full bg-secondery text-textWhite hover:bg-bgRed hover:text-navyBlue transition duration-700"
             }
             onClick={(e) => setTisBus(item)}
           >
