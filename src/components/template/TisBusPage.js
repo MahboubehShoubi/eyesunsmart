@@ -5,11 +5,12 @@ import Image from "next/image";
 
 import TisBusPanels from "@/module/tisbuspage/TisBusPanels";
 import TisBusHotelInterFace from "@/module/tisbuspage/TisBusHotelInterFace";
+import TisBusScreen from "@/module/tisbuspage/TisBusScreen";
 
 function TisBusPage() {
   const [tisBus, setTisBus] = useState("panels");
 
-  const TisBusList = ["panels" , "Hotel InterFace" , "Screen" , "Dimmers" , "Relays" , "Sensore" , "BMS/PMS" , "Motors" , "Audio/Video" , "Meters" , "Gateways" , "Other"]
+  const TisBusList = ["panels" , "Hotel InterFace" , "Screens" , "Dimmers" , "Relays" , "Sensore" , "BMS/PMS" , "Motors" , "Audio/Video" , "Meters" , "Gateways" , "Other"]
   
   return (
     <div className="w-full mt-20 mb-20">
@@ -38,6 +39,7 @@ function TisBusPage() {
         <div className="w-full flex justify-center">
           {tisBus === "panels" ? <TisBusPanels/> : null}
           {tisBus === "Hotel InterFace" ? <TisBusHotelInterFace /> : null}
+          {tisBus === "Screens" ? <TisBusScreen /> : null}
         </div>
       </div>
     </div>
