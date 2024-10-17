@@ -1,8 +1,10 @@
 "use client";
 
-import TisBusPanels from "@/module/tisbuspage/TisBusPanels";
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
+
+import TisBusPanels from "@/module/tisbuspage/TisBusPanels";
+import TisBusHotelInterFace from "@/module/tisbuspage/TisBusHotelInterFace";
 
 function TisBusPage() {
   const [tisBus, setTisBus] = useState("panels");
@@ -35,6 +37,7 @@ function TisBusPage() {
         </div>
         <div className="w-full flex justify-center">
           {tisBus === "panels" ? <TisBusPanels/> : null}
+          {tisBus === "Hotel InterFace" ? <TisBusHotelInterFace /> : null}
         </div>
       </div>
     </div>
