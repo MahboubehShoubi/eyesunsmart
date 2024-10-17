@@ -1,6 +1,8 @@
-import Image from "next/image"
+import Image from "next/image";
 
-function ShowListMenu({list}) {
+import "animate.css";
+
+function ShowListMenu({ list }) {
   return (
     <div className=" w-fit p-10 flex animate__animated animate__zoomIn">
       {list.map((item) => (
@@ -18,7 +20,7 @@ function ShowListMenu({list}) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
-export default ShowListMenu
+export default ShowListMenu;

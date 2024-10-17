@@ -1,6 +1,5 @@
-import Image from "next/image";
+import ShowListMenu from "../ShowListMenu";
 
-import "animate.css";
 
 function TisAirSensor() {
   const SensorList = [
@@ -18,24 +17,8 @@ function TisAirSensor() {
     },
   ];
 
-  return (
-    <div className=" w-fit p-10 flex animate__animated animate__zoomIn">
-      {SensorList.map((item) => (
-        <div className="w-fit p-5 flex flex-col items-center">
-          <div className="w-[150px] h-[250px] flex justify-center items-center hover:cursor-pointer">
-            <Image
-              src={item.Image}
-              className="w-full hover:scale-150 transition-all duration-[1500ms]"
-              width={1000}
-              height={700}
-              alt="panel-img"
-            />
-          </div>
-          <p>{item.title}</p>
-        </div>
-      ))}
-    </div>
-  );
+  return <ShowListMenu list={SensorList} />;
+
 }
 
 export default TisAirSensor;
