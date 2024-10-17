@@ -6,6 +6,7 @@ import Image from "next/image";
 import TisBusPanels from "@/module/tisbuspage/TisBusPanels";
 import TisBusHotelInterFace from "@/module/tisbuspage/TisBusHotelInterFace";
 import TisBusScreen from "@/module/tisbuspage/TisBusScreen";
+import TisBusDimmers from "@/module/tisbuspage/TisBusDimmers";
 
 function TisBusPage() {
   const [tisBus, setTisBus] = useState("panels");
@@ -40,6 +41,7 @@ function TisBusPage() {
           {tisBus === "panels" ? <TisBusPanels/> : null}
           {tisBus === "Hotel InterFace" ? <TisBusHotelInterFace /> : null}
           {tisBus === "Screens" ? <TisBusScreen /> : null}
+          {tisBus === "Dimmers" ? <TisBusDimmers /> : null}
         </div>
       </div>
     </div>
