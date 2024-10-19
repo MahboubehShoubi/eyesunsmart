@@ -1,6 +1,6 @@
 import ShowListMenu from "../ShowListMenu";
 
-function TisBuaBmsPms() {
+function TisBusBmsPms() {
   const BmsPmsList = [
     {
       title: "22DL",
@@ -35,4 +35,4 @@ function TisBuaBmsPms() {
   return <ShowListMenu list={BmsPmsList} />;
 }
 
-export default TisBuaBmsPms;
+export default TisBusBmsPms;

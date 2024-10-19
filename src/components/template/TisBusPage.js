@@ -9,7 +9,7 @@ import TisBusScreen from "@/module/tisbuspage/TisBusScreen";
 import TisBusDimmers from "@/module/tisbuspage/TisBusDimmers";
 import TisBusRelays from "@/module/tisbuspage/TisBusRelays";
 import TisBusSensors from "@/module/tisbuspage/TisBusSensors";
-import TisBuaBmsPms from "@/module/tisbuspage/TisBuaBmsPms";
+import TisBusBmsPms from "@/module/tisbuspage/TisBusBmsPms";
 import TisBusMotors from "@/module/tisbuspage/TisBusMotors";
 
 function TisBusPage() {
@@ -63,7 +63,7 @@ function TisBusPage() {
           {tisBus === "Dimmers" ? <TisBusDimmers /> : null}
           {tisBus === "Relays" ? <TisBusRelays /> : null}
           {tisBus === "Sensors" ? <TisBusSensors /> : null}
-          {tisBus === "BMS/PMS" ? <TisBuaBmsPms /> : null}
+          {tisBus === "BMS/PMS" ? <TisBusBmsPms /> : null}
           {tisBus === "Motors" ? <TisBusMotors /> : null}
         </div>
       </div>
