@@ -10,6 +10,7 @@ import TisBusDimmers from "@/module/tisbuspage/TisBusDimmers";
 import TisBusRelays from "@/module/tisbuspage/TisBusRelays";
 import TisBusSensors from "@/module/tisbuspage/TisBusSensors";
 import TisBuaBmsPms from "@/module/tisbuspage/TisBuaBmsPms";
+import TisBusMotors from "@/module/tisbuspage/TisBusMotors";
 
 function TisBusPage() {
   const [tisBus, setTisBus] = useState("panels");
@@ -63,6 +64,7 @@ function TisBusPage() {
           {tisBus === "Relays" ? <TisBusRelays /> : null}
           {tisBus === "Sensors" ? <TisBusSensors /> : null}
           {tisBus === "BMS/PMS" ? <TisBuaBmsPms /> : null}
+          {tisBus === "Motors" ? <TisBusMotors /> : null}
         </div>
       </div>
     </div>
