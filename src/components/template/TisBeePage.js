@@ -37,8 +37,8 @@ function TisBeePage() {
             <button
               className={
                 tisBee === `${item}`
-                  ? "w-[200px] py-4 rounded-full bg-grayTisBee text-orangTisBus"
-                  : "w-[200px] py-4 rounded-full bg-bgRed text-textWhite hover:bg-grayTisBee hover:text-orangTisBus transition duration-700"
+                  ? "w-[200px] py-4 rounded-full bg-grayTisBee text-yellowTisBee"
+                  : "w-[200px] py-4 rounded-full bg-yellowTisBee text-textBlack hover:bg-grayTisBee hover:text-yellowTisBee transition duration-700"
               }
               onClick={(e) => setTisBee(item)}
             >

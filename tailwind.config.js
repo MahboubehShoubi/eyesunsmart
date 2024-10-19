@@ -28,6 +28,7 @@ module.exports = {
       grayTisAir: "#C7C6C6",
       orangTisBus:"#FCBD5A",
       grayTisBee:"#565656",
+      yellowTisBee:"#FFCB01",
     },
     fontSize: {
       titleFontSize: "1.2rem",
