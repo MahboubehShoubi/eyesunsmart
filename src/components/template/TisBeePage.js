@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import TisBeeWallSwitch from "@/module/tisbeepage/TisBeeWallSwitch";
 
 function TisBeePage() {
   const [tisBee, setTisBee] = useState("Wall Switch");
@@ -40,7 +41,9 @@ function TisBeePage() {
             </button>
           ))}
         </div>
-        <div className="w-full flex justify-center"></div>
+        <div className="w-full flex justify-center">
+        {tisBee === "Wall Switch" ? <TisBeeWallSwitch /> : null}
+        </div>
       </div>
     </div>
   );
