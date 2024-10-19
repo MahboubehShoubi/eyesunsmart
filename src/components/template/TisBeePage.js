@@ -7,6 +7,7 @@ import TisBeeWallSwitch from "@/module/tisbeepage/TisBeeWallSwitch";
 import TisBeeController from "@/module/tisbeepage/TisBeeController";
 import TisBeeSecuritySensor from "@/module/tisbeepage/TisBeeSecuritySensor";
 import TisBeeLights from "@/module/tisbeepage/TisBeeLights";
+import TisBeeGateway from "@/module/tisbeepage/TisBeeGateway";
 
 function TisBeePage() {
   const [tisBee, setTisBee] = useState("Wall Switch");
@@ -50,6 +51,7 @@ function TisBeePage() {
         {tisBee === "Controller" ? <TisBeeController /> : null}
         {tisBee === "Security/Sensor" ? <TisBeeSecuritySensor /> : null}
         {tisBee === "Lights" ? <TisBeeLights /> : null}
+        {tisBee === "Gateway" ? <TisBeeGateway /> : null}
         </div>
       </div>
     </div>
