@@ -1,9 +1,8 @@
+import TisBeePage from "@/template/TisBeePage"
 
 function TisBee() {
   return (
-    <div>
-      <h2>TIS BEE</h2>
-    </div>
+    <TisBeePage />
   )
 }
 
