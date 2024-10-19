@@ -12,6 +12,7 @@ import TisBusSensors from "@/module/tisbuspage/TisBusSensors";
 import TisBusBmsPms from "@/module/tisbuspage/TisBusBmsPms";
 import TisBusMotors from "@/module/tisbuspage/TisBusMotors";
 import TisBusAudioVideo from "@/module/tisbuspage/TisBusAudioVideo";
+import TisBusMeters from "@/module/tisbuspage/TisBusMeters";
 
 function TisBusPage() {
   const [tisBus, setTisBus] = useState("panels");
@@ -67,6 +68,7 @@ function TisBusPage() {
           {tisBus === "BMS/PMS" ? <TisBusBmsPms /> : null}
           {tisBus === "Motors" ? <TisBusMotors /> : null}
           {tisBus === "Audio/Video" ? <TisBusAudioVideo /> : null}
+          {tisBus === "Meters" ? <TisBusMeters /> : null}
         </div>
       </div>
     </div>
