@@ -14,6 +14,7 @@ import TisBusMotors from "@/module/tisbuspage/TisBusMotors";
 import TisBusAudioVideo from "@/module/tisbuspage/TisBusAudioVideo";
 import TisBusMeters from "@/module/tisbuspage/TisBusMeters";
 import TisBusGateways from "@/module/tisbuspage/TisBusGateways";
+import TisBusOther from "@/module/tisbuspage/TisBusOther";
 
 function TisBusPage() {
   const [tisBus, setTisBus] = useState("panels");
@@ -71,6 +72,7 @@ function TisBusPage() {
           {tisBus === "Audio/Video" ? <TisBusAudioVideo /> : null}
           {tisBus === "Meters" ? <TisBusMeters /> : null}
           {tisBus === "Gateways" ? <TisBusGateways /> : null}
+          {tisBus === "Other" ? <TisBusOther /> : null}
         </div>
       </div>
     </div>
