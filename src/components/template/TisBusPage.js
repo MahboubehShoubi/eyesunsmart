@@ -52,7 +52,7 @@ function TisBusPage() {
               className={
                 tisBus === `${item}`
                   ? "w-[200px] py-4 rounded-full bg-bgRed text-textWhite "
-                  : "w-[200px] py-4 rounded-full bg-secondery text-textWhite hover:bg-bgRed hover:text-navyBlue transition duration-700"
+                  : "w-[200px] py-4 rounded-full bg-orangTisBus text-textBlack hover:bg-bgRed hover:text-textWhite transition duration-700"
               }
               onClick={(e) => setTisBus(item)}
             >
