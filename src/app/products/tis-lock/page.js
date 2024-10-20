@@ -1,9 +1,8 @@
+import TisLockPage from "@/template/TisLockPage";
 
 function TisLock() {
   return (
-    <div>
-      <h2>TIS LOCK</h2>
-    </div>
+    <TisLockPage />
   )
 }
 
