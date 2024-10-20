@@ -1,7 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
+
+import TisLockHotelLock from "@/module/tislockpage/TisLockHotelLock";
 
 function TisLockPage() {
   const [tisBus, setTisBus] = useState("Hotel Lock");
@@ -39,7 +41,7 @@ function TisLockPage() {
           ))}
         </div>
         <div className="w-full flex justify-center">
-          {/* {tisBus === "Hotel Lock" ? <TisBusPanels /> : null} */}
+          {tisBus === "Hotel Lock" ? <TisLockHotelLock /> : null}
           {/* {tisBus === "Smart Lock" ? <TisBusPanels /> : null} */}
           {/* {tisBus === "Other" ? <TisBusPanels /> : null} */}
           
