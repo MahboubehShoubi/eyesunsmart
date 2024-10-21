@@ -206,14 +206,69 @@ function HeaderSubPage() {
                 صفحه اصلی
               </Link>
             </li>
-            <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/products"
-                onClick={() => isShow(false)}
+            <li className="w-full hover:text-secondery text-[1.2rem] relative">
+              <span
+                className="flex items-center"
+                onMouseEnter={() => setSubMenu(true)}
+                onMouseLeave={() => setSubMenu(false)}
               >
                 محصولات
-              </Link>
+                <MdKeyboardDoubleArrowDown className=" mr-1 text-secondery" />
+              </span>
+              <ul
+                className={
+                  subMenu
+                    ? "absolute w-[85%] h-fit top-[30px] right-[70px] z-[10] flex flex-col items-center bg-textWhite shadow-2xl py-4"
+                    : " hidden"
+                }
+                onMouseEnter={() => setSubMenu(true)}
+                onMouseLeave={() => setSubMenu(false)}
+              >
+                <li>
+                  <Link href="/products/tis-bus">
+                    <Image
+                      className="w-[110px]"
+                      src="/image/tis-group/bus.png"
+                      width={1000}
+                      height={700}
+                      alt="brandImg"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products/tis-air">
+                    <Image
+                      className="w-[100px]"
+                      src="/image/tis-group/air.png"
+                      width={1000}
+                      height={700}
+                      alt="brandImg"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products/tis-bee">
+                    <Image
+                      className="w-[100px]"
+                      src="/image/tis-group/bee.png"
+                      width={1000}
+                      height={700}
+                      alt="brandImg"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products/tis-lock">
+                    <Image
+                      className="w-[100px]"
+                      src="/image/tis-group/tis-lock.png"
+                      width={1000}
+                      height={700}
+                      alt="brandImg"
+                    />
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link
