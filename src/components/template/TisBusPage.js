@@ -35,11 +35,11 @@ function TisBusPage() {
   ];
 
   return (
-    <div className="w-full mt-20 mb-20">
+    <div className="w-full md:mt-20 md:mb-20">
       <div className="container w-full md:max-w-screen-xl">
         <div className="w-full flex justify-center">
           <Image
-            className="w-[400px]"
+            className=" w-[200px] md:w-[400px]"
             src="/image/tis-group/bus.png"
             width={1000}
             height={700}

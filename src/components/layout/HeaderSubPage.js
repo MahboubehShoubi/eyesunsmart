@@ -62,15 +62,15 @@ function HeaderSubPage() {
         </div>
       </div>
 
-      <div className="w-full md:h-[100px] md:max-w-screen-xl">
-        <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full">
+      <div className="w-full md:h-[100px] bg-navyBlue">
+        <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full px-5">
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
               <RiMenuFold2Fill
                 className={
                   isShow
-                    ? "text-navyBlue w-[30px] h-[30px] animate__animated animate__fadeIn"
-                    : "text-navyBlue w-[30px] h-[30px] animate__animated animate__fadeOut"
+                    ? "text-textWhite w-[30px] h-[30px] animate__animated animate__fadeIn"
+                    : "text-textWhite w-[30px] h-[30px] animate__animated animate__fadeOut"
                 }
                 onClick={() => setIsShow(!isShow)}
               />
@@ -78,8 +78,8 @@ function HeaderSubPage() {
               <RiMenuUnfold2Fill
                 className={
                   isShow
-                    ? "text-navyBlue w-[30px] h-[30px] animate__animated animate__fadeOut "
-                    : "text-navyBlue w-[30px] h-[30px] animate__animated animate__fadeIn"
+                    ? "text-textWhite w-[30px] h-[30px] animate__animated animate__fadeOut "
+                    : "text-textWhite w-[30px] h-[30px] animate__animated animate__fadeIn"
                 }
                 onClick={() => setIsShow(!isShow)}
               />
@@ -188,12 +188,12 @@ function HeaderSubPage() {
         </div>
       </div>
 
-      <div className=" w-full h-[50vh] md:h-fit flex md:items-center relative">
+      <div className=" w-full md:h-fit flex md:items-center relative">
         <div
           className={
             isShow
-              ? "md:hidden w-[80%] h-full bg-navyBlue absolute z-[2] animate__animated animate__fadeInRight"
-              : "md:hidden w-[80%] h-full bg-navyBlue absolute z-[2] animate__animated animate__fadeOutRight"
+              ? "md:hidden w-[80%] h-[50vh] bg-navyBlue absolute z-[2] animate__animated animate__fadeInRight"
+              : "md:hidden w-[80%] h-[50vh] bg-navyBlue absolute z-[2] animate__animated animate__fadeOutRight"
           }
         >
           <ul className="text-[#fff] w-full h-full flex flex-col items-start justify-between px-8 py-5">
