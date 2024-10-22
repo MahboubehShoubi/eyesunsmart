@@ -62,7 +62,7 @@ function HeaderSubPage() {
         </div>
       </div>
 
-      <div className="w-full md:h-[100px] bg-navyBlue">
+      <div className="w-full md:h-[100px] bg-navyBlue md:bg-textWhite md:shadow-xl">
         <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full px-5">
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
@@ -225,7 +225,7 @@ function HeaderSubPage() {
                 onMouseLeave={() => setSubMenu(false)}
               >
                 <li>
-                  <Link href="/products/tis-bus">
+                  <Link href="/products/tis-bus" onClick={() => isShow(false)}>
                     <Image
                       className="w-[110px]"
                       src="/image/tis-group/bus.png"
@@ -236,7 +236,7 @@ function HeaderSubPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/tis-air">
+                  <Link href="/products/tis-air" onClick={() => isShow(false)}>
                     <Image
                       className="w-[100px]"
                       src="/image/tis-group/air.png"
@@ -246,8 +246,8 @@ function HeaderSubPage() {
                     />
                   </Link>
                 </li>
-                <li>
-                  <Link href="/products/tis-bee">
+                <li >
+                  <Link  href="/products/tis-bee" onClick={() => isShow(false)}>
                     <Image
                       className="w-[100px]"
                       src="/image/tis-group/bee.png"
@@ -258,7 +258,7 @@ function HeaderSubPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/products/tis-lock">
+                  <Link href="/products/tis-lock" onClick={() => isShow(false)}>
                     <Image
                       className="w-[100px]"
                       src="/image/tis-group/tis-lock.png"
