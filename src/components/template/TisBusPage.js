@@ -46,13 +46,13 @@ function TisBusPage() {
             alt="Tis Air"
           />
         </div>
-        <div className="w-full flex justify-around flex-wrap gap-y-5">
+        <div className="w-full flex justify-between flex-wrap gap-y-5">
           {TisBusList.map((item) => (
             <button
               className={
                 tisBus === `${item}`
-                  ? " w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text[1rem] bg-bgRed text-textWhite "
-                  : " w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text[1rem] bg-orangTisBus text-textBlack hover:bg-bgRed hover:text-textWhite transition duration-700"
+                  ? " w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-bgRed text-textWhite "
+                  : " w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-orangTisBus text-textBlack hover:bg-bgRed hover:text-textWhite transition duration-700"
               }
               onClick={(e) => setTisBus(item)}
             >
@@ -60,7 +60,7 @@ function TisBusPage() {
             </button>
           ))}
         </div>
-        <div className="w-full flex justify-center ">
+        <div className="w-full flex justify-center">
           {tisBus === "panels" ? <TisBusPanels /> : null}
           {tisBus === "Hotel InterFace" ? <TisBusHotelInterFace /> : null}
           {tisBus === "Screens" ? <TisBusScreen /> : null}
