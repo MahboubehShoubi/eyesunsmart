@@ -17,11 +17,11 @@ function TisLockPage() {
   ];
 
   return (
-    <div className="w-full mt-20 mb-20">
-      <div className="container w-full md:max-w-screen-xl">
+    <div className="w-full md:mt-20 md:mb-20">
+      <div className="container w-full md:max-w-screen-xl px-5">
         <div className="w-full flex justify-center">
           <Image
-            className="w-[400px]"
+            className="w-[200px] md:w-[400px]"
             src="/image/tis-group/tis-lock.png"
             width={1000}
             height={700}
@@ -33,8 +33,8 @@ function TisLockPage() {
             <button
               className={
                 tisBus === `${item}`
-                  ? "w-[200px] py-4 rounded-full bg-garyTisLock text-textWhite "
-                  : "w-[200px] py-4 rounded-full bg-bgRed border-2 text-textWhite hover:bg-garyTisLock hover:text-textWhite transition duration-700"
+                  ? "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-garyTisLock text-textWhite "
+                  : "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-bgRed border-2 text-textWhite hover:bg-garyTisLock hover:text-textWhite transition duration-700"
               }
               onClick={(e) => setTisBus(item)}
             >
