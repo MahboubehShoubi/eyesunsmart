@@ -21,11 +21,11 @@ function TisBeePage() {
   ];
 
   return (
-    <div className="w-full mt-20 mb-20">
-      <div className="container w-full md:max-w-screen-xl">
+    <div className="w-full md:mt-20 md:mb-20">
+      <div className="container w-full md:max-w-screen-xl px-5">
         <div className="w-full flex justify-center">
           <Image
-            className="w-[400px]"
+            className="w-[200px] md:w-[400px]"
             src="/image/tis-group/bee.png"
             width={1000}
             height={700}
@@ -37,8 +37,8 @@ function TisBeePage() {
             <button
               className={
                 tisBee === `${item}`
-                  ? "w-[200px] py-4 rounded-full bg-grayTisBee text-yellowTisBee"
-                  : "w-[200px] py-4 rounded-full bg-yellowTisBee text-textBlack hover:bg-grayTisBee hover:text-yellowTisBee transition duration-700"
+                  ? "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-grayTisBee text-yellowTisBee"
+                  : "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-yellowTisBee text-textBlack hover:bg-grayTisBee hover:text-yellowTisBee transition duration-700"
               }
               onClick={(e) => setTisBee(item)}
             >
