@@ -36,7 +36,7 @@ function TisBusPage() {
 
   return (
     <div className="w-full md:mt-20 md:mb-20">
-      <div className="container w-full md:max-w-screen-xl">
+      <div className="container w-full md:max-w-screen-xl px-5">
         <div className="w-full flex justify-center">
           <Image
             className=" w-[200px] md:w-[400px]"
