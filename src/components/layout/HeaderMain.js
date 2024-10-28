@@ -67,7 +67,7 @@ function HeaderMain() {
       </div>
 
       <div className="w-full md:h-[100px]">
-        <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full">
+        <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full px-5 md:px-0">
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
               <RiMenuFold2Fill
@@ -91,7 +91,7 @@ function HeaderMain() {
           </div>
 
           <div className="hidden md:block md:w-[60%] md:h-full">
-            <ul className=" md:w-full md:h-full md:flex md:items-center md:justify-between">
+            <ul className=" md:w-full md:h-full md:flex md:items-start md:justify-between">
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/">صفحه اصلی</Link>
               </li>
@@ -161,9 +161,9 @@ function HeaderMain() {
                   </li>
                 </ul>
               </li>
-              <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
+              {/* <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/education">آموزش</Link>
-              </li>
+              </li> */}
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/servicess">خدمات</Link>
               </li>
@@ -274,7 +274,7 @@ function HeaderMain() {
                   </li>
                 </ul>
               </li>
-            <li>
+            {/* <li>
               <Link
                 className=" inline-block bg-navyBlue"
                 href="/education"
@@ -282,7 +282,7 @@ function HeaderMain() {
               >
                 آموزش
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className=" inline-block bg-navyBlue"
