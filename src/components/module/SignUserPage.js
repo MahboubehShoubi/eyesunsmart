@@ -69,7 +69,7 @@ function SignInUpPage({ showSignup, setShowSignup }) {
         className={
           showSignup
             ? " container w-1/2 h-[60vh] md:max-w-screen-xl flex bg-backgroundWhite animate__animated animate__zoomIn rounded-3xl overflow-hidden"
-            : " container w-1/2 h-[60vh] md:max-w-screen-xl flex bg-backgroundWhite animate__animated animate__zoomOut rounded-3xl"
+            : " container w-1/2 h-[60vh] md:max-w-screen-xl flex bg-backgroundWhite animate__animated animate__zoomOut rounded-3xl overflow-hidden"
         }
       >
         {login ? (
