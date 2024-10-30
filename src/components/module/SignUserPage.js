@@ -68,29 +68,29 @@ function SignInUpPage({ showSignup, setShowSignup }) {
       <div
         className={
           showSignup
-            ? " container w-1/2 h-[60vh] md:max-w-screen-xl flex bg-backgroundWhite animate__animated animate__zoomIn rounded-3xl overflow-hidden"
-            : " container w-1/2 h-[60vh] md:max-w-screen-xl flex bg-backgroundWhite animate__animated animate__zoomOut rounded-3xl overflow-hidden"
+            ? " container w-2/3 h-fit md:w-1/2 md:h-[60vh] md:max-w-screen-xl flex flex-col md:flex-row bg-backgroundWhite animate__animated animate__zoomIn rounded-3xl overflow-hidden"
+            : " container w-2/3 h-fit md:w-1/2 md:h-[60vh] md:max-w-screen-xl flex flex-col md:flex-row bg-backgroundWhite animate__animated animate__zoomOut rounded-3xl overflow-hidden"
         }
       >
         {login ? (
-          <div className="w-1/2 h-full">
+          <div className="w-full md:w-1/2 md:h-full">
             <div className="w-full h-10 px-4 py-4">
               <MdClose
                 className="w-[30px] h-[30px] cursor-pointer"
                 onClick={(e) => setShowSignup(false)}
               />
             </div>
-            <h3 className=" text-[2rem] w-full text-center">فرم ورود</h3>
-            <form className="w-full flex flex-col justify-center rounded-lg px-8 py-10 gap-y-5">
+            <h3 className="text-[1.6rem] md:text-[2rem] w-full text-center">فرم ورود</h3>
+            <form className="w-full flex flex-col justify-center rounded-lg px-5 py-5 md:px-8 md:py-10 md:gap-y-5 gap-y-2">
               <input
-                className="border-[1px] px-2 py-1 rounded-lg"
+                className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
                 placeholder="ایمیل"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
-                className="border-[1px] px-2 py-1 rounded-lg"
+                className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
                 placeholder="رمز عبور"
                 type="text"
                 value={password}
@@ -112,38 +112,37 @@ function SignInUpPage({ showSignup, setShowSignup }) {
                   className="w-full rounded-md text-textWhite bg-secondery py-1"
                   onClick={signinHandler}
                 >
-                  {" "}
-                  ورود{" "}
+                  ورود
                 </button>
               )}
             </form>
           </div>
         ) : (
-          <div className="w-1/2 h-full">
+          <div className="w-full md:w-1/2 md:h-full">
             <div className="w-full h-10 px-4 py-4">
               <MdClose
                 className="w-[30px] h-[30px] cursor-pointer"
                 onClick={(e) => setShowSignup(false)}
               />
             </div>
-            <h3 className=" text-[2rem] w-full text-center">فرم ثبت نام</h3>
-            <form className="w-full flex flex-col justify-center rounded-lg px-8 py-10 gap-y-5">
+            <h3 className="text-[1.6rem] md:text-[2rem] w-full text-center">فرم ثبت نام</h3>
+            <form className="w-full flex flex-col justify-center rounded-lg px-5 py-5 md:px-8 md:py-10 md:gap-y-5 gap-y-2">
               <input
-                className="border-[1px] px-2 py-1 rounded-lg"
+                className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
                 placeholder="ایمیل"
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <input
-                className="border-[1px] px-2 py-1 rounded-lg"
+                className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
                 placeholder="رمز عبور"
                 type="text"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <input
-                className="border-[1px] px-2 py-1 rounded-lg"
+                className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
                 placeholder="تکرار رمز عبور "
                 type="text"
                 value={rePassword}
@@ -173,9 +172,9 @@ function SignInUpPage({ showSignup, setShowSignup }) {
         )}
 
         {login ? (
-          <div className="w-1/2 h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue rounded-r-[30%]">
+          <div className="w-full md:w-1/2 md:h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue rounded-t-[10%] md:rounded-r-[30%] p-5">
             <p className="text-textWhite text-[1.5rem]">سلام دوست من !</p>
-            <p className="text-textWhite">
+            <p className="text-textWhite text-center">
               برای ایجاد حساب کاربری جدید از لینک زیر وارد شوید
             </p>
             <button
@@ -186,9 +185,9 @@ function SignInUpPage({ showSignup, setShowSignup }) {
             </button>
           </div>
         ) : (
-          <div className="w-1/2 h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue rounded-r-[30%]">
+          <div className="w-full md:w-1/2 md:h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue rounded-t-[10%] md:rounded-r-[30%] p-5">
             <p className="text-textWhite text-[1.5rem]">سلام دوست من !</p>
-            <p className="text-textWhite">
+            <p className="text-textWhite text-center">
               برای ورود به حساب کاربری از لینک زیر وارد شوید
             </p>
             <button
