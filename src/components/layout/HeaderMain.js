@@ -14,6 +14,7 @@ import { RiMenuFold2Fill } from "react-icons/ri";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 import Slider from "@/module/Slider";
+import { My_Day } from "@/utils/ShowDay";
 
 import "animate.css";
 
@@ -36,8 +37,11 @@ function HeaderMain() {
       {/*----------------------------------- قسمت هدر سایت ---------------------------------------*/}
       <div className="hidden md:block md:w-full md:h-16 md:bg-bgRed md:items-center">
         <div className="container md:max-w-screen-xl flex md:justify-between md:items-center h-full">
-          <div>
-            <p className="text-textWhite">محل قرار گیری تاریخ و ساعت</p>
+          <div className="w-fit flex gap-x-2">
+            <span className="text-textWhite text-[14px]">{My_Day} :</span>
+            <span className="text-textWhite text-[14px]">
+              {new Date().toLocaleDateString("fa-IR")}
+            </span>
           </div>
           <div>
             {data ? (

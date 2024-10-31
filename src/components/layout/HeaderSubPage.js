@@ -12,6 +12,7 @@ import { RxEnter } from "react-icons/rx";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { RiMenuFold2Fill } from "react-icons/ri";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { My_Day } from "@/utils/ShowDay";
 
 function HeaderSubPage() {
   const [isShow, setIsShow] = useState(false);
@@ -31,8 +32,11 @@ function HeaderSubPage() {
       {/*------------------------- قسمت هدر سایت --------------------------*/}
       <div className="hidden md:block md:w-full md:h-16 md:bg-bgRed md:items-center">
         <div className="container md:max-w-screen-xl flex md:justify-between md:items-center h-full">
-          <div>
-            <p className="text-textWhite">محل قرار گیری تاریخ و ساعت</p>
+          <div className="w-fit flex gap-x-2">
+            <span className="text-textWhite text-[14px]">{My_Day} :</span>
+            <span className="text-textWhite text-[14px]">
+              {new Date().toLocaleDateString("fa-IR")}
+            </span>
           </div>
           <div>
             {data ? (
@@ -63,10 +67,10 @@ function HeaderSubPage() {
         </div>
       </div>
 
-{/* ----------------------------------باکس منو و لوگو ---------------------------------------*/}
+      {/* ----------------------------------باکس منو و لوگو ---------------------------------------*/}
       <div className="w-full md:h-[100px] bg-navyBlue md:bg-textWhite md:shadow-xl">
         <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full  px-5 py-2 md:px-0 md:py-0">
-{/* --------------------------------همبرگر منو ----------------------------------------------*/}
+          {/* --------------------------------همبرگر منو ----------------------------------------------*/}
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
               <RiMenuFold2Fill
@@ -89,7 +93,7 @@ function HeaderSubPage() {
             )}
           </div>
 
-- {/*----------------------- منو در حالت دسکتاپ ----------------------------------*/}
+          {/*----------------------- منو در حالت دسکتاپ ----------------------------------*/}
           <div className="hidden md:block md:w-[60%] md:h-full">
             <ul className=" md:w-full md:h-full md:flex md:items-center md:justify-between">
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
@@ -180,7 +184,7 @@ function HeaderSubPage() {
           </div>
 
           <div className="w-fit flex items-center">
- {/* ------------------------------------- ورود کاربر در حالت موبایل ----------------------------------------*/}
+            {/* ------------------------------------- ورود کاربر در حالت موبایل ----------------------------------------*/}
             <div className=" md:hidden w-fit ml-5">
               {data ? (
                 <div className="flex items-center gap-x-2">
@@ -223,15 +227,13 @@ function HeaderSubPage() {
         </div>
       </div>
 
-{/* ----------------------- باکس زیر منو در حالت موبایل  ----------------------------*/}
-      <div
-      className="relative w-full h-fit z-[2]"
-      >
+      {/* ----------------------- باکس زیر منو در حالت موبایل  ----------------------------*/}
+      <div className="relative w-full h-fit z-[2]">
         <div
           className={isShow && " absolute w-full h-screen bg-backgroundBlack"}
           onClick={() => setIsShow(false)}
         ></div>
-{/* --------------------------- منو در حالت موبایل ----------------------- */}
+        {/* --------------------------- منو در حالت موبایل ----------------------- */}
         <div
           className={
             isShow
