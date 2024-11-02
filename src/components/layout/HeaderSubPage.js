@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { useSession } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
+
+// Components
+import { My_Day } from "@/utils/ShowDay";
 import SignInUpPage from "@/module/SignUserPage";
+import ShowMenuMobile from "@/module/ShowMenuMobile";
 
 // Icons
 import { FaUserAlt } from "react-icons/fa";
@@ -12,7 +16,6 @@ import { RxEnter } from "react-icons/rx";
 import { RiMenuUnfold2Fill } from "react-icons/ri";
 import { RiMenuFold2Fill } from "react-icons/ri";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
-import { My_Day } from "@/utils/ShowDay";
 
 function HeaderSubPage() {
   const [isShow, setIsShow] = useState(false);
@@ -189,11 +192,11 @@ function HeaderSubPage() {
               {data ? (
                 <div className="flex items-center gap-x-2">
                   {/* <div className="flex flex-col items-end">
-                  <span className="text-bgRed text-[12px]">خوش آمدید</span>
-                  <span className="text-bgRed text-[10px]">
-                    {data.user.email}
-                  </span>
-                </div> */}
+                    <span className="text-bgRed text-[12px]">خوش آمدید</span>
+                    <span className="text-bgRed text-[10px]">
+                      {data.user.email}
+                    </span>
+                  </div> */}
                   <Link
                     href="/dashboard"
                     className="flex items-baseline gap-1 cursor-pointer bg-textWhite p-2 rounded-full"
@@ -211,7 +214,7 @@ function HeaderSubPage() {
                 </button>
               )}
             </div>
-            {/* لوگوی سایت */}
+            {/*------------------- لوگوی سایت ----------------------*/}
             <div className="w-fit">
               <Link href="/">
                 <Image
@@ -228,153 +231,13 @@ function HeaderSubPage() {
       </div>
 
       {/* ----------------------- باکس زیر منو در حالت موبایل  ----------------------------*/}
-      <div className="relative w-full h-fit z-[2]">
-        <div
-          className={isShow && " absolute w-full h-screen bg-backgroundBlack"}
-          onClick={() => setIsShow(false)}
-        ></div>
-        {/* --------------------------- منو در حالت موبایل ----------------------- */}
-        <div
-          className={
-            isShow
-              ? "container absolute md:hidden w-[80%] h-screen bg-navyBlue animate__animated animate__fadeInRight"
-              : "container absolute md:hidden w-[80%] h-screen bg-navyBlue animate__animated animate__fadeOutRight"
-          }
-        >
-          <ul className="text-[#fff] w-full h-full flex flex-col items-start gap-y-5 px-8 py-5">
-            <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/"
-                onClick={() => setIsShow(false)}
-              >
-                صفحه اصلی
-              </Link>
-            </li>
-            <li className="w-full hover:text-secondery text-[1.2rem] relative">
-              <span
-                className="flex items-center"
-                onMouseEnter={() => setSubMenu(true)}
-                onMouseLeave={() => setSubMenu(false)}
-                onClick={() => setSubMenu(!subMenu)}
-              >
-                محصولات
-                <MdKeyboardDoubleArrowDown className=" mr-1 text-secondery" />
-              </span>
-              <ul
-                className={
-                  subMenu
-                    ? "absolute w-[85%] h-[50vh] top-[30px] right-[70px] z-[10] flex flex-col items-center justify-between bg-textWhite py-4 animate__animated animate__fadeIn"
-                    : "absolute w-[85%] h-[50vh] top-[30px] right-[70px] z-[10] flex flex-col items-center justify-between bg-textWhite py-4 animate__animated animate__fadeOut"
-                }
-                onMouseEnter={() => setSubMenu(true)}
-                onMouseLeave={() => setSubMenu(false)}
-              >
-                <li>
-                  <Link
-                    href="/products/tis-bus"
-                    onClick={() => setIsShow(false)}
-                  >
-                    <Image
-                      className="w-[110px]"
-                      src="/image/tis-group/bus.png"
-                      width={1000}
-                      height={700}
-                      alt="brandImg"
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products/tis-air"
-                    onClick={() => setIsShow(false)}
-                  >
-                    <Image
-                      className="w-[100px]"
-                      src="/image/tis-group/air.png"
-                      width={1000}
-                      height={700}
-                      alt="brandImg"
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products/tis-bee"
-                    onClick={() => setIsShow(false)}
-                  >
-                    <Image
-                      className="w-[100px]"
-                      src="/image/tis-group/bee.png"
-                      width={1000}
-                      height={700}
-                      alt="brandImg"
-                    />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products/tis-lock"
-                    onClick={() => setIsShow(false)}
-                  >
-                    <Image
-                      className="w-[100px]"
-                      src="/image/tis-group/tis-lock.png"
-                      width={1000}
-                      height={700}
-                      alt="brandImg"
-                    />
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            {/* <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/education"
-                onClick={() => isShow(false)}
-              >
-                آموزش
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/servicess"
-                onClick={() => isShow(false)}
-              >
-                خدمات
-              </Link>
-            </li>
-            <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/projects"
-                onClick={() => isShow(false)}
-              >
-                پروژه ها
-              </Link>
-            </li>
-            <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/about"
-                onClick={() => isShow(false)}
-              >
-                درباره ما
-              </Link>
-            </li>
-            <li>
-              <Link
-                className=" inline-block bg-navyBlue"
-                href="/contact"
-                onClick={() => isShow(false)}
-              >
-                ارتباط با ما
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <div className="md:hidden w-full">
+        <ShowMenuMobile
+          isShow={isShow}
+          setIsShow={setIsShow}
+          subMenu={subMenu}
+          setSubMenu={setSubMenu}
+        />
       </div>
     </div>
   );
