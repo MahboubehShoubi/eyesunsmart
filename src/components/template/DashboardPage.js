@@ -9,7 +9,7 @@ function DashboardPage({role , createdAt}) {
           <p className="bg-bgRed text-textWhite p-2 mt-3">
             در پنل ادمین با استفاده از گزینه{" "}
             <Link
-              href="/admin/products"
+              href="/admin/products/add"
               className="border-[1px] border-textWhite rounded-lg px-2 mx-1 w-fit text-grayTisAir hover:text-textWhite"
             >
               افزودن محصولات{" "}

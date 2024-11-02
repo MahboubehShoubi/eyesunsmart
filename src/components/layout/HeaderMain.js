@@ -370,25 +370,25 @@ function HeaderMain() {
           <Slider
             silderInfo={[
               {
-                // title: "تیتر دوم",
+                sliderName: "تیتر دوم",
                 // text: "یک متن کوتاه برای تیتر دوم",
                 src: "/image/slider/slider-2.jpg",
                 // link: "/project",
               },
               {
-                // title: "تیتر سوم",
+                sliderName: "تیتر سوم",
                 // text: "یک متن کوتاه برای تیتر سوم",
                 src: "/image/slider/slider-3.jpg",
                 // link: "/",
               },
               {
-                // title: "تیتر سوم",
+                sliderName: "تیتر سوم",
                 // text: "یک متن کوتاه برای تیتر سوم",
                 src: "/image/slider/slider-4.jpg",
                 // link: "/",
               },
               {
-                // title: "تیتر سوم",
+                sliderName: "تیتر سوم",
                 // text: "یک متن کوتاه برای تیتر سوم",
                 src: "/image/slider/slider-5.jpg",
                 // link: "/",

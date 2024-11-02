@@ -39,7 +39,7 @@ export default function Slider({ silderInfo }) {
         className="w-full h-full"
       >
         {silderInfo.map((slider) => (
-          <SwiperSlide className="w-full h-full relative">
+          <SwiperSlide className="w-full h-full relative" key={slider.sliderName}>
             <Image
               src={slider.src}
               width={1000}
