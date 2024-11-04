@@ -47,7 +47,7 @@ function TisBusPage() {
           />
         </div>
         <div className="w-full flex justify-between flex-wrap gap-y-5">
-          {TisBusList.map((item) => (
+          {TisBusList.map((item , index) => (
             <button
               className={
                 tisBus === `${item}`
@@ -55,6 +55,7 @@ function TisBusPage() {
                   : " w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-orangTisBus text-textBlack hover:bg-bgRed hover:text-textWhite transition duration-700"
               }
               onClick={(e) => setTisBus(item)}
+              key={index}
             >
               {item}
             </button>

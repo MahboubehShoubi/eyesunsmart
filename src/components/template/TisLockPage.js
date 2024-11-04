@@ -29,7 +29,7 @@ function TisLockPage() {
           />
         </div>
         <div className="w-full flex justify-around flex-wrap gap-y-5">
-          {TisLockList.map((item) => (
+          {TisLockList.map((item , index) => (
             <button
               className={
                 tisBus === `${item}`
@@ -37,6 +37,7 @@ function TisLockPage() {
                   : "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-bgRed border-2 text-textWhite hover:bg-garyTisLock hover:text-textWhite transition duration-700"
               }
               onClick={(e) => setTisBus(item)}
+              key={index}
             >
               {item}
             </button>

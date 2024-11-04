@@ -38,8 +38,8 @@ export default function Slider({ silderInfo }) {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         className="w-full h-full"
       >
-        {silderInfo.map((slider) => (
-          <SwiperSlide className="w-full h-full relative" key={slider.sliderName}>
+        {silderInfo.map((slider , index) => (
+          <SwiperSlide className="w-full h-full relative" key={index}>
             <Image
               src={slider.src}
               width={1000}

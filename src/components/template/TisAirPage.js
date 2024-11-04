@@ -26,13 +26,14 @@ function TisAirPage() {
           />
         </div>
         <div className="w-full flex justify-around flex-wrap gap-y-5">
-          {TisAirList.map(item => (<button
+          {TisAirList.map((item , index) => (<button
             className={
               tisAir === `${item}`
                 ? "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-grayTisAir text-navyBlue "
                 : "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir(item)}
+            key={index}
           >
             {item}
           </button>))}  

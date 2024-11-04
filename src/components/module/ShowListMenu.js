@@ -5,8 +5,11 @@ import "animate.css";
 function ShowListMenu({ list }) {
   return (
     <div className="w-full md:w-fit py-10 flex flex-wrap justify-between gap-y-10 md:justify-center md:gap-x-5 md:flex-nowrap animate__animated animate__zoomIn">
-      {list.map((item) => (
-        <div className="w-[45%] md:w-[12%] h-[260px] flex flex-col items-center hover:cursor-pointer overflow-hidden shadow-lg md:shadow-none">
+      {list.map((item, index) => (
+        <div
+          className="w-[45%] md:w-[12%] h-[260px] flex flex-col items-center hover:cursor-pointer overflow-hidden shadow-lg md:shadow-none"
+          key={index}
+        >
           <div className="w-[80%] md:w-[80%] h-[240px] md:h-[200px] flex justify-center items-center">
             <Image
               src={item.Image}
