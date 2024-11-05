@@ -6,11 +6,11 @@ function RadioList({ productData, setProductData }) {
     setProductData({ ...productData, [name]: value });
   };
   return (
-    <div className="w-full">
-      <p>دسته بندی</p>
-      <div className="w-full flex gap-x-4 mt-2">
+    <div className="w-full flex items-center">
+      <p className="w-[15%] text-[1.2rem]">دسته بندی :</p>
+      <div className="w-[70%] flex justify-between mt-2">
         <div>
-          <label htmlFor="TisBus">Tis Bus</label>
+          <label htmlFor="TisBus" className="text-[1.2rem]">Tis Bus</label>
           <input
             type="radio"
             name="firstCategory"
@@ -21,7 +21,7 @@ function RadioList({ productData, setProductData }) {
           />
         </div>
         <div>
-          <label htmlFor="TisAir">Tis Air</label>
+          <label htmlFor="TisAir" className="text-[1.2rem]">Tis Air</label>
           <input
             type="radio"
             name="firstCategory"
@@ -32,7 +32,7 @@ function RadioList({ productData, setProductData }) {
           />
         </div>
         <div>
-          <label htmlFor="TisBee">Tis Bee</label>
+          <label htmlFor="TisBee" className="text-[1.2rem]">Tis Bee</label>
           <input
             type="radio"
             name="firstCategory"
@@ -43,7 +43,7 @@ function RadioList({ productData, setProductData }) {
           />
         </div>
         <div>
-          <label htmlFor="TisLock">Tis Lock Smart</label>
+          <label htmlFor="TisLock" className="text-[1.2rem]">Tis Lock Smart</label>
           <input
             type="radio"
             name="firstCategory"

@@ -12,15 +12,15 @@ function TextInput({
      setProductData({...productData , [name]:p2e(value)})
   };
   return (
-    <div className="flex flex-col gap-y-2">
-      <p>{title}</p>
+    <div className="flex ">
+      <p className="w-[15%] text-[1.2rem]">{title}</p>
       {textarea ? (
         <textarea
           type="text"
           name={name}
           value={productData[name]}
           onChange={changeHandler}
-          className=" border-[1px] border-dashed w-[350px] p-1"
+          className=" border-[1px] border-dashed w-[85%] p-1 text-[1.2rem]"
         />
       ) : (
         <input
@@ -28,7 +28,7 @@ function TextInput({
           name={name}
           value={productData[name]}
           onChange={changeHandler}
-          className=" border-[1px] border-dashed w-[350px] p-1"
+          className=" border-[1px] border-dashed w-[85%] p-1 text-[1.2rem]"
         />
       )}
     </div>

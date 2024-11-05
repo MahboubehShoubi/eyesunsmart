@@ -3,6 +3,8 @@
 import { useState } from "react";
 import TextInput from "../element/TextInput";
 import RadioList from "../element/RadioList";
+import SecondCategoryList from "../element/SecondCategoryList";
+import SelectOptionList from "../element/SelectOptionList";
 
 function AddProductsPage() {
   const [productData, setProductData] = useState({
@@ -13,22 +15,27 @@ function AddProductsPage() {
     description: "",
     productColor: "",
     productIndexImage: "",
-    productAllphotos : [],
+    productAllphotos: [],
   });
 
   const submitHandler = () => {
     console.log(productData);
-  }
+  };
   return (
     <div className="w-full flex flex-col gap-y-5">
-      <h3 className="text-textWhite bg-bgRed px-5 py-2 text-[1.7rem] w-full ">
+      <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
         محصولات
       </h3>
-      <p className="w-fit px-5 py-2  text-bgRed ">
+      <p className="w-full text-center px-5 py-2 text-[1.5rem]">
         در این صفحه شما می توانید محصولات خود را اضافه کنید
       </p>
       <div className="w-full flex flex-col gap-y-5">
         <RadioList productData={productData} setProductData={setProductData} />
+
+        <SecondCategoryList
+          productData={productData}
+          setProductData={setProductData}
+        />
 
         <TextInput
           title="نام محصول"
@@ -36,16 +43,20 @@ function AddProductsPage() {
           productData={productData}
           setProductData={setProductData}
         />
-         <TextInput
+        <TextInput
           title="توضیحات "
           name="description"
           productData={productData}
           setProductData={setProductData}
-          textarea= {true}
+          textarea={true}
         />
-        
       </div>
-      <button onClick={submitHandler} className=" bg-green text-textWhite w-[350px] p-2 rounded-lg">ثبت محصول</button>
+      <button
+        onClick={submitHandler}
+        className=" bg-green text-textWhite w-[350px] p-2 rounded-lg"
+      >
+        ثبت محصول
+      </button>
     </div>
   );
 }

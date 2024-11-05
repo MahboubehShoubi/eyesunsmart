@@ -33,8 +33,8 @@ function Dashboardsidebar({ children, role, email }) {
           ></div>
         </div>
         <div className=" hidden md:block w-3/12">
-          <div className=" w-full flex flex-col gap-y-5 items-center shadow-2xl shadow-bgRed rounded-xl py-10 px-5">
-            <CgProfile className="text-[3rem] text-bgRed" />
+          <div className=" w-full flex flex-col gap-y-5 items-center shadow-2xl rounded-xl py-10 px-5">
+            <CgProfile className="text-[3rem]" />
             {role === "ADMIN" ? "ادمین سایت" : null}
             <span className="text-navyBlue">{email}</span>
             <span className="bg-textGray w-full h-[1px]"></span>
