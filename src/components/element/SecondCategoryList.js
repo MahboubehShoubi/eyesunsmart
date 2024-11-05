@@ -4,6 +4,7 @@ function SecondCategoryList({ productData, setProductData }) {
   const { firstCategory } = productData;
 
   const TisAirList = [
+    "پیش فرض",
     "panel",
     "controllers",
     "sensors",
@@ -11,6 +12,7 @@ function SecondCategoryList({ productData, setProductData }) {
     "gateways",
   ];
   const TisBeeList = [
+    "پیش فرض",
     "Wall Switch",
     "Controller",
     "Security/Sensor",
@@ -18,6 +20,7 @@ function SecondCategoryList({ productData, setProductData }) {
     "Gateway",
   ];
   const TisBusList = [
+    "پیش فرض",
     "panels",
     "Hotel InterFace",
     "Screens",
@@ -32,14 +35,14 @@ function SecondCategoryList({ productData, setProductData }) {
     "Other",
   ];
 
-  const TisLockList = ["Hotel Lock", "Smart Lock", "Other"];
-  
+  const TisLockList = ["پیش فرض", "Hotel Lock", "Smart Lock", "Other"];
+
   if (!firstCategory)
     return (
       <div className="w-full flex">
-      <label className="w-[15%] text-[1.2rem]">دسته بندی دوم :</label>
-      <select className="border-2 w-[300px] text-[1.1rem]">
-          <option>پیش فرض</option>
+        <label className="w-[15%] text-[1.2rem]">دسته بندی دوم :</label>
+        <select className="border-2 w-[300px] text-[1.1rem] rounded-l-full px-2 hover:cursor-pointer">
+          <option className=" hover:cursor-pointer">پیش فرض</option>
         </select>
       </div>
     );
@@ -49,6 +52,7 @@ function SecondCategoryList({ productData, setProductData }) {
       {firstCategory === "TisBus" && (
         <SelectOptionList
           title="دسته بندی دوم"
+          type="secondCategory"
           tisList={TisBusList}
           productData={productData}
           setProductData={setProductData}
@@ -57,6 +61,7 @@ function SecondCategoryList({ productData, setProductData }) {
       {firstCategory === "TisAir" && (
         <SelectOptionList
           title="دسته بندی دوم"
+          type="secondCategory"
           tisList={TisAirList}
           productData={productData}
           setProductData={setProductData}
@@ -65,6 +70,7 @@ function SecondCategoryList({ productData, setProductData }) {
       {firstCategory === "TisBee" && (
         <SelectOptionList
           title="دسته بندی دوم"
+          type="secondCategory"
           tisList={TisBeeList}
           productData={productData}
           setProductData={setProductData}
@@ -73,6 +79,7 @@ function SecondCategoryList({ productData, setProductData }) {
       {firstCategory === "TisLock" && (
         <SelectOptionList
           title="دسته بندی دوم"
+          type="secondCategory"
           tisList={TisLockList}
           productData={productData}
           setProductData={setProductData}

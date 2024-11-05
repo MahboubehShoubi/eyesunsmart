@@ -1,16 +1,28 @@
 function RadioList({ productData, setProductData }) {
-  const { firstCategory } = productData;
+  const { firstCategory} = productData;
 
   const changeHandler = (e) => {
     const { name, value } = e.target;
-    setProductData({ ...productData, [name]: value });
+    // setProductData({...productData,[name]: value});
+    setProductData({
+      firstCategory: value,
+      secondCategory: "",
+      thirdCategory: "",
+      productName: "",
+      description: "",
+      productColor: "",
+      productIndexImage: "",
+      productAllphotos: [],
+    });
   };
   return (
     <div className="w-full flex items-center">
-      <p className="w-[15%] text-[1.2rem]">دسته بندی :</p>
+      <p className="w-[15%] text-[1.2rem]"> دسته بندی اول :</p>
       <div className="w-[70%] flex justify-between mt-2">
         <div>
-          <label htmlFor="TisBus" className="text-[1.2rem]">Tis Bus</label>
+          <label htmlFor="TisBus" className="text-[1.2rem]">
+            Tis Bus
+          </label>
           <input
             type="radio"
             name="firstCategory"
@@ -21,7 +33,9 @@ function RadioList({ productData, setProductData }) {
           />
         </div>
         <div>
-          <label htmlFor="TisAir" className="text-[1.2rem]">Tis Air</label>
+          <label htmlFor="TisAir" className="text-[1.2rem]">
+            Tis Air
+          </label>
           <input
             type="radio"
             name="firstCategory"
@@ -32,7 +46,9 @@ function RadioList({ productData, setProductData }) {
           />
         </div>
         <div>
-          <label htmlFor="TisBee" className="text-[1.2rem]">Tis Bee</label>
+          <label htmlFor="TisBee" className="text-[1.2rem]">
+            Tis Bee
+          </label>
           <input
             type="radio"
             name="firstCategory"
@@ -43,7 +59,9 @@ function RadioList({ productData, setProductData }) {
           />
         </div>
         <div>
-          <label htmlFor="TisLock" className="text-[1.2rem]">Tis Lock Smart</label>
+          <label htmlFor="TisLock" className="text-[1.2rem]">
+            Tis Lock Smart
+          </label>
           <input
             type="radio"
             name="firstCategory"

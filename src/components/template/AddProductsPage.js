@@ -5,6 +5,7 @@ import TextInput from "../element/TextInput";
 import RadioList from "../element/RadioList";
 import SecondCategoryList from "../element/SecondCategoryList";
 import SelectOptionList from "../element/SelectOptionList";
+import ThirdCategory from "../element/ThirdCategory";
 
 function AddProductsPage() {
   const [productData, setProductData] = useState({
@@ -20,11 +21,21 @@ function AddProductsPage() {
 
   const submitHandler = () => {
     console.log(productData);
+    setProductData({
+      firstCategory: "",
+      secondCategory: "",
+      thirdCategory: "",
+      productName: "",
+      description: "",
+      productColor: "",
+      productIndexImage: "",
+      productAllphotos: [],
+    });
   };
   return (
     <div className="w-full flex flex-col gap-y-5">
       <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
-        محصولات
+         افزودن محصولات 
       </h3>
       <p className="w-full text-center px-5 py-2 text-[1.5rem]">
         در این صفحه شما می توانید محصولات خود را اضافه کنید
@@ -33,6 +44,11 @@ function AddProductsPage() {
         <RadioList productData={productData} setProductData={setProductData} />
 
         <SecondCategoryList
+          productData={productData}
+          setProductData={setProductData}
+        />
+
+        <ThirdCategory
           productData={productData}
           setProductData={setProductData}
         />
