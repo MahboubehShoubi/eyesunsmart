@@ -6,6 +6,7 @@ import RadioList from "../element/RadioList";
 import SecondCategoryList from "../element/SecondCategoryList";
 import SelectOptionList from "../element/SelectOptionList";
 import ThirdCategory from "../element/ThirdCategory";
+import ImagesList from "../element/ImagesList";
 
 function AddProductsPage() {
   const [productData, setProductData] = useState({
@@ -14,7 +15,6 @@ function AddProductsPage() {
     thirdCategory: "",
     productName: "",
     description: "",
-    productColor: "",
     productIndexImage: "",
     productAllphotos: [],
   });
@@ -27,7 +27,6 @@ function AddProductsPage() {
       thirdCategory: "",
       productName: "",
       description: "",
-      productColor: "",
       productIndexImage: "",
       productAllphotos: [],
     });
@@ -35,7 +34,7 @@ function AddProductsPage() {
   return (
     <div className="w-full flex flex-col gap-y-5">
       <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
-         افزودن محصولات 
+        افزودن محصولات
       </h3>
       <p className="w-full text-center px-5 py-2 text-[1.5rem]">
         در این صفحه شما می توانید محصولات خود را اضافه کنید
@@ -66,6 +65,25 @@ function AddProductsPage() {
           setProductData={setProductData}
           textarea={true}
         />
+        <div className="w-full flex">
+          <label for="img" className="w-[15%]">
+            انتخاب عکس شاخص :
+          </label>
+          <input
+            type="file"
+            id="img"
+            name="productIndexImage"
+            accept="image/*"
+            onChange={(e) =>
+              setProductData({
+                ...productData,
+                productIndexImage: e.target.value,
+              })
+            }
+            value={productData.productIndexImage}
+          />
+        </div>
+        <ImagesList title="  گالری تصاویر : " type="productAllphotos" productData={productData} setProductData={setProductData} />
       </div>
       <button
         onClick={submitHandler}
