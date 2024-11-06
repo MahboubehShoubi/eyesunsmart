@@ -13,7 +13,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 
 import DashboardMenu from "@/module/DashboardMenu";
 
-function Dashboardsidebar({ children, role, email }) {
+function Dashboardsidebar({ children , role , email }) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -21,16 +21,9 @@ function Dashboardsidebar({ children, role, email }) {
       <div className=" container w-full md:max-w-screen-xl flex flex-col gap-y-5 md:flex-row md:gap-x-5">
         <div className=" md:hidden w-full flex">
           <div className="w-1/2">
-            <DashboardMenu
-              role={role}
-              showMenu={showMenu}
-              setShowMenu={setShowMenu}
-            />
+            <DashboardMenu role={role} showMenu={showMenu} setShowMenu={setShowMenu} />
           </div>
-          <div
-            className="w-1/2"
-            onClick={() => setShowMenu(false)}
-          ></div>
+          <div className="w-1/2" onClick={() => setShowMenu(false)}></div>
         </div>
         <div className=" hidden md:block w-3/12">
           <div className=" w-full flex flex-col gap-y-5 items-center shadow-2xl rounded-xl py-10 px-5">

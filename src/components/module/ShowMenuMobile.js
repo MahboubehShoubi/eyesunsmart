@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,10 +8,7 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 function ShowMenuMobile({isShow , setIsShow , subMenu , setSubMenu}) {
   return (
     <div className="relative w-full h-fit z-[2]">
-      <div
-        className={isShow && " absolute w-full h-screen bg-backgroundBlack"}
-        onClick={() => setIsShow(false)}
-      ></div>
+      <div onClick={(e) => setIsShow(false)} className={isShow ? "absolute w-full h-screen bg-backgroundBlack" : null}></div>    
       {/* --------------------------- منو در حالت موبایل ----------------------- */}
       <div
         className={
@@ -21,9 +20,9 @@ function ShowMenuMobile({isShow , setIsShow , subMenu , setSubMenu}) {
         <ul className="text-[#fff] w-full h-full flex flex-col items-start gap-y-5 px-8 py-5">
           <li>
             <Link
-              className=" inline-block bg-navyBlue"
+              className="inline-block bg-navyBlue"
               href="/"
-              onClick={() => setIsShow(false)}
+              onClick={(e) => setIsShow(false)}
             >
               صفحه اصلی
             </Link>

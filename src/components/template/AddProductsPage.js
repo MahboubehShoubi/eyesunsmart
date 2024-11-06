@@ -1,15 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import TextInput from "../element/TextInput";
-import RadioList from "../element/RadioList";
-import SecondCategoryList from "../element/SecondCategoryList";
-import SelectOptionList from "../element/SelectOptionList";
-import ThirdCategory from "../element/ThirdCategory";
-import ImagesList from "../element/ImagesList";
 
+import RadioList from "@/element/RadioList";
+import SecondCategoryList from "@/element/SecondCategoryList";
+import ThirdCategory from "@/element/ThirdCategory";
+import TextInput from "@/element/TextInput";
+import ImagesList from "@/element/ImagesList";
 function AddProductsPage() {
-  const [productData, setProductData] = useState({
+  const [ productData , setProductData ] = useState({
     firstCategory: "",
     secondCategory: "",
     thirdCategory: "",
@@ -47,24 +46,10 @@ function AddProductsPage() {
           setProductData={setProductData}
         />
 
-        <ThirdCategory
-          productData={productData}
-          setProductData={setProductData}
-        />
+        <ThirdCategory productData={productData} setProductData={setProductData} />
 
-        <TextInput
-          title="نام محصول"
-          name="productName"
-          productData={productData}
-          setProductData={setProductData}
-        />
-        <TextInput
-          title="توضیحات "
-          name="description"
-          productData={productData}
-          setProductData={setProductData}
-          textarea={true}
-        />
+        <TextInput title="نام محصول" name="productName" productData={productData} setProductData={setProductData} />
+        <TextInput title="توضیحات " name="description" productData={productData} setProductData={setProductData} textarea={true} />
         <div className="w-full flex">
           <label for="img" className="w-[15%]">
             انتخاب عکس شاخص :
@@ -87,7 +72,7 @@ function AddProductsPage() {
       </div>
       <button
         onClick={submitHandler}
-        className=" bg-green text-textWhite w-[350px] p-2 rounded-lg"
+        className="bg-green text-textWhite w-[350px] p-2 rounded-lg"
       >
         ثبت محصول
       </button>
