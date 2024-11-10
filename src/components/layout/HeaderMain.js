@@ -169,7 +169,7 @@ function HeaderMain() {
                   <li>
                     <Link href="/products/other">
                       <Image
-                        className="w-[150px] h-[60px]"
+                        className="w-[150px] h-[55px]"
                         src="/image/tis-group/other.png"
                         width={1000}
                         height={700}
