@@ -72,37 +72,6 @@ function ThirdCategory({ productData, setProductData }) {
     "Dion Wall Remote",
   ];
 
-  // Tis Bus Category-------------------------------------------------------------
-  // const TisBusList = [
-  //   "panels",
-  //   "Hotel InterFace",
-  //   "Screens",
-  //   "Dimmers",
-  //   "Relays",
-  //   "Sensors",
-  //   "BMS/PMS",
-  //   "Motors",
-  //   "Audio/Video",
-  //   "Meters",
-  //   "Gateways",
-  //   "Other",
-  // ];
-
-  // const TisBusGroup = [
-  //   "TisBusPanels",
-  //   "TisBusHotelInterFace",
-  //   "TisBusScreen",
-  //   "TisBusDimmers",
-  //   "TisBusRelays",
-  //   "TisBusSensors",
-  //   "TisBusBmsPms",
-  //   "TisBusMotors",
-  //   "TisBusAudioVideo",
-  //   "TisBusMeters",
-  //   "TisBusGateways",
-  //   "TisBusOther"
-  // ];
-
   const TisBusAudioVideo = [
     "پیش فرض",
     "4Zone Amplifier",
@@ -238,6 +207,17 @@ function ThirdCategory({ productData, setProductData }) {
     "TIS-A210",
   ];
 
+  // Other ------------------------------------------
+  const OtherProductPanel = ["پیش فرض", "Screen", "Simple Panel"];
+  const OtherProductAudio = ["پیش فرض", "Player", "Speacker"];
+  const OtherProductSmartLock = ["پیش فرض", "Lock"];
+  const OtherProductSensors = [
+    "پیش فرض",
+    "CO Detector",
+    "Smook Detector",
+    "Motion Sensor",
+  ];
+
   // ---------------------------------------------------------------------
   if (!firstCategory || !secondCategory)
     return (
@@ -251,26 +231,12 @@ function ThirdCategory({ productData, setProductData }) {
 
   // ----------------- Tis bus --------------------------------------------
   if (firstCategory === "TisBus") {
-    // TisBusList.map((item , index) => {
-    //   if (secondCategory === `${item}`) {
-    //     return (
-    //       <SelectOptionList
-    //         title="دسته بندی سوم"
-    //         type="thirdCategory"
-    //         tisList={TisBusGroup[index]}
-    //         productData={productData}
-    //         setProductData={setProductData}
-    //       />
-    //     );
-    //   }
-    // })
-
     if (secondCategory === "panels") {
       return (
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusPanels}
+          list={TisBusPanels}
           productData={productData}
           setProductData={setProductData}
         />
@@ -280,7 +246,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusHotelInterFace}
+          list={TisBusHotelInterFace}
           productData={productData}
           setProductData={setProductData}
         />
@@ -290,7 +256,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusScreen}
+          list={TisBusScreen}
           productData={productData}
           setProductData={setProductData}
         />
@@ -300,7 +266,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusDimmers}
+          list={TisBusDimmers}
           productData={productData}
           setProductData={setProductData}
         />
@@ -310,7 +276,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusRelays}
+          list={TisBusRelays}
           productData={productData}
           setProductData={setProductData}
         />
@@ -320,7 +286,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusSensors}
+          list={TisBusSensors}
           productData={productData}
           setProductData={setProductData}
         />
@@ -330,7 +296,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusBmsPms}
+          list={TisBusBmsPms}
           productData={productData}
           setProductData={setProductData}
         />
@@ -340,7 +306,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusMotors}
+          list={TisBusMotors}
           productData={productData}
           setProductData={setProductData}
         />
@@ -350,7 +316,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusAudioVideo}
+          list={TisBusAudioVideo}
           productData={productData}
           setProductData={setProductData}
         />
@@ -360,7 +326,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusMeters}
+          list={TisBusMeters}
           productData={productData}
           setProductData={setProductData}
         />
@@ -370,7 +336,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusGateways}
+          list={TisBusGateways}
           productData={productData}
           setProductData={setProductData}
         />
@@ -380,7 +346,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBusOther}
+          list={TisBusOther}
           productData={productData}
           setProductData={setProductData}
         />
@@ -395,7 +361,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisAirPanel}
+          list={TisAirPanel}
           productData={productData}
           setProductData={setProductData}
         />
@@ -405,7 +371,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisAirControllers}
+          list={TisAirControllers}
           productData={productData}
           setProductData={setProductData}
         />
@@ -415,7 +381,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisAirSensor}
+          list={TisAirSensor}
           productData={productData}
           setProductData={setProductData}
         />
@@ -425,7 +391,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisAirIntercom}
+          list={TisAirIntercom}
           productData={productData}
           setProductData={setProductData}
         />
@@ -435,7 +401,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisAirGateways}
+          list={TisAirGateways}
           productData={productData}
           setProductData={setProductData}
         />
@@ -450,7 +416,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBeeWallSwitch}
+          list={TisBeeWallSwitch}
           productData={productData}
           setProductData={setProductData}
         />
@@ -460,7 +426,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBeeController}
+          list={TisBeeController}
           productData={productData}
           setProductData={setProductData}
         />
@@ -470,7 +436,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBeeSecuritySensor}
+          list={TisBeeSecuritySensor}
           productData={productData}
           setProductData={setProductData}
         />
@@ -480,7 +446,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBeeLights}
+          list={TisBeeLights}
           productData={productData}
           setProductData={setProductData}
         />
@@ -490,7 +456,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisBeeGateway}
+          list={TisBeeGateway}
           productData={productData}
           setProductData={setProductData}
         />
@@ -505,7 +471,7 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisLockHotelLock}
+          list={TisLockHotelLock}
           productData={productData}
           setProductData={setProductData}
         />
@@ -515,7 +481,52 @@ function ThirdCategory({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی سوم"
           type="thirdCategory"
-          tisList={TisLockSmartLock}
+          list={TisLockSmartLock}
+          productData={productData}
+          setProductData={setProductData}
+        />
+      );
+    }
+  }
+
+  // ----------- Other ---------------------------
+  if (firstCategory === "Other") {
+    if (secondCategory === "Panel") {
+      return (
+        <SelectOptionList
+          title="دسته بندی سوم"
+          type="thirdCategory"
+          list={OtherProductPanel}
+          productData={productData}
+          setProductData={setProductData}
+        />
+      );
+    } else if (secondCategory === "Smart Lock") {
+      return (
+        <SelectOptionList
+          title="دسته بندی سوم"
+          type="thirdCategory"
+          list={OtherProductSmartLock}
+          productData={productData}
+          setProductData={setProductData}
+        />
+      );
+    } else if (secondCategory === "Sensors") {
+      return (
+        <SelectOptionList
+          title="دسته بندی سوم"
+          type="thirdCategory"
+          list={OtherProductSensors}
+          productData={productData}
+          setProductData={setProductData}
+        />
+      );
+    } else if (secondCategory === "Audio") {
+      return (
+        <SelectOptionList
+          title="دسته بندی سوم"
+          type="thirdCategory"
+          list={OtherProductAudio}
           productData={productData}
           setProductData={setProductData}
         />

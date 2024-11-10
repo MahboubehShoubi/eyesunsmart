@@ -12,7 +12,6 @@ function RadioList({ productData, setProductData }) {
       description: "",
       productColor: "",
       productIndexImage: "",
-      productAllphotos: [],
     });
   };
   return (
@@ -60,7 +59,7 @@ function RadioList({ productData, setProductData }) {
         </div>
         <div>
           <label htmlFor="TisLock" className="text-[1.2rem]">
-            Tis Lock Smart
+            Tis Smart Lock
           </label>
           <input
             type="radio"
@@ -68,6 +67,19 @@ function RadioList({ productData, setProductData }) {
             id="TisLock"
             value="TisLock"
             checked={firstCategory === "TisLock"}
+            onChange={changeHandler}
+          />
+        </div>
+        <div>
+          <label htmlFor="Other" className="text-[1.2rem]">
+            Other
+          </label>
+          <input
+            type="radio"
+            name="firstCategory"
+            id="Other"
+            value="Other"
+            checked={firstCategory === "Other"}
             onChange={changeHandler}
           />
         </div>

@@ -35,6 +35,14 @@ function SecondCategoryList({ productData, setProductData }) {
     "Other",
   ];
 
+  const Other = [
+    "پیش فرض",
+    "Panel",
+    "Smart Lock",
+    "Sensors",
+    "Audio",
+  ];
+
   const TisLockList = ["پیش فرض", "Hotel Lock", "Smart Lock", "Other"];
 
   if (!firstCategory)
@@ -53,7 +61,7 @@ function SecondCategoryList({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی دوم"
           type="secondCategory"
-          tisList={TisBusList}
+          list={TisBusList}
           productData={productData}
           setProductData={setProductData}
         />
@@ -62,7 +70,7 @@ function SecondCategoryList({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی دوم"
           type="secondCategory"
-          tisList={TisAirList}
+          list={TisAirList}
           productData={productData}
           setProductData={setProductData}
         />
@@ -71,7 +79,7 @@ function SecondCategoryList({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی دوم"
           type="secondCategory"
-          tisList={TisBeeList}
+          list={TisBeeList}
           productData={productData}
           setProductData={setProductData}
         />
@@ -80,7 +88,16 @@ function SecondCategoryList({ productData, setProductData }) {
         <SelectOptionList
           title="دسته بندی دوم"
           type="secondCategory"
-          tisList={TisLockList}
+          list={TisLockList}
+          productData={productData}
+          setProductData={setProductData}
+        />
+      )}
+      {firstCategory === "Other" && (
+        <SelectOptionList
+          title="دسته بندی دوم"
+          type="secondCategory"
+          list={Other}
           productData={productData}
           setProductData={setProductData}
         />

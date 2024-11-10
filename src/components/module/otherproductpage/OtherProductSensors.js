@@ -1,29 +1,21 @@
 import ShowListMenu from "../ShowListMenu";
 
 function OtherProductSensors() {
-    const ControllersList = [
+    const SensorsList = [
         {
-          title: "ADS-Controller",
+          title: "CO Detector",
           Image: "/image/tis-group/tis-air/controllers/ADS-Controller.jpg",
         },
         {
-          title: "ACM Switch",
+          title: "Smook Detector",
           Image: "/image/tis-group/tis-air/controllers/ACM-Switch.jpg",
         },
         {
-          title: "AIR Socket",
-          Image: "/image/tis-group/tis-air/controllers/AIR-Socket.jpg",
-        },
-        {
-          title: "AIR IR Emitter",
-          Image: "/image/tis-group/tis-air/controllers/AIR-IR-Emitter.jpg",
-        },
-        {
-          title: "TRV Controller",
-          Image: "/image/tis-group/tis-air/controllers/TRV-Controller.jpg",
+          title: "Motion Sensor",
+          Image: "/image/tis-group/tis-air/controllers/ACM-Switch.jpg",
         },
       ];
-      return <ShowListMenu list={ControllersList} />;
+      return <ShowListMenu list={SensorsList} />;
 }
 
 export default OtherProductSensors;
