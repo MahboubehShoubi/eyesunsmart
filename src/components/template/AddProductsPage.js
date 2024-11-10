@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import toast, { Toaster } from "react-hot-toast";
 
 // Components
 import RadioList from "@/element/RadioList";
@@ -18,20 +19,28 @@ function AddProductsPage() {
     thirdCategory: "",
     productName: "",
     description: "",
+    productColor:"",
     productIndexImage: "",
   });
 
 
-  const submitHandler = () => {
-    console.log(productData);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const {firstCategory ,secondCategory ,thirdCategory , productName , productIndexImage} = productData;
+
+    if(!firstCategory || !secondCategory ||!thirdCategory || !productName || !productIndexImage){
+      toast.error("لطفا اطلاعات را درست وارد کنید");
+    }
     setProductData({
       firstCategory: "",
       secondCategory: "",
       thirdCategory: "",
       productName: "",
       description: "",
+      productColor:"",
       productIndexImage: "",
     });
+    console.log(productData);
   };
 
   return (
@@ -67,6 +76,12 @@ function AddProductsPage() {
           productData={productData}
           setProductData={setProductData}
           textarea={true}
+        />
+         <TextInput
+          title="رنگ محصول"
+          name="productColor"
+          productData={productData}
+          setProductData={setProductData}
         />
         <div className="w-full flex">
           <div className="w-3/5">
@@ -109,6 +124,7 @@ function AddProductsPage() {
       >
         ثبت محصول
       </button>
+      <Toaster/>
     </div>
   );
 }
