@@ -20,7 +20,11 @@ const productSchema = new Schema(
     },
     description: {
       type: String,
-      required: true,
+      required: false,
+    },
+    productColor: {
+      type: String,
+      required: false,
     },
     productIndexImage: {
       type: String,
