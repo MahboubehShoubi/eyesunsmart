@@ -124,7 +124,7 @@ function HeaderMain() {
                   <li>
                     <Link href="/products/tis-bus">
                       <Image
-                        className="w-[250px]"
+                        className="w-[200px] h-[110px]"
                         src="/image/tis-group/bus.png"
                         width={1000}
                         height={700}
@@ -135,7 +135,7 @@ function HeaderMain() {
                   <li>
                     <Link href="/products/tis-air">
                       <Image
-                        className="w-[250px]"
+                        className="w-[200px] h-[110px]"
                         src="/image/tis-group/air.png"
                         width={1000}
                         height={700}
@@ -146,7 +146,7 @@ function HeaderMain() {
                   <li>
                     <Link href="/products/tis-bee">
                       <Image
-                        className="w-[250px]"
+                        className="w-[200px] h-[110px]"
                         src="/image/tis-group/bee.png"
                         width={1000}
                         height={700}
@@ -158,8 +158,19 @@ function HeaderMain() {
                   <li>
                     <Link href="/products/tis-lock">
                       <Image
-                        className="w-[250px]"
+                        className="w-[200px] h-[110px]"
                         src="/image/tis-group/tis-lock.png"
+                        width={1000}
+                        height={700}
+                        alt="brandImg"
+                      />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products/other">
+                      <Image
+                        className="w-[150px] h-[60px]"
+                        src="/image/tis-group/other.png"
                         width={1000}
                         height={700}
                         alt="brandImg"

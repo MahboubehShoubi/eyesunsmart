@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+
+// Components
 import TisAirPanel from "@/module/tisairpage/TisAirPanel";
 import TisAirControllers from "@/module/tisairpage/TisAirControllers";
 import TisAirSensor from "@/module/tisairpage/TisAirSensor";
