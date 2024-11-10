@@ -79,7 +79,7 @@ function MainOurProject() {
             onMouseOut={() => setShow2(false)}
             className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
             style={{
-              backgroundImage: `linear-gradient(to top , #0A043C ,transparent 80%) , url(/image/main/main-our-project/imag-2.jpg)`,
+              backgroundImage: `linear-gradient(to top , #E51B20 ,transparent 80%) , url(/image/main/main-our-project/imag-2.jpg)`,
             }}
           >
             <div
@@ -104,6 +104,8 @@ function MainOurProject() {
             </div>
           </div>
 
+          {/* #E51B20 */}
+          {/* #0A043C */}
           <div
             onMouseOver={() => setShow3(true)}
             onMouseOut={() => setShow3(false)}
@@ -139,7 +141,7 @@ function MainOurProject() {
             onMouseOut={() => setShow4(false)}
             className="w-full h-[400px] md:w-[22.5%] grid grid-rows-5 rounded-3xl overflow-hidden bg-cover bg-center hover:cursor-pointer"
             style={{
-              backgroundImage: `linear-gradient(to top , #EC7626 ,transparent 80% ) , url(/image/main/main-our-project/imag-4.jpg)`,
+              backgroundImage: `linear-gradient(to top , #E51B20 ,transparent 80%) , url(/image/main/main-our-project/imag-4.jpg)`,
             }}
           >
             <div

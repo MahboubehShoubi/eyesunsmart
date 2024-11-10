@@ -126,7 +126,7 @@ function Footer() {
               <div className="w-2/3 h-full flex justify-center">
                 <div className="w-[80%] h-full border-2 border-textWhite">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d2896.043425962957!2d51.4255905!3d36.6689187!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sfa!2s!4v1727380337175!5m2!1sfa!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237.5901841900937!2d53.075083931457115!3d36.56064501407739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f853f0047acd169%3A0xb91ff561a272f2c!2z2LTYsdqp2Kog2YHZhiDYp9mI2LHYp9mGINmH2YjYtNmF2YbYryDYs9in2YYgVElT!5e1!3m2!1sfa!2s!4v1731183988895!5m2!1sfa!2s"
                     className="w-full h-full"
                   ></iframe>
                 </div>

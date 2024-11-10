@@ -102,16 +102,14 @@ function HeaderSubPage() {
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/">صفحه اصلی</Link>
               </li>
-              <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem] relative">
-                <Link
-                  href="/products"
-                  className="flex items-center"
-                  onMouseEnter={() => setSubMenu(true)}
-                  onMouseLeave={() => setSubMenu(false)}
-                >
-                  محصولات
-                  <MdKeyboardDoubleArrowDown className=" mr-1 text-secondery" />
-                </Link>
+              <li
+                onMouseEnter={() => setSubMenu(true)}
+                onMouseLeave={() => setSubMenu(false)}
+                onMouseDown={() => setSubMenu(true)}
+                className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem] relative cursor-pointer"
+              >
+                محصولات
+                <MdKeyboardDoubleArrowDown className=" mr-1 text-secondery" />
                 <ul
                   className={
                     subMenu
