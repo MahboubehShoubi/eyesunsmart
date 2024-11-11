@@ -22,7 +22,7 @@ function MainProduct() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-y-10 w-full justify-between mt-10">
-          <div className="w-full md:w-[23.5%] shadow-xl px-10 py-5 rounded-xl bg-backgroundWhite">
+          <div className="w-full h-[150px] md:h-[100px] md:w-[19%] md:px-5 flex justify-center items-center shadow-xl rounded-xl bg-backgroundWhite">
             <Link href="/products/tis-air">
               <Image
                 className="w-full"
@@ -33,7 +33,7 @@ function MainProduct() {
               />
             </Link>
           </div>
-          <div className="w-full md:w-[23.5%] shadow-xl px-10 py-5 rounded-xl bg-backgroundWhite">
+          <div className="w-full h-[150px] md:h-[100px] md:w-[19%] md:px-5 flex justify-center items-center shadow-xl rounded-xl bg-backgroundWhite">
             <Link href="/products/tis-bee">
               <Image
                 className="w-full"
@@ -44,7 +44,7 @@ function MainProduct() {
               />
             </Link>
           </div>
-          <div className="w-full md:w-[23.5%] shadow-xl px-10 py-5 rounded-xl bg-backgroundWhite">
+          <div className="w-full h-[150px] md:h-[100px] md:w-[19%] md:px-5 flex justify-center items-center shadow-xl rounded-xl bg-backgroundWhite">
             <Link href="/products/tis-bus">
               <Image
                 className="w-full"
@@ -55,11 +55,22 @@ function MainProduct() {
               />
             </Link>
           </div>
-          <div className=" w-full md:w-[23.5%] shadow-2xl px-10 py-5 rounded-xl bg-backgroundWhite">
+          <div className=" w-full h-[150px] md:h-[100px] md:w-[19%] md:px-5 flex justify-center items-center shadow-2xl rounded-xl bg-backgroundWhite">
             <Link href="/products/tis-lock">
               <Image
                 className="w-full"
                 src="/image/tis-group/tis-lock.png"
+                width={1000}
+                height={700}
+                alt="berandImg"
+              />
+            </Link>
+          </div>
+          <div className=" w-full h-[150px] md:h-[100px] md:w-[19%] md:px-5 flex justify-center items-center shadow-2xl rounded-xl bg-backgroundWhite ">
+            <Link href="/products/other">
+              <Image
+                className="w-full h-[70px] md:w-[150px] md:h-[50px]"
+                src="/image/tis-group/other.png"
                 width={1000}
                 height={700}
                 alt="berandImg"
