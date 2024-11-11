@@ -221,8 +221,8 @@ function ThirdCategory({ productData, setProductData }) {
   // ---------------------------------------------------------------------
   if (!firstCategory || !secondCategory)
     return (
-      <div className="w-full flex">
-        <label className="w-[15%] text-[1.2rem]">دسته بندی سوم :</label>
+      <div className="w-full flex flex-col md:flex-row">
+        <label className="w-full md:w-[15%] text-[1.2rem]">دسته بندی سوم :</label>
         <select className="border-2 w-[300px] text-[1.1rem] rounded-l-full px-2 hover:cursor-pointer">
           <option className=" hover:cursor-pointer">پیش فرض</option>
         </select>

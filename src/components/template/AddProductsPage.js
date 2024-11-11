@@ -48,7 +48,7 @@ function AddProductsPage() {
       <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
         افزودن محصولات
       </h3>
-      <p className="w-full text-center px-5 py-2 text-[1.5rem]">
+      <p className="w-full text-center px-5 py-2 bg-bgRed text-textWhite text-[1rem] md:text-[1.5rem] md:bg-transparent md:text-backgroundBlack">
         در این صفحه شما می توانید محصولات خود را اضافه کنید
       </p>
       <div className="w-full flex flex-col gap-y-5">
@@ -83,10 +83,10 @@ function AddProductsPage() {
           productData={productData}
           setProductData={setProductData}
         />
-        <div className="w-full flex">
-          <div className="w-3/5">
-            <div className="w-full flex">
-              <label htmlFor="img" className="w-[30%]">
+        <div className="w-full flex flex-col gap-y-5 md:flex-row">
+          <div className="w-full md:w-3/5">
+            <div className="w-full flex flex-col md:flex-row">
+              <label htmlFor="img" className="w-full md:w-[30%] text-[1.2rem] md:text-[1rem]">
                 انتخاب عکس شاخص :
               </label>
               <input
@@ -120,7 +120,7 @@ function AddProductsPage() {
       </div>
       <button
         onClick={submitHandler}
-        className="bg-green text-textWhite w-[350px] p-2 rounded-lg"
+        className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
       >
         ثبت محصول
       </button>
