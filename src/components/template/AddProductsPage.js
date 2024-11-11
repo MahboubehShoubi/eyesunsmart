@@ -86,7 +86,7 @@ function AddProductsPage() {
         <div className="w-full flex">
           <div className="w-3/5">
             <div className="w-full flex">
-              <label for="img" className="w-[30%]">
+              <label htmlFor="img" className="w-[30%]">
                 انتخاب عکس شاخص :
               </label>
               <input
