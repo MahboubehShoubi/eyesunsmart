@@ -29,17 +29,17 @@ function MainServicess() {
             <div className="md:hidden rounded-[30px] overflow-hidden mt-10">
               <Image
                 className="w-full h-full object-cover"
-                src="/image/main/main-services/img-1.jpg"
+                src="/image/main/main-services/img.jpg"
                 width={1000}
                 height={700}
                 alt="image"
               />
             </div>
           </div>
-          <div className=" hidden md:block md:col-start-8 md:col-end-13 md:row-start-1 md:row-end-4 rounded-[40px] overflow-hidden">
+          <div className="hidden md:block md:col-start-8 md:col-end-13 md:row-start-1 md:row-end-4 rounded-[40px] overflow-hidden">
             <Image
               className="w-full h-full object-cover"
-              src="/image/main-services/img-1.jpg"
+              src="/image/main/main-services/img.jpg"
               width={1000}
               height={700}
               alt="image"
