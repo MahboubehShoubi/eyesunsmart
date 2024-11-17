@@ -10,37 +10,37 @@ import SecondCategoryList from "@/element/SecondCategoryList";
 import ThirdCategory from "@/element/ThirdCategory";
 import TextInput from "@/element/TextInput";
 
-
 function AddProductsPage() {
-
   const [productData, setProductData] = useState({
     firstCategory: "",
     secondCategory: "",
     thirdCategory: "",
     productName: "",
     description: "",
-    productColor:"",
-    productIndexImage: "",
+    productColor: "",
+    productIndexImage: null,
   });
-
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const {firstCategory ,secondCategory ,thirdCategory , productName , productIndexImage} = productData;
-
-    if(!firstCategory || !secondCategory ||!thirdCategory || !productName || !productIndexImage){
-      toast.error("لطفا اطلاعات را درست وارد کنید");
-    }
-    setProductData({
-      firstCategory: "",
-      secondCategory: "",
-      thirdCategory: "",
-      productName: "",
-      description: "",
-      productColor:"",
-      productIndexImage: "",
-    });
     console.log(productData);
+
+    const formData = new FormData();
+    for (let i in productData) {
+      formData.append(i, productData[i]);
+    }
+
+    console.log(formData);
+
+    // setProductData({
+    //   firstCategory: "",
+    //   secondCategory: "",
+    //   thirdCategory: "",
+    //   productName: "",
+    //   description: "",
+    //   productColor:"",
+    //   productIndexImage: "",
+    // });
   };
 
   return (
@@ -77,7 +77,7 @@ function AddProductsPage() {
           setProductData={setProductData}
           textarea={true}
         />
-         <TextInput
+        <TextInput
           title="رنگ محصول"
           name="productColor"
           productData={productData}
@@ -86,7 +86,10 @@ function AddProductsPage() {
         <div className="w-full flex flex-col gap-y-5 md:flex-row">
           <div className="w-full md:w-3/5">
             <div className="w-full flex flex-col md:flex-row">
-              <label htmlFor="img" className="w-full md:w-[30%] text-[1.2rem] md:text-[1rem]">
+              <label
+                htmlFor="img"
+                className="w-full md:w-[30%] text-[1.2rem] md:text-[1rem]"
+              >
                 انتخاب عکس شاخص :
               </label>
               <input
@@ -97,23 +100,17 @@ function AddProductsPage() {
                 onChange={(e) =>
                   setProductData({
                     ...productData,
-                    productIndexImage: e.target.value,
+                    productIndexImage: e.target.files[0],
                   })
                 }
-                value={productData.productIndexImage}
               />
             </div>
           </div>
           <div className="w-2/5">
             <div className="w-full h-[150px] border-2">
-              {productData.productIndexImage ? (
-                <Image
-                  src=""
-                  width={1000}
-                  height={700}
-                  alt="Index Image"
-                />
-              ) : null}
+              {/* {productData.productIndexImage ? (
+                <Image src="" width={1000} height={700} alt="Index Image" />
+              ) : null} */}
             </div>
           </div>
         </div>
@@ -124,7 +121,7 @@ function AddProductsPage() {
       >
         ثبت محصول
       </button>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }
