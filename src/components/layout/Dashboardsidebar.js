@@ -10,10 +10,12 @@ import { CgProfile } from "react-icons/cg";
 import { IoMdHome } from "react-icons/io";
 import { AiFillProduct } from "react-icons/ai";
 import { FaProjectDiagram } from "react-icons/fa";
+import { MdRebaseEdit } from "react-icons/md";
+import { RiEdit2Fill } from "react-icons/ri";
 
 import DashboardMenu from "@/module/DashboardMenu";
 
-function Dashboardsidebar({ children , role , email }) {
+function Dashboardsidebar({ children, role, email }) {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -21,7 +23,11 @@ function Dashboardsidebar({ children , role , email }) {
       <div className=" container w-full md:max-w-screen-xl flex flex-col gap-y-5 md:flex-row md:gap-x-5">
         <div className=" md:hidden w-full flex">
           <div className="w-1/2">
-            <DashboardMenu role={role} showMenu={showMenu} setShowMenu={setShowMenu} />
+            <DashboardMenu
+              role={role}
+              showMenu={showMenu}
+              setShowMenu={setShowMenu}
+            />
           </div>
           <div className="w-1/2" onClick={() => setShowMenu(false)}></div>
         </div>
@@ -52,7 +58,7 @@ function Dashboardsidebar({ children , role , email }) {
                     href="/admin/products/edite"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
-                    <AiFillProduct className="w-[20px] h-[20px]" />
+                    <RiEdit2Fill className="w-[20px] h-[20px]" />
                     ویرایش محصولات
                   </Link>
                   <Link
@@ -60,6 +66,13 @@ function Dashboardsidebar({ children , role , email }) {
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <FaProjectDiagram className="w-[20px] h-[20px]" />
+                    افزودن پروژه ها
+                  </Link>
+                  <Link
+                    href="/admin/projects/edite"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  >
+                    <MdRebaseEdit className="w-[20px] h-[20px]" />
                     ویرایش پروژه ها
                   </Link>
                 </div>
