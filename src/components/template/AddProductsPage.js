@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 
 // Components
@@ -9,8 +9,9 @@ import RadioList from "@/element/RadioList";
 import SecondCategoryList from "@/element/SecondCategoryList";
 import ThirdCategory from "@/element/ThirdCategory";
 import TextInput from "@/element/TextInput";
+import Loader from "@/module/Loader";
 
-function AddProductsPage() {
+function AddProductsPage({ data }) {
   const [productData, setProductData] = useState({
     firstCategory: "",
     secondCategory: "",
@@ -21,17 +22,37 @@ function AddProductsPage() {
     productIndexImage: null,
   });
 
-  const submitHandler = (e) => {
+  const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (data) setProductData(data);
+  }, []);
+
+  const submitHandler = async (e) => {
     e.preventDefault();
     console.log(productData);
+    setLoading(true);
 
     const formData = new FormData();
     for (let i in productData) {
       formData.append(i, productData[i]);
     }
 
+    const res = await fetch("", {
+      method: "PATCH",
+      body: formData,
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+
+    const result = await res.json();
+
+    setLoading(false);
     console.log(formData);
 
+    // بعد از انجام عملیات ادیت ضفحه را رفرش می کنیم تا تغییرات نمایش داده شود
+    router.refresh();
     // setProductData({
     //   firstCategory: "",
     //   secondCategory: "",
@@ -43,13 +64,49 @@ function AddProductsPage() {
     // });
   };
 
+  const editHandler = async () => {
+    e.preventDefault();
+    console.log(productData);
+    setLoading(true);
+
+    const formData = new FormData();
+    for (let i in productData) {
+      formData.append(i, productData[i]);
+    }
+
+    const res = await fetch("", {
+      method: "PATCH",
+      body: formData,
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+
+    const result = await res.json();
+
+    setLoading(false);
+    console.log(formData);
+
+    // بعد از انجام عملیات ادیت ضفحه را رفرش می کنیم تا تغییرات نمایش داده شود
+    router.refresh();
+    // setProductData({
+    //   firstCategory: "",
+    //   secondCategory: "",
+    //   thirdCategory: "",
+    //   productName: "",
+    //   description: "",
+    //   productColor:"",
+    //   productIndexImage: "",
+    // });  
+  };
+
   return (
-    <div className="w-full flex flex-col gap-y-5">
+    <div className="w-full flex flex-col gap-y-5 md:shadow-2xl py-[50px] px-[25px]">
       <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
-        افزودن محصولات
+        {data ? "ویرایش محصولات" : "افزودن محصولات"}
       </h3>
       <p className="w-full text-center px-5 py-2 bg-bgRed text-textWhite text-[1rem] md:text-[1.5rem] md:bg-transparent md:text-backgroundBlack">
-        در این صفحه شما می توانید محصولات خود را اضافه کنید
+        {data
+          ? "در این صفحه شما می توانید محصولات خود را ویرایش کنید"
+          : "در این صفحه شما می توانید محصولات خود را ثبت کنید"}
       </p>
       <div className="w-full flex flex-col gap-y-5">
         <RadioList productData={productData} setProductData={setProductData} />
@@ -83,7 +140,7 @@ function AddProductsPage() {
           productData={productData}
           setProductData={setProductData}
         />
-        <div className="w-full flex flex-col gap-y-5 md:flex-row">
+        <div className="w-full flex flex-col gap-y-5 md:flex-row ">
           <div className="w-full md:w-3/5">
             <div className="w-full flex flex-col md:flex-row">
               <label
@@ -115,12 +172,24 @@ function AddProductsPage() {
           </div>
         </div>
       </div>
-      <button
-        onClick={submitHandler}
-        className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
-      >
-        ثبت محصول
-      </button>
+      {loading ? (
+        <Loader />
+      ) : data ? (
+        <button
+          onClick={editHandler}
+          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
+        >
+          ویرایش محصول
+        </button>
+      ) : (
+        <button
+          onClick={submitHandler}
+          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
+        >
+          ثبت محصول
+        </button>
+      )}
+
       <Toaster />
     </div>
   );

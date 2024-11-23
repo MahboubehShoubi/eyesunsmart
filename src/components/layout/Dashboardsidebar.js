@@ -55,21 +55,21 @@ function Dashboardsidebar({ children, role, email }) {
                     افزودن محصولات
                   </Link>
                   <Link
-                    href="/admin/products/edite"
+                    href="/admin/products/edit"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <RiEdit2Fill className="w-[20px] h-[20px]" />
                     ویرایش محصولات
                   </Link>
                   <Link
-                    href="/admin/projects/edite"
+                    href="/admin/projects/add"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <FaProjectDiagram className="w-[20px] h-[20px]" />
                     افزودن پروژه ها
                   </Link>
                   <Link
-                    href="/admin/projects/edite"
+                    href="/admin/projects/edit"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <MdRebaseEdit className="w-[20px] h-[20px]" />
@@ -99,7 +99,7 @@ function Dashboardsidebar({ children, role, email }) {
         </div>
         <div
           onClick={() => setShowMenu(false)}
-          className=" w-full md:w-9/12 md:shadow-2xl py-[50px] px-[25px] h-fit"
+          className=" w-full md:w-9/12 h-fit"
         >
           {children}
         </div>

@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 import { signIn } from "next-auth/react";
+import Loader from "@/module/Loader";
 import toast, { Toaster } from "react-hot-toast";
-import { ThreeDots } from "react-loader-spinner";
 import { MdClose } from "react-icons/md";
-
 import "animate.css";
+
+
 
 
 
@@ -97,15 +98,7 @@ function SignInUpPage({ showSignup, setShowSignup }) {
                 onChange={(e) => setPassword(e.target.value)}
               />
               {loading ? (
-                <ThreeDots
-                  visible={true}
-                  height="60"
-                  width="60"
-                  color="#EC7626"
-                  radius="9"
-                  ariaLabel="three-dots-loading"
-                  wrapperStyle={{ margin: "auto" }}
-                />
+                <Loader />
               ) : (
                 <button
                   type="submit"
@@ -149,15 +142,7 @@ function SignInUpPage({ showSignup, setShowSignup }) {
                 onChange={(e) => setRePassword(e.target.value)}
               />
               {loading ? (
-                <ThreeDots
-                  visible={true}
-                  height="60"
-                  width="60"
-                  color="#EC7626"
-                  radius="9"
-                  ariaLabel="three-dots-loading"
-                  wrapperStyle={{ margin: "auto" }}
-                />
+                <Loader />
               ) : (
                 <button
                   type="submit"
