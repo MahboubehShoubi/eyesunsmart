@@ -3,13 +3,13 @@ import { p2e } from "@/utils/replaceNumber";
 function TextInput({
   title,
   name,
-  productData,
-  setProductData,
+  dataState,
+  setDataState,
   textarea = false,
 }) {
   const changeHandler = (e) => {
      const {name , value} = e.target;
-     setProductData({...productData , [name]:p2e(value)})
+     setDataState({...dataState , [name]:p2e(value)})
   };
   return (
     <div className="flex flex-col md:flex-row">
@@ -18,7 +18,7 @@ function TextInput({
         <textarea
           type="text"
           name={name}
-          value={productData[name]}
+          value={dataState[name]}
           onChange={changeHandler}
           className=" border-[1px] border-dashed border-backgroundBlack w-full md:w-[85%] p-1 text-[1.2rem] text-secondery"
         />
@@ -26,7 +26,7 @@ function TextInput({
         <input
           type="text"
           name={name}
-          value={productData[name]}
+          value={dataState[name]}
           onChange={changeHandler}
           className=" border-[1px] border-dashed border-backgroundBlack w-full md:w-[85%] p-1 text-[1.2rem] text-secondery"
         />

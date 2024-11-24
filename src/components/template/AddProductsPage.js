@@ -51,6 +51,7 @@ function AddProductsPage({ data }) {
     setLoading(false);
     console.log(formData);
 
+
     // بعد از انجام عملیات ادیت ضفحه را رفرش می کنیم تا تغییرات نمایش داده شود
     router.refresh();
     // setProductData({
@@ -124,21 +125,21 @@ function AddProductsPage({ data }) {
         <TextInput
           title="نام محصول"
           name="productName"
-          productData={productData}
-          setProductData={setProductData}
+          dataState={productData}
+          setDataState={setProductData}
         />
         <TextInput
           title="توضیحات "
           name="description"
-          productData={productData}
-          setProductData={setProductData}
+          dataState={productData}
+          setDataState={setProductData}
           textarea={true}
         />
         <TextInput
           title="رنگ محصول"
           name="productColor"
-          productData={productData}
-          setProductData={setProductData}
+          dataState={productData}
+          setDataState={setProductData}
         />
         <div className="w-full flex flex-col gap-y-5 md:flex-row ">
           <div className="w-full md:w-3/5">

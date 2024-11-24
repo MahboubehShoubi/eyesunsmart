@@ -1,31 +1,30 @@
 import { MdOutlineLibraryAdd } from "react-icons/md";
 import { AiOutlineDelete } from "react-icons/ai";
 
-function ImagesList({ title, type, productData, setProductData }) {
+function ImagesList({ title, type, dataState, setDataState }) {
 
   const changeHandler = (e, index) => {
-    const {value} = e.target;
-    const list = productData[type];
+    const value = e.target.files[0];
+    const list = dataState[type];
     list[index] = value;
-    setProductData({ ...productData, [type]: list });
+    setDataState({ ...dataState, [type]: list });
   };
 
 
   const addHandler = () => {
-    setProductData({ ...productData, [type]: [...productData[type], ""] });
+    setDataState({ ...dataState, [type]: [...dataState[type], ""] });
   };
   return (
     <div className="w-full flex flex-col gap-y-5">
       <p>{title}</p>
       <div className="w-full flex flex-col gap-y-5">
-        {productData[type].map((item, index) => (
+        {dataState[type].map((item, index) => (
           <div key={index}>
             <input
               type="file"
               name={type}
               accept="image/*"
-              onChange={(e) =>changeHandler(e , index)}
-              value={productData.productAllphotos[index]}
+              onChange={(e) => changeHandler(e , index)}
             />
           </div>
         ))}
