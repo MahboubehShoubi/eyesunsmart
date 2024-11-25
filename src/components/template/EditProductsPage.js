@@ -83,10 +83,10 @@ function EditProductsPage() {
           />
           <button
             onClick={searchHandler}
-            className="w-[50%] py-2 bg-green text-textWhite rounded-[10px] flex justify-center"
+            className="w-[50%] py-2 bg-green text-textWhite rounded-[10px] flex justify-center items-center gap-2"
           >
             جستجوی محصول
-            <MdImageSearch />
+            <MdImageSearch  className="text-[1.5rem]"/>
           </button>
         </div>
       </div>
