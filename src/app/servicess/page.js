@@ -1,10 +1,7 @@
+import ServicessPage from "@/template/ServicessPage";
 
-function page() {
-  return (
-    <div className='w-full h-[50vh] flex justify-center items-center'>
-      <h1 className=' text-[3rem] text-secondery'>خدمات ما برای شما</h1>
-    </div>
-  )
+function Servicess() {
+  return <ServicessPage />;
 }
 
-export default page
+export default Servicess;
