@@ -1,8 +1,14 @@
 import MainServicess from "@/module/mainpage/MainServicess";
 import VideoPlayer from "@/module/VideoPlayer";
+import Counter from "@/utils/Counter";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+// Icons
+import { IoLocationOutline } from "react-icons/io5";
+import { BsClockHistory } from "react-icons/bs";
+import { MdSettingsPhone } from "react-icons/md";
 
 function ServicessPage() {
   return (
@@ -154,15 +160,33 @@ function ServicessPage() {
                 </div>
               </div>
             </div>
-            <div className="col-start-2 col-end-3 row-span-full grid grid-cols-2 grid-rows-12 border-4"></div>
+            <div className="col-start-2 col-end-3 row-span-full grid grid-cols-2 grid-rows-12 gap-4">
+              <div className=" col-start-1 col-end-2 row-start-1 row-end-4 border-4 rounded-[10px]"></div>
+              <div className=" col-start-1 col-end-2 row-start-4 row-end-8 border-4 rounded-[10px]"></div>
+              <div className=" col-start-1 col-end-2 row-start-8 row-end-13 border-4 rounded-[10px]"></div>
+              <div className=" col-start-2 col-end-3 row-start-1 row-end-6 border-4 rounded-[10px]"></div>
+              <div className=" col-start-2 col-end-3 row-start-6 row-end-9 border-4 rounded-[10px]"></div>
+              <div className=" col-start-2 col-end-3 row-start-9 row-end-13 border-4 rounded-[10px]"></div>
+            </div>
           </div>
 
           <div className="w-full h-[500px] mt-10 flex justify-center">
-            <VideoPlayer width={1200} height={500} src="/video/TIS-Automation-Technology.mp4" />
+            <VideoPlayer
+              width={1200}
+              height={500}
+              src="/video/TIS-Automation-Technology.mp4"
+            />
           </div>
 
           <div className="w-full grid grid-cols-2 grid-rows-1 mt-[50px]">
-            <div className="col-start-1 col-end-2 row-span-full grid grid-cols-2 grid-rows-12 border-4"></div>
+            <div className="col-start-1 col-end-2 row-span-full grid grid-cols-2 grid-rows-12 gap-4">
+              <div className=" col-start-1 col-end-2 row-start-1 row-end-4 border-4 rounded-[10px]"></div>
+              <div className=" col-start-1 col-end-2 row-start-4 row-end-8 border-4 rounded-[10px]"></div>
+              <div className=" col-start-1 col-end-2 row-start-8 row-end-13 border-4 rounded-[10px]"></div>
+              <div className=" col-start-2 col-end-3 row-start-1 row-end-6 border-4 rounded-[10px]"></div>
+              <div className=" col-start-2 col-end-3 row-start-6 row-end-9 border-4 rounded-[10px]"></div>
+              <div className=" col-start-2 col-end-3 row-start-9 row-end-13 border-4 rounded-[10px]"></div>
+            </div>
 
             <div className="col-start-2 col-end-3 row-span-full pr-5 text-justify">
               <div className="flex flex-col gap-y-2">
@@ -293,10 +317,54 @@ function ServicessPage() {
       <div className="w-full h-[40vh] bg-secondery mb-[50px]">
         <div className=" container w-full md:max-w-screen-xl h-full">
           <div className="w-full flex justify-between items-center h-full">
-            <p className="text-textWhite text-[2rem]">100</p>
-            <p className="text-textWhite text-[2rem]">200</p>
-            <p className="text-textWhite text-[2rem]">300</p>
-            <p className="text-textWhite text-[2rem]">400</p>
+            <div className="w-1/3 h-[150px] flex flex-col justify-center items-center">
+              <p className="text-textWhite text-[1.2rem]">پروژه های تمام شده</p>
+              <p className="text-textWhite text-[2rem] h-[2rem]">
+                <Counter max={100} time={100} />
+              </p>
+            </div>
+            <div className="w-1/3 h-[150px] flex flex-col justify-center items-center">
+              <p className="text-textWhite text-[1.2rem]">
+                پروژه های در حال اجرا
+              </p>
+              <p className="text-textWhite text-[2rem] h-[2rem]">
+                <Counter max={200} time={60} />
+              </p>
+            </div>
+            <div className="w-1/3 h-[150px] flex flex-col justify-center items-center">
+              <p className="text-textWhite text-[1.2rem]">
+                پروژه های در حال بررسی
+              </p>
+              <p className="text-textWhite text-[2rem] h-[2rem]">
+                <Counter max={300} time={40} />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full h-[50vh] mb-[50px]">
+        <div className=" container w-full md:max-w-screen-xl h-full flex justify-between items-center gap-5">
+          <div className="w-1/3 h-[35vh] flex flex-col justify-center items-center shadow-2xl rounded-[10px]">
+            <MdSettingsPhone className=" bg-bgRed text-textWhite p-2 w-[80px] h-[80px] rounded-[10px]" />
+            <p className="text-[1.3rem] mt-[10px]">تماس با ما</p>
+            <p className="text-textGray mt-[20px]">09112223333</p>
+            <p className="text-textGray">09214445555</p>
+          </div>
+          <div className="w-1/3 h-[35vh] flex flex-col justify-center items-center shadow-2xl rounded-[10px]">
+            <IoLocationOutline className=" bg-bgRed text-textWhite p-2 w-[80px] h-[80px] rounded-[10px]" />
+            <p className="text-[1.3rem] mt-[10px]"> آدرس </p>
+            <p className="text-textGray mt-[20px]">ساری خیابان 15 خرداد</p>
+            <p className="text-textGray">سرخرود - خط دریا</p>
+          </div>
+          <div className="w-1/3 h-[35vh] flex flex-col justify-center items-center shadow-2xl rounded-[10px]">
+            <BsClockHistory className=" bg-bgRed text-textWhite p-2 w-[80px] h-[80px] rounded-[10px]" />
+            <p className="text-[1.3rem] mt-[10px]"> ساعت کاری </p>
+            <p className="text-textGray mt-[20px]">
+              شنبه – چهارشنبه: 17:30 تا 07:30
+            </p>
+            <p className="text-textGray">
+              پـــنــجــــشـــنــبــه: 14:30 تا 07:30
+            </p>
           </div>
         </div>
       </div>
@@ -305,41 +373,3 @@ function ServicessPage() {
 }
 
 export default ServicessPage;
-
-{
-  /* <div className=" w-full h-[500px] flex border-2">
-            <div className="w-2/3 h-full"></div>
-            <div className="w-1/3 h-full bg-secondery">
-              <Image src="" width={1000} height={700} alt="img" />
-            </div>
-          </div> */
-}
-{
-  /* <div className="w-full h-screen mt-10 grid grid-cols-1 md:grid-cols-2 md:grid-rows-1 gap-5">
-            <div className="  border-2 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
-              <div className="w-full h-1/3  bg-secondery">
-                <Image src="" width={1000} height={700} alt="img" />
-              </div>
-            </div>
-            <div className=" md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2 grid grid-cols-1  md:grid-rows-2 gap-5">
-              <div className=" col-start-1 col-end-2 md:row-start-1 md:row-end-2 border-2">
-                <div className="w-full h-1/3 bg-secondery">
-                  <Image src="" width={1000} height={700} alt="img" />
-                </div>
-              </div>
-              <div className=" col-start-1 col-end-2 md:row-start-2 md:row-end-3 border-2">
-                <div className="w-full h-1/3 bg-secondery">
-                  <Image src="" width={1000} height={700} alt="img" />
-                </div>
-              </div>
-            </div>
-          </div> */
-}
-{
-  /* <div className=" w-full h-[500px] flex border-2 mt-10">
-            <div className="w-2/3 h-full"></div>
-            <div className="w-1/3 h-full bg-secondery">
-              <Image src="" width={1000} height={700} alt="img" />
-            </div>
-          </div> */
-}
