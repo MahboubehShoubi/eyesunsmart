@@ -1,10 +1,7 @@
+import ProjectPage from "@/template/ProjectPage";
 
 function page() {
-  return (
-    <div className='w-full h-[50vh] flex justify-center items-center'>
-    <h1 className=' text-[3rem] text-secondery'>پروژه های ما</h1>
-  </div>
-  )
+  return <ProjectPage />;
 }
 
-export default page
+export default page;
