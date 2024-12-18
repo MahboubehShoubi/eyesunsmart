@@ -95,7 +95,7 @@ function Dashboardsidebar({ children, role, email }) {
                     پنل کاربری
                   </Link>
                   <Link
-                    href="/dashboard"
+                    href="/user/edit"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <FaUserEdit className="w-[20px] h-[20px]" />
@@ -103,7 +103,7 @@ function Dashboardsidebar({ children, role, email }) {
                   </Link>
                   {role === "CUSTOMERS" ? (
                     <Link
-                      href="/dashboard"
+                      href="/user/customer"
                       className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                     >
                       <IoMdHome className="w-[20px] h-[20px]" />
@@ -111,7 +111,7 @@ function Dashboardsidebar({ children, role, email }) {
                     </Link>
                   ) : role === "COLLEAGUE" ? (
                     <Link
-                      href="/dashboard"
+                      href="/user/colleague"
                       className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                     >
                       <IoMdHome className="w-[20px] h-[20px]" />
