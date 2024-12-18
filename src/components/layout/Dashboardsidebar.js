@@ -12,6 +12,8 @@ import { AiFillProduct } from "react-icons/ai";
 import { FaProjectDiagram } from "react-icons/fa";
 import { MdRebaseEdit } from "react-icons/md";
 import { RiEdit2Fill } from "react-icons/ri";
+import { FaUserEdit } from "react-icons/fa";
+
 
 import DashboardMenu from "@/module/DashboardMenu";
 
@@ -48,6 +50,13 @@ function Dashboardsidebar({ children, role, email }) {
                     پنل ادمین
                   </Link>
                   <Link
+                    href="/dashboard"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  >
+                    <IoMdHome className="w-[20px] h-[20px]" />
+                    مدیریت کاربران
+                  </Link>
+                  <Link
                     href="/admin/products/add"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
@@ -77,7 +86,7 @@ function Dashboardsidebar({ children, role, email }) {
                   </Link>
                 </div>
               ) : (
-                <div>
+                <div className="flex flex-col h-fit gap-y-3">
                   <Link
                     href="/dashboard"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
@@ -85,12 +94,30 @@ function Dashboardsidebar({ children, role, email }) {
                     <IoMdHome className="w-[20px] h-[20px]" />
                     پنل کاربری
                   </Link>
-                  {/* <Link
-                    href="/dashboard/my-educatin-film"
-                    className="text-navyBlue hover:text-secondery"
+                  <Link
+                    href="/dashboard"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
-                    آموزش های من
-                  </Link> */}
+                    <FaUserEdit className="w-[20px] h-[20px]" />
+                    ویرایش اطلاعات  
+                  </Link>
+                  {role === "CUSTOMERS" ? (
+                    <Link
+                      href="/dashboard"
+                      className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    >
+                      <IoMdHome className="w-[20px] h-[20px]" />
+                       باشگاه مشتریان
+                    </Link>
+                  ) : role === "COLLEAGUE" ? (
+                    <Link
+                      href="/dashboard"
+                      className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    >
+                      <IoMdHome className="w-[20px] h-[20px]" />
+                       باشگاه همکاران
+                    </Link>
+                  ) : null}
                 </div>
               )}
               <LogoutButton />

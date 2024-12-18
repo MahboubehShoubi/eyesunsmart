@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function DashboardPage({role , createdAt}) {
+function DashboardPage({ role, createdAt }) {
   return (
     <>
       {role === "ADMIN" ? (
@@ -17,7 +17,7 @@ function DashboardPage({role , createdAt}) {
             میتوانید محصولات خود را وارد کنید
           </p>
         </div>
-      ) : (
+      ) : role === "USER" ? (
         <div>
           <h3 className="text-[1.5rem]">سلام کاربر گرامی ❤️</h3>
           <div className="w-fit flex gap-x-3 bg-navyBlue text-textWhite py-2 px-4 mt-3">
@@ -25,7 +25,23 @@ function DashboardPage({role , createdAt}) {
             <p>{new Date(createdAt).toLocaleDateString("fa-IR")}</p>
           </div>
         </div>
-      )}
+      ) : role === "COLLEAGUE" ? (
+        <div>
+          <h3 className="text-[1.5rem]">سلام همکار گرامی ❤️</h3>
+          <div className="w-fit flex gap-x-3 bg-navyBlue text-textWhite py-2 px-4 mt-3">
+            <p>تاریخ عضویت : </p>
+            <p>{new Date(createdAt).toLocaleDateString("fa-IR")}</p>
+          </div>
+        </div>
+      ) : role === "CUSTOMERS" ? (
+        <div>
+          <h3 className="text-[1.5rem]">سلام مشتری گرامی ❤️</h3>
+          <div className="w-fit flex gap-x-3 bg-navyBlue text-textWhite py-2 px-4 mt-3">
+            <p>تاریخ عضویت : </p>
+            <p>{new Date(createdAt).toLocaleDateString("fa-IR")}</p>
+          </div>
+        </div>
+      ) : null}
     </>
   );
 }

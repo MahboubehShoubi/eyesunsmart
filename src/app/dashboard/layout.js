@@ -8,6 +8,7 @@ import Dashboardsidebar from "@/layout/Dashboardsidebar";
 import Footer from "@/layout/Footer";
 
 async function DashboardLayout({ children }) {
+
   const session = await getServerSession(authOptions);
   if (!session) return redirect("/");
 

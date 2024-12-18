@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 
 import "animate.css";
@@ -14,7 +15,7 @@ function DashboardMenu({ role, showMenu, setShowMenu }) {
     <div className=" relative w-full px-[20px]">
       <p
         onClick={() => setShowMenu(!showMenu)}
-        className="w-fit flex gap-x-1 border-[2px] border-grayTisAir rounded-xl p-2"
+        className="w-fit flex gap-x-1 border-[2px] border-grayTisAir rounded-xl p-2 cursor-pointer"
       >
         <PiDotsThreeOutlineVerticalFill />
         منوی حساب کاربری
@@ -34,6 +35,13 @@ function DashboardMenu({ role, showMenu, setShowMenu }) {
             >
               <IoMdHome className="w-[20px] h-[20px]" />
               پنل ادمین
+            </Link>
+            <Link
+              href="/dashboard"
+              className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+            >
+              <IoMdHome className="w-[20px] h-[20px]" />
+              مدیریت کاربران 
             </Link>
             <Link
               href="/admin/products/add"
