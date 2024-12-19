@@ -13,7 +13,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { MdRebaseEdit } from "react-icons/md";
 import { RiEdit2Fill } from "react-icons/ri";
 import { FaUserEdit } from "react-icons/fa";
-
+import { MdCastForEducation } from "react-icons/md";
 
 import DashboardMenu from "@/module/DashboardMenu";
 
@@ -99,7 +99,14 @@ function Dashboardsidebar({ children, role, email }) {
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <FaUserEdit className="w-[20px] h-[20px]" />
-                    ویرایش اطلاعات  
+                    ویرایش اطلاعات
+                  </Link>
+                  <Link
+                    href="/user/education"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  >
+                    <MdCastForEducation className="w-[20px] h-[20px]" />
+                    آموزش 
                   </Link>
                   {role === "CUSTOMERS" ? (
                     <Link
@@ -107,7 +114,7 @@ function Dashboardsidebar({ children, role, email }) {
                       className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                     >
                       <IoMdHome className="w-[20px] h-[20px]" />
-                       باشگاه مشتریان
+                      باشگاه مشتریان
                     </Link>
                   ) : role === "COLLEAGUE" ? (
                     <Link
@@ -115,7 +122,7 @@ function Dashboardsidebar({ children, role, email }) {
                       className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                     >
                       <IoMdHome className="w-[20px] h-[20px]" />
-                       باشگاه همکاران
+                      باشگاه همکاران
                     </Link>
                   ) : null}
                 </div>
