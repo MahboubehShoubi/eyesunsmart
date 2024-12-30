@@ -50,11 +50,18 @@ function Dashboardsidebar({ children, role, email }) {
                     پنل ادمین
                   </Link>
                   <Link
-                    href="/dashboard"
+                    href="/admin/user/setting"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <IoMdHome className="w-[20px] h-[20px]" />
                     مدیریت کاربران
+                  </Link>
+                  <Link
+                    href="/admin/user/all"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  >
+                    <IoMdHome className="w-[20px] h-[20px]" />
+                     مشاهده لیست همه کاربران
                   </Link>
                   <Link
                     href="/admin/products/add"
