@@ -54,7 +54,7 @@ function Dashboardsidebar({ children, role, email }) {
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <IoMdHome className="w-[20px] h-[20px]" />
-                    مدیریت کاربران
+                    مدیریت کاربران جدید
                   </Link>
                   <Link
                     href="/admin/user/all"
