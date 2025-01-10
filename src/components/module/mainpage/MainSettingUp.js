@@ -2,8 +2,12 @@ function MainSettingUp() {
   return (
     <div className="h-fit py-36">
       <div className=" container md:max-w-screen-xl flex flex-col items-center">
-        <div className="w-full text-center px-5">
-          <h2 className=" text-bgRed">راه اندازی دستگاه های هوشمند</h2>
+        <div className="w-full flex flex-col items-center px-5">
+          <div className="flex items-center gap-x-2">
+            <span className="w-[50px] h-[2px] bg-bgRed"></span>
+            <h2 className=" text-bgRed">راه اندازی دستگاه های هوشمند</h2>
+            <span className="w-[50px] h-[2px] bg-bgRed"></span>
+          </div>
           <h3 className=" text-mainTitleFontSize md:text-[3rem]">
             راه اندازی دستگاه های هوشمند ساده شده است
           </h3>
@@ -64,7 +68,9 @@ function MainSettingUp() {
                 <span className="bg-bgRed text-textWhite text-[2rem]">04</span>
               </div>
               <div className="text-center">
-                <h4 className="text-[1.2rem] font-semibold">آموزش و پشتیبانی</h4>
+                <h4 className="text-[1.2rem] font-semibold">
+                  آموزش و پشتیبانی
+                </h4>
                 <p className="mt-3 font-light">
                   فناوری تنها زمانی مفید است که به درستی از آن استفاده شود. ما
                   تمامی آموزش‌های لازم برای بهره‌گیری از امکانات خانه هوشمند را

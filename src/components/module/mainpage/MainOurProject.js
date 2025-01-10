@@ -23,7 +23,10 @@ function MainOurProject() {
       <div className=" container md:max-w-screen-xl py-20">
         <div className="flex flex-col px-5 md:flex-row">
           <div className="w-full md:w-1/2">
-            <h3 className="text-bgRed text-titleFontSize">پروژه ها</h3>
+            <div className="flex items-center gap-x-2">
+              <span className="w-[30px] h-[2px] bg-bgRed"></span>
+              <h3 className="text-bgRed text-titleFontSize">پروژه ها</h3>
+            </div>
             <h4 className="text-mainTitleFontSize mt-5">
               زندگی خود را با پروژه های هوشمند توانمند کنید
             </h4>

@@ -20,10 +20,12 @@ function ProjectPage({ projectsData }) {
       </div>
 
       <div className="container w-full md:max-w-screen-xl mt-[50px]">
-        <div className="w-full flex justify-center">
-          <h1 className="text-[1.2rem] md:text-[2rem] w-fit border-b-2 border-bgRed">
+        <div className="w-full flex justify-center items-center gap-x-3">
+          <span className="w-[50px] h-[2px] bg-bgRed"></span>
+          <h1 className="text-[1.2rem] md:text-[2rem] w-fit ">
             پروژه‌های خانه هوشمند
           </h1>
+          <span className="w-[50px] h-[2px] bg-bgRed"></span>
         </div>
         <p className="mt-10 text-textGray">
           در بخش پروژه‌های ما، شما می‌توانید نمونه‌های موفق و نوآورانه از

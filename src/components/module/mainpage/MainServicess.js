@@ -12,19 +12,19 @@ import { GiOpenBook } from "react-icons/gi";
 import { GiNetworkBars } from "react-icons/gi";
 import { MdOutlineWifiPassword } from "react-icons/md";
 
-
-
-
-
 function MainServicess() {
   return (
     <div className=" relative w-full mt-[50px] md:mt-[100px] h-fit">
       <div className=" container md:max-w-screen-xl relative md:h-[150vh] grid md:grid-rows-5">
         <div className="w-full md:row-start-1 md:row-end-6 grid grid-cols-1 md:grid-cols-12 md:grid-rows-[7vh_60vh_50vh_33vh] ">
           <div className=" md:col-start-1 md:col-end-8 md:row-start-2 md:row-end-3 rounded-[60px] md:rounded-l-[0] bg-bgRed p-[40px]">
-            <span className="text-textWhite text-[1.1rem] md:text-titleFontSize border-b-2">
-              خدمات ما
-            </span>
+            <div className="flex items-center gap-x-2">
+              <span className="w-[30px] h-[2px] bg-textWhite"></span>
+              <span className="text-textWhite text-[1.1rem] md:text-titleFontSize">
+                خدمات ما
+              </span>
+            </div>
+
             <h2 className=" text-[1.5rem] md:text-mainTitleFontSize text-textWhite mt-5">
               خدمات خانه هوشمند
             </h2>
@@ -84,7 +84,7 @@ function MainServicess() {
           </div>
 
           <div className=" md:col-start-1 md:col-span-1 md:row-start-2 md:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
-            <MdOutlineWifiPassword  className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
+            <MdOutlineWifiPassword className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
             <h3 className="text-[1.3rem] md:text-subTitle text-navyBlue">
               برنامه نویسی سیستم های هوشمند
             </h3>

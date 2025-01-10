@@ -13,7 +13,11 @@ function MainProduct() {
       />
       <div className=" container md:max-w-screen-xl  px-5 mb-[100px] md:mb-0">
         <div className=" w-full flex flex-col items-center text-center mt-28 md:mt-0">
-          <h2 className="text-bgRed md:text-[2rem]">تجهیزات خانه هوشمند</h2>
+          <div className="flex items-center gap-x-2">
+            <span className="w-[50px] h-[2px] bg-bgRed"></span>
+            <h2 className="text-bgRed md:text-[2rem]">تجهیزات خانه هوشمند</h2>
+            <span className="w-[50px] h-[2px] bg-bgRed"></span>
+          </div>
           <p className="w-full md:w-[60%] text-[14px] md:[1rem] text-justify md:text-center">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
             استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در
