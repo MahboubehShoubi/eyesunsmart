@@ -11,11 +11,8 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
-import Link from "next/link";
 
-export default function Slider({ silderInfo }) {
-
-  // const infoLengthce = silderInfo.;
+export default function Slider({ silderInfo : {imageList} }) {
 
   return (
     <>
@@ -38,10 +35,10 @@ export default function Slider({ silderInfo }) {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         className="w-full h-full"
       >
-        {silderInfo.map((slider , index) => (
+        {imageList.map((slider , index) => (
           <SwiperSlide className="w-full h-full relative" key={index}>
             <Image
-              src={slider.src}
+              src={slider}
               width={1000}
               height={700}
               alt="bg-image"

@@ -1,68 +1,53 @@
-"use client";
-
-import Image from "next/image";
-import React, { useState } from "react";
-
 import "animate.css";
+import Slider from "./Slider";
+
+//icons
+import { PiMapPinAreaFill } from "react-icons/pi";
+import { MdMapsHomeWork } from "react-icons/md";
+import { AiOutlineAreaChart } from "react-icons/ai";
+import { BsBuildingFillCheck } from "react-icons/bs";
 
 
-function CardProjectSlider() {
-     const [imgSrc, setImgSrc] = useState("");
-    
-      const changHandler = (img) => {
-        setImgSrc(img);
-        // imgIndex.className("animate__animated animate__zoomIn")
-      };
 
+
+function CardProjectSlider({ data }) {
   return (
-    <div className="w-full flex">
-          <div className="w-3/5">
-            <div className=" w-full h-[350px] flex justify-center items-center shadow-lg">
-              <Image
-                className="h-full w-full object-cover animate__animated animate__zoomIn"
-                src={imgSrc || data.imageList[0]}
-                width={1000}
-                height={700}
-                alt="projectImag"
-                // ref={imgIndex}
-              />
-            </div>
-            <div className="w-full flex flex-wrap gap-1 mt-5">
-              {data.imageList.map((img, index) => (
-                <Image
-                  className="w-1/6 border-2 border-textBlack rounded-[5px]"
-                  src={img}
-                  key={index}
-                  width={1000}
-                  height={700}
-                  alt="projectImg"
-                  onClick={() => changHandler(img)}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="w-2/5">
-            <div className=" w-full p-10">
-              <div className="h-[100px]">
-                <p className="text-bgRed">
-                  نوع پروژه :{" "}
-                  <span className=" font-semibold	text-textGray">{data.projectType}</span>{" "}
-                </p>
-                <p className="text-bgRed">
-                  مکان پروژه :{" "}
-                  <span className=" font-semibold	text-textGray">{data.projectLocation}</span>{" "}
-                </p>
-              </div>
-              <div className="w-full h-1/2 border-t-2 pt-5">
-                <p className="w-full bg-grayTisAir font-semibold p-2">
-                  توضیحات پروژه :{" "}
-                </p>
-                <p className=" text-textGray mt-5">{data.description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  )
+    <div className="w-full h-[400px] flex shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 rounded-xl my-[50px]">
+      <div className="w-3/5 rounded-lg overflow-hidden">
+        <Slider silderInfo={data} />
+      </div>
+      <div className="w-2/5 h-full flex flex-col py-5 px-3 divide-y">
+        <p className="flex gap-x-2 items-center pb-2">
+          <PiMapPinAreaFill className="text-bgRed w-[1.1rem] h-[1.1rem]" />
+          مکان پروژه :{" "}
+          <span className=" font-semibold	text-textGray">
+            {data.projectLocation}
+          </span>{" "}
+        </p>
+        <p className="flex gap-x-2 items-end py-2">
+          <MdMapsHomeWork className="text-bgRed w-[1.1rem] h-[1.1rem]" />
+          نوع پروژه :{" "}
+          <span className=" font-semibold	text-textGray">
+            {data.projectType}
+          </span>{" "}
+        </p>
+        <p className="flex gap-x-2 items-end py-2">
+          <AiOutlineAreaChart className="text-bgRed w-[1.1rem] h-[1.1rem]" />
+          مساحت :{" "}
+          <span className=" font-semibold	text-textGray">
+            {data.projectArea}
+          </span>{" "}
+        </p>
+        <p className="flex gap-x-2 items-baseline py-2">
+          <BsBuildingFillCheck className="text-bgRed w-[1.1rem] h-[1.1rem]" />
+          تعداد طبقات :{" "}
+          <span className=" font-semibold	text-textGray">
+            {data.numberOfFloors}
+          </span>{" "}
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default CardProjectSlider;
