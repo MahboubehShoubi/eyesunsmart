@@ -56,13 +56,13 @@ function ProjectPage({ projectsData }) {
           هوشمندسازی خانه یا محل کار خود، با ما تماس بگیرید.
         </p>
       </div>
-      <div className="container w-full md:max-w-screen-xl flex flex-col gap-y-10 mt-10">
+      <div className="container w-full md:max-w-screen-xl flex gap-x-5 gap-y-10  my-10 flex-wrap mt-[100px]">
         {projectsData.map((project) => (
-          <div key={project.id} className="border-t-4 py-10">
-            <div className="w-full h-fit">
-              <CardProject data={project} />
-            </div>
-          </div>
+          // <div key={project.id} className="border-t-4 py-10">
+          //   <div className="w-full h-fit">
+              <CardProject data={project} key={project.id} />
+          //   </div>
+          // </div>
         ))}
       </div>
     </>

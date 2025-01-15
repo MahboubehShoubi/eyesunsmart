@@ -1,64 +1,60 @@
 "use clinet";
 
-import Image from "next/image";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import "animate.css";
 
+import { FaLongArrowAltLeft } from "react-icons/fa";
+
 function CardProject({ data }) {
   const [imgSrc, setImgSrc] = useState("");
+
+  const router = useRouter();
 
   const changHandler = (img) => {
     setImgSrc(img);
     // imgIndex.className("animate__animated animate__zoomIn")
   };
 
+  const routHandler =() => {
+    router.push(`/project/${data.id}`)
+
+  }
+
+  // 0px 0px 20px 0px rgba(0,0,0,0.75
+
   return (
-    <div className="w-full flex">
-      <div className="w-3/5">
-        <div className=" w-full h-[350px] flex justify-center items-center shadow-lg">
-          <Image
-            className="h-full w-full object-cover animate__animated animate__zoomIn"
-            src={imgSrc || data.imageList[0]}
-            width={1000}
-            height={700}
-            alt="projectImag"
-            // ref={imgIndex}
-          />
-        </div>
-        <div className="w-full flex flex-wrap gap-1 mt-5">
-          {data.imageList.map((img, index) => (
-            <Image
-              className="w-1/6 border-2 border-textBlack rounded-[5px]"
-              src={img}
-              key={index}
-              width={1000}
-              height={700}
-              alt="projectImg"
-              onClick={() => changHandler(img)}
-            />
-          ))}
-        </div>
+    <div className=" w- h-full md:w-[23.5%] flex flex-col rounded-[10px] animate__animated animate__zoomIn hover:cursor-pointer shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2">
+      <div className=" w-full h-[350px] overflow-hidden rounded-[8px]">
+        <Image
+          className="h-full w-full object-cover hover:scale-110  transition-all grayscale hover:grayscale-0 "
+          src={data.imageList[0]}
+          width={1000}
+          height={700}
+          alt="projectImag"
+          // ref={imgIndex}
+        />
       </div>
-      <div className="w-2/5">
-        <div className=" w-full p-10">
-          <div className="h-[100px]">
-            <p className="text-bgRed">
-              نوع پروژه :{" "}
-              <span className=" font-semibold	text-textGray">{data.projectType}</span>{" "}
-            </p>
-            <p className="text-bgRed">
-              مکان پروژه :{" "}
-              <span className=" font-semibold	text-textGray">{data.projectLocation}</span>{" "}
-            </p>
-          </div>
-          <div className="w-full h-1/2 border-t-2 pt-5">
-            <p className="w-full bg-grayTisAir font-semibold p-2">
-              توضیحات پروژه :{" "}
-            </p>
-            <p className=" text-textGray mt-5">{data.description}</p>
-          </div>
-        </div>
+
+      <div className=" w-full py-5 px-2 flex flex-col gap-y-3">
+        <p className="text-bgRed text-[15px]">
+          نوع پروژه :{" "}
+          <span className=" font-semibold	text-textGray">
+            {data.projectType}
+          </span>{" "}
+        </p>
+        <p className="text-bgRed text-[15px]">
+          مکان پروژه :{" "}
+          <span className=" font-semibold	text-textGray">
+            {data.projectLocation}
+          </span>{" "}
+        </p>
+        <button onClick={routHandler} className="bg-bgRed text-textWhite text-[12px] py-[5px] rounded-lg flex items-center justify-center gap-x-2 w-[150px]">
+          جزئیات بیشتر 
+          <FaLongArrowAltLeft />
+        </button>
       </div>
     </div>
   );
