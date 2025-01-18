@@ -2,17 +2,61 @@
 
 import CardUser from "@/module/CardUser";
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 import { IoSearchSharp } from "react-icons/io5";
 
-function AllUserPage() {
-  const [userData, setUserData] = useState([]);
+function AllUserPage({ usersData }) {
+  const [search, setSearch] = useState({
+    fullName: "",
+    idCode: "",
+    phone: "",
+  });
 
-  const searchHandler = () => {};
+  const [searchUserData, setSearchUserData] = useState(null);
+
+  const changeHandler = (e) => {
+    const { name, value } = e.target;
+    setSearch((prev) => ({
+      ...prev,
+      [name]: value // حذف فاصله‌های اضافی
+    }));
+  };
+
+  const searchHandler = () => {
+    if (!search.fullName && !search.idCode && !search.phone) {
+      toast.error("لطفا اطلاعات معتبر وارد کنید")
+      return;
+    }
+
+    const result = usersData.find((user) => {
+      return (
+        (search.fullName && user.fullName === search.fullName) ||
+        (search.idCode && user.idCode === search.idCode) ||
+        (search.phone && user.phone === search.phone)
+      );
+    });
+
+    if(!result){
+      toast.error("این کاربر با این مشخصات وجو ندارد")
+    }
+
+    if (JSON.stringify(result) !== JSON.stringify(searchUserData)) {
+      setSearchUserData(result || null);
+    } else {
+      toast.error("اطلاعات وارد شده تکراری است.")
+    }
+
+    setSearch({
+      fullName: "",
+      idCode: "",
+      phone: "",
+    });
+  };
 
   useEffect(() => {
-    setUserData();
-  }, []);
+    console.log("searchUserData updated:", searchUserData);
+  }, [searchUserData]);
 
   return (
     <div>
@@ -25,18 +69,43 @@ function AllUserPage() {
         </p>
         <div className=" py-5 border-b-4 flex flex-col gap-y-5">
           <div>
-            <label className="w-[150px] inline-block">
-              نام و نام خانوادگی :{" "}
+            <label htmlFor="fullName" className="w-[150px] inline-block">
+              نام و نام خانوادگی :
             </label>
-            <input type="text" className="border-[1px] w-[300px] p-2" />
+            <input
+              type="text"
+              className="border-[1px] w-[300px] p-2"
+              id="fullName"
+              name="fullName"
+              value={search.fullName}
+              onChange={changeHandler}
+            />
           </div>
           <div>
-            <label className="w-[150px] inline-block">کد ملی : </label>
-            <input type="text" className="border-[1px] w-[300px] p-2" />
+            <label htmlFor="idCode" className="w-[150px] inline-block">
+              کد ملی :
+            </label>
+            <input
+              type="text"
+              className="border-[1px] w-[300px] p-2"
+              id="idCode"
+              name="idCode"
+              value={search.idCode}
+              onChange={changeHandler}
+            />
           </div>
           <div>
-            <label className="w-[150px] inline-block">شماره تماس : </label>
-            <input type="text" className="border-[1px] w-[300px] p-2" />
+            <label htmlFor="phone" className="w-[150px] inline-block">
+              شماره تماس :
+            </label>
+            <input
+              type="text"
+              className="border-[1px] w-[300px] p-2"
+              id="phone"
+              name="phone"
+              value={search.phone}
+              onChange={changeHandler}
+            />
           </div>
 
           <button
@@ -48,9 +117,19 @@ function AllUserPage() {
           </button>
         </div>
       </div>
-      <div className="py-[50px]">
-        <CardUser userData={userData} />
+      {/* نمایش نتیجه */}
+      <div>
+        {searchUserData ? (
+          <CardUser key={searchUserData.id} userData={searchUserData} />
+        ) : (
+          <div className="pb-[50px] w-full flex flex-col gap-y-[30px]">
+            {usersData.map((user) => (
+              <CardUser key={user.id} userData={user} />
+            ))}
+          </div>
+        )}
       </div>
+      <Toaster/>
     </div>
   );
 }

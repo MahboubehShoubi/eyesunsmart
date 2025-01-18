@@ -12,7 +12,8 @@ function EditUserPage() {
     age: "",
     province: "",
     city: "",
-    status: "USER",
+    statusUser: "USER",
+    status:"pendding",
   });
   // const [fullName, setFullName] = useState("");
   // const [phone, setPhone] = useState("");
