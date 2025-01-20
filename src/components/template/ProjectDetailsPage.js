@@ -1,9 +1,9 @@
 "use client";
 
+import CircularProgress from "@/element/CircularProgress";
 import CardProjectSlider from "@/module/CardProjectSlider";
 import Image from "next/image";
 import React from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
 
 import "react-circular-progressbar/dist/styles.css";
 
@@ -23,17 +23,22 @@ function ProjectDetailsPage({ data }) {
         <div className="w-full flex flex-col md:flex-row">
           <div className=" w-full md:w-1/2 h-[300px] flex flex-col md:flex-row justify-around items-center">
             <div className="md:w-2/3 text-center">
-              <p className="text-primaryBlue text-[2rem]"> پروژه : {data.projectType} </p>
+              <p className="text-primaryBlue text-[2rem]">
+                {" "}
+                پروژه : {data.projectType}{" "}
+              </p>
             </div>
             <div className="md:w-1/3 flex flex-col items-center gap-y-10">
-              {/* <div className="border-[10px] border-primaryBlue w-[120px] h-[120px] rounded-full flex justify-center items-center">
-                <Counter max={80} time={100} />
-              </div> */}
-
               <div className="w-[150px] h-[150px]">
-                <CircularProgressbar value={data.projectProgress} text={`${data.projectProgress}%`} />
+                <CircularProgress
+                  size={150}
+                  strokeWidth={10}
+                  progress={40}
+                  duration={2}
+                  color={"#4D4C7D"}
+                  bgColor={"rgb(236, 236, 236)"}
+                />
               </div>
-
               <p className="text-textGray">پیشرفت پروژه</p>
             </div>
           </div>

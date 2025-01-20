@@ -19,7 +19,7 @@ function AllUserPage({ usersData }) {
     const { name, value } = e.target;
     setSearch((prev) => ({
       ...prev,
-      [name]: value // حذف فاصله‌های اضافی
+      [name]: value
     }));
   };
 
