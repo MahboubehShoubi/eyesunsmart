@@ -59,7 +59,7 @@ function CardUser({ userData }) {
   const editUserHandler = () => {};
 
   return (
-    <div className="px-5 py-8 rounded-[10px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]">
+    <div className="p-5 rounded-[10px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]">
       {/* اطلاعات اصلی */}
       <div className="grid grid-cols-2 sm:grid-cols-7 gap-4 items-center">
         <div className="flex gap-x-2 col-span-2 ">

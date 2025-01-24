@@ -10,6 +10,7 @@ import SecondCategoryList from "@/element/SecondCategoryList";
 import ThirdCategory from "@/element/ThirdCategory";
 import TextInput from "@/element/TextInput";
 import Loader from "@/module/Loader";
+import Image from "next/image";
 
 function AddProductsPage({ data }) {
   const [productData, setProductData] = useState({
@@ -23,82 +24,80 @@ function AddProductsPage({ data }) {
   });
 
   const [loading, setLoading] = useState(false);
+  const [imagePreview, setImagePreview] = useState(null); // ذخیره آدرس پیش‌نمایش
 
   const router = useRouter();
 
   useEffect(() => {
-    if (data) setProductData(data);
-  }, []);
+    if (data) {
+      setProductData(data);
+
+      // ایجاد پیش‌نمایش در صورت وجود تصویر
+      if (data.productIndexImage) {
+        setImagePreview(data.productIndexImage);
+      }
+    }
+  }, [data]);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(productData);
+
     setLoading(true);
 
     const formData = new FormData();
-    for (let i in productData) {
-      formData.append(i, productData[i]);
+    for (let key in productData) {
+      formData.append(key, productData[key]);
     }
 
-    const res = await fetch("", {
-      method: "PATCH",
-      body: formData,
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    try {
+      const res = await fetch("/api/products", {
+        method: data ? "PATCH" : "POST",
+        body: formData,
+      });
 
-    const result = await res.json();
+      if (!res.ok) throw new Error("Something went wrong");
 
-    setLoading(false);
-    console.log(formData);
+      const result = await res.json();
+      toast.success(
+        data ? "محصول با موفقیت ویرایش شد" : "محصول با موفقیت ثبت شد"
+      );
 
+      setLoading(false);
 
-    // بعد از انجام عملیات ادیت ضفحه را رفرش می کنیم تا تغییرات نمایش داده شود
-    router.refresh();
-    // setProductData({
-    //   firstCategory: "",
-    //   secondCategory: "",
-    //   thirdCategory: "",
-    //   productName: "",
-    //   description: "",
-    //   productColor:"",
-    //   productIndexImage: "",
-    // });
-  };
+      // بازنشانی داده‌ها پس از ثبت موفق
+      if (!data) {
+        setProductData({
+          firstCategory: "",
+          secondCategory: "",
+          thirdCategory: "",
+          productName: "",
+          description: "",
+          productColor: "",
+          productIndexImage: null,
+        });
+        setImagePreview(null);
+      }
 
-  const editHandler = async () => {
-    e.preventDefault();
-    console.log(productData);
-    setLoading(true);
-
-    const formData = new FormData();
-    for (let i in productData) {
-      formData.append(i, productData[i]);
+      router.refresh();
+    } catch (error) {
+      toast.error("مشکلی پیش آمد. دوباره تلاش کنید.");
+      setLoading(false);
     }
-
-    const res = await fetch("", {
-      method: "PATCH",
-      body: formData,
-      headers: { "Content-Type": "multipart/form-data" },
-    });
-
-    const result = await res.json();
-
-    setLoading(false);
-    console.log(formData);
-
-    // بعد از انجام عملیات ادیت ضفحه را رفرش می کنیم تا تغییرات نمایش داده شود
-    router.refresh();
-    // setProductData({
-    //   firstCategory: "",
-    //   secondCategory: "",
-    //   thirdCategory: "",
-    //   productName: "",
-    //   description: "",
-    //   productColor:"",
-    //   productIndexImage: "",
-    // });  
   };
 
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setProductData((prev) => ({ ...prev, productIndexImage: file }));
+
+      // ایجاد پیش‌نمایش
+      setImagePreview(URL.createObjectURL(file));
+    }
+  };
+
+
+  
   return (
     <div className="w-full flex flex-col gap-y-5 md:shadow-2xl py-[50px] px-[25px]">
       <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
@@ -155,20 +154,23 @@ function AddProductsPage({ data }) {
                 id="img"
                 name="productIndexImage"
                 accept="image/*"
-                onChange={(e) =>
-                  setProductData({
-                    ...productData,
-                    productIndexImage: e.target.files[0],
-                  })
-                }
+                onChange={handleImageChange}
               />
             </div>
           </div>
           <div className="w-2/5">
-            <div className="w-full h-[150px] border-2">
-              {/* {productData.productIndexImage ? (
-                <Image src="" width={1000} height={700} alt="Index Image" />
-              ) : null} */}
+            <div className="w-full h-[150px] border-2 flex items-center justify-center">
+              {imagePreview ? (
+                <Image
+                  width={1000}
+                  height={700}
+                  src={imagePreview}
+                  alt="Product Preview"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <span>پیش‌نمایش تصویر</span>
+              )}
             </div>
           </div>
         </div>
@@ -177,7 +179,7 @@ function AddProductsPage({ data }) {
         <Loader />
       ) : data ? (
         <button
-          onClick={editHandler}
+          onClick={submitHandler}
           className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
         >
           ویرایش محصول

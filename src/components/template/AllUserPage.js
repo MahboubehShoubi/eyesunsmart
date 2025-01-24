@@ -122,7 +122,7 @@ function AllUserPage({ usersData }) {
         {searchUserData ? (
           <CardUser key={searchUserData.id} userData={searchUserData} />
         ) : (
-          <div className="pb-[50px] w-full flex flex-col gap-y-[30px]">
+          <div className="py-[50px] w-full flex flex-col gap-y-[30px]">
             {usersData.map((user) => (
               <CardUser key={user.id} userData={user} />
             ))}
