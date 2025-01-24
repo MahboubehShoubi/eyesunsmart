@@ -118,57 +118,49 @@ function CardUser({ userData }) {
         <div className="flex items-baseline mt-4">
           <p className="w-[150px] text-bgRed">تعیین وضعیت:</p>
           <div className="w-full flex md:justify-between md:items-end md:pl-20">
-            <div className="w-fit flex gap-x-3">
-              <label htmlFor={`Admin-${userData.id}`}>
-                <input
-                  type="radio"
-                  name={`role-${userData.id}`}
-                  id={`Admin-${userData.id}`}
-                  value="ADMIN"
-                  onChange={changeHandler}
-                  checked={role === "ADMIN"}
-                />
-                ادمین سایت
-              </label>
+            <div className="w-fit flex gap-x-2">
+              <label htmlFor={`Admin-${userData.id}`}>ادمین سایت</label>
+              <input
+                type="radio"
+                name={`role-${userData.id}`}
+                id={`Admin-${userData.id}`}
+                value="ADMIN"
+                onChange={changeHandler}
+                checked={role === "ADMIN"}
+              />
             </div>
             <div className="w-fit flex gap-x-2">
-              <label htmlFor={`User-${userData.id}`}>
-                <input
-                  type="radio"
-                  name={`role-${userData.id}`}
-                  id={`User-${userData.id}`}
-                  value="USER"
-                  onChange={changeHandler}
-                  checked={role === "USER"}
-                />
-                کاربر عادی
-              </label>
+              <label htmlFor={`User-${userData.id}`}>کاربر عادی</label>
+              <input
+                type="radio"
+                name={`role-${userData.id}`}
+                id={`User-${userData.id}`}
+                value="USER"
+                onChange={changeHandler}
+                checked={role === "USER"}
+              />
             </div>
             <div className="w-fit flex gap-x-2">
-              <label htmlFor={`Customer-${userData.id}`}>
-                <input
-                  type="radio"
-                  name={`role-${userData.id}`}
-                  id={`Customer-${userData.id}`}
-                  value="CUSTOMER"
-                  onChange={changeHandler}
-                  checked={role === "CUSTOMER"}
-                />
-                باشگاه مشتریان
-              </label>
+              <label htmlFor={`Customer-${userData.id}`}>باشگاه مشتریان</label>
+              <input
+                type="radio"
+                name={`role-${userData.id}`}
+                id={`Customer-${userData.id}`}
+                value="CUSTOMER"
+                onChange={changeHandler}
+                checked={role === "CUSTOMER"}
+              />
             </div>
             <div className="w-fit flex gap-x-2">
-              <label htmlFor={`Colleague-${userData.id}`}>
-                <input
-                  type="radio"
-                  name={`role-${userData.id}`}
-                  id={`Colleague-${userData.id}`}
-                  value="COLLEAGUE"
-                  onChange={changeHandler}
-                  checked={role === "COLLEAGUE"}
-                />
-                همکار
-              </label>
+              <label htmlFor={`Colleague-${userData.id}`}>همکار</label>
+              <input
+                type="radio"
+                name={`role-${userData.id}`}
+                id={`Colleague-${userData.id}`}
+                value="COLLEAGUE"
+                onChange={changeHandler}
+                checked={role === "COLLEAGUE"}
+              />
             </div>
           </div>
         </div>
