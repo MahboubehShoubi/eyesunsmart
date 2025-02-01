@@ -159,14 +159,14 @@ function AddProductsPage({ data }) {
             </div>
           </div>
           <div className="w-2/5">
-            <div className="w-full h-[150px] border-2 flex items-center justify-center">
+            <div className=" max-w-full min-w-fit border-2 flex items-center justify-center">
               {imagePreview ? (
                 <Image
                   width={1000}
                   height={700}
                   src={imagePreview}
                   alt="Product Preview"
-                  className="w-full h-full object-cover"
+                  className="w-full object-contain"
                 />
               ) : (
                 <span>پیش‌نمایش تصویر</span>

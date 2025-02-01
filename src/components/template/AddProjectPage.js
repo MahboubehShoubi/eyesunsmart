@@ -1,17 +1,25 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import ImagesList from "@/element/ImagesList";
 import TextInput from "@/element/TextInput";
 import Loader from "@/module/Loader";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
+
+//Icons
+import { MdAppRegistration } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
 
 function AddProjectPage({ data }) {
   const [projectData, setProjectData] = useState({
+    userPhone: "",
+    projectName: "",
     projectType: "",
     projectLocation: "",
     description: "",
+    projectState: "",
+    projectFile: "",
     imageList: [],
   });
 
@@ -85,11 +93,24 @@ function AddProjectPage({ data }) {
       </p>
       <div className="w-full flex flex-col gap-y-5">
         <TextInput
+          title="شماره مشتری"
+          name="projectType"
+          dataState={projectData}
+          setDataState={setProjectData}
+        />
+        <TextInput
+          title="نام پروژه"
+          name="projectType"
+          dataState={projectData}
+          setDataState={setProjectData}
+        />
+        <TextInput
           title="نوع پروژه"
           name="projectType"
           dataState={projectData}
           setDataState={setProjectData}
         />
+
         <TextInput
           title="مکان پروژه"
           name="projectLocation"
@@ -115,16 +136,18 @@ function AddProjectPage({ data }) {
       ) : data ? (
         <button
           onClick={editHandler}
-          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
+          className="bg-green text-textWhite text-[1.2rem] w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-x-1"
         >
-          ویرایش پروژه
+          <FaEdit className="w-[20px] h-[20px]"/>
+          ویرایـــــش
         </button>
       ) : (
         <button
           onClick={submitHandler}
-          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
+          className="bg-green text-textWhite text-[1.2rem] w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-x-1"
         >
-          ثبت پروژه
+          <MdAppRegistration className="w-[25px] h-[25px]" />
+          ثبــــت
         </button>
       )}
 
