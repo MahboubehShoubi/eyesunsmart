@@ -9,17 +9,19 @@ import User from "@/models/User";
 
 async function AdminLayout({ children }) {
   const session = await getServerSession(authOptions);
-  if(!session) redirect("/");
+  if (!session) redirect("/");
 
   await connectDB();
-  const user = await User.findOne({email : session.user.email});
-  if(user.role !== "ADMIN") redirect("/dashboard");
+  const user = await User.findOne({ email: session.user.email });
+  if (user.role !== "ADMIN") redirect("/dashboard");
 
   return (
     <>
-    <HeaderSubPage/>
-    <Dashboardsidebar email={user.email} role={user.role}>{children}</Dashboardsidebar>
-    <Footer />
+      <HeaderSubPage />
+      <Dashboardsidebar email={user.email} role={user.role}>
+        {children}
+      </Dashboardsidebar>
+      <Footer />
     </>
   );
 }

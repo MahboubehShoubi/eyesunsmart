@@ -14,6 +14,8 @@ import { MdRebaseEdit } from "react-icons/md";
 import { RiEdit2Fill } from "react-icons/ri";
 import { FaUserEdit } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
+import { LiaFileInvoiceDollarSolid } from "react-icons/lia";
+
 
 import DashboardMenu from "@/module/DashboardMenu";
 
@@ -90,6 +92,13 @@ function Dashboardsidebar({ children, role, email }) {
                   >
                     <MdRebaseEdit className="w-[20px] h-[20px]" />
                     ویرایش پروژه ها
+                  </Link>
+                  <Link
+                    href="/admin/invoice"
+                    className="text-navyBlue hover:text-secondery flex gap-x-1"
+                  >
+                    <LiaFileInvoiceDollarSolid className="w-[20px] h-[20px]" />
+                      صدور فاکتـــــور
                   </Link>
                 </div>
               ) : (
