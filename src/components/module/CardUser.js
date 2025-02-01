@@ -13,6 +13,7 @@ import "animate.css";
 function CardUser({ userData }) {
   const [role, setRole] = useState(userData.role);
   const [showDetails, setShowDetails] = useState(false); // کنترل نمایش اطلاعات اضافی
+  const [editUser, setEditUser] = useState(false);
 
   const changeHandler = (e) => {
     setRole(e.target.value);
@@ -56,26 +57,65 @@ function CardUser({ userData }) {
     console.log("deleted user : ", userDeletedId);
   };
 
-  const editUserHandler = () => {};
+  const editUserHandler = () => {
+    setEditUser(true);
+  };
+
+  const saveEditUserToDatabase = () => {
+    setEditUser(false);
+  };
 
   return (
     <div className="p-5 rounded-[10px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]">
       {/* اطلاعات اصلی */}
-      <div className="grid grid-cols-2 sm:grid-cols-7 gap-4 items-center">
-        <div className="flex gap-x-2 col-span-2 ">
-          <label className="text-bgRed">نام و نام خانوادگی:</label>
-          <p>{userData.fullName}</p>
+      <div className="grid grid-cols-2 sm:grid-cols-12 items-center">
+        <div className="flex gap-x-2 col-span-4 items-center">
+          <label className="text-bgRed w-fit" htmlFor="fullName">
+            نام و نام خانوادگی:
+          </label>
+          {editUser ? (
+            <input
+              type="text"
+              value={userData.fullName}
+              id="fullName"
+              className=" w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+            />
+          ) : (
+            <p className="w-1/2 px-2">{userData.fullName}</p>
+          )}
         </div>
-        <div className="flex gap-x-2 col-span-2">
-          <label className="text-bgRed">کد ملی:</label>
-          <p>{userData.idCode}</p>
+        <div className="flex gap-x-2 col-span-3 items-center">
+          <label className="text-bgRed w-fit" htmlFor="idCode">
+            کد ملی:
+          </label>
+          {editUser ? (
+            <input
+              type="text"
+              value={userData.idCode}
+              id="idCode"
+              className=" w-2/3 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+            />
+          ) : (
+            <p className="w-1/2 px-2">{userData.idCode}</p>
+          )}
         </div>
-        <div className="flex gap-x-2 col-span-2">
-          <label className="text-bgRed">شماره تماس:</label>
-          <p>{userData.phone}</p>
+        <div className="flex gap-x-2 col-span-3 items-center">
+          <label className="text-bgRed w-fit" htmlFor="phone">
+            شماره تماس:
+          </label>
+          {editUser ? (
+            <input
+              type="text"
+              value={userData.phone}
+              id="phone"
+              className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+            />
+          ) : (
+            <p className="w-1/2 px-2">{userData.phone}</p>
+          )}
         </div>
         {/* دکمه نمایش جزئیات */}
-        <div className="flex justify-end col-span-1">
+        <div className="flex justify-end col-span-2">
           <button
             onClick={toggleDetails}
             className="rounded-[5px] bg-primaryBlue text-textWhite w-full py-[5px] text-[12px] flex gap-x-1 justify-center items-center"
@@ -96,22 +136,58 @@ function CardUser({ userData }) {
           showDetails ? "max-h-[250px]" : "max-h-0"
         }`}
       >
-        <div className="grid grid-cols-2 sm:grid-cols-7 gap-4 mt-5 items-center">
-          <div className="flex gap-x-2 col-span-2">
-            <label className="text-bgRed">شغل:</label>
-            <p>{userData.job}</p>
+        <div className="grid grid-cols-2 sm:grid-cols-12 gap-4 mt-5 items-center">
+          <div className="flex gap-x-2 col-span-4">
+            <label className="text-bgRed" htmlFor="job">شغل:</label>
+            {editUser ? (
+              <input
+                type="text"
+                value={userData.job}
+                id="job"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              />
+            ) : (
+              <p className="w-1/2 px-2">{userData.job}</p>
+            )}
+          </div>
+          <div className="flex gap-x-2 col-span-3">
+            <label className="text-bgRed" htmlFor="province">استان:</label>
+            {editUser ? (
+              <input
+                type="text"
+                value={userData.province}
+                id="province"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              />
+            ) : (
+              <p className="w-1/2 px-2">{userData.province}</p>
+            )}
+          </div>
+          <div className="flex gap-x-2 col-span-3">
+            <label className="text-bgRed" htmlFor="city">شهر:</label>
+            {editUser ? (
+              <input
+                type="text"
+                value={userData.city}
+                id="city"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              />
+            ) : (
+              <p className="w-1/2 px-2">{userData.city}</p>
+            )}
           </div>
           <div className="flex gap-x-2 col-span-2">
-            <label className="text-bgRed">استان:</label>
-            <p>{userData.province}</p>
-          </div>
-          <div className="flex gap-x-2 col-span-2">
-            <label className="text-bgRed">شهر:</label>
-            <p>{userData.city}</p>
-          </div>
-          <div className="flex gap-x-2 col-span-2">
-            <label className="text-bgRed">سن:</label>
-            <p>{userData.age}</p>
+            <label className="text-bgRed" htmlFor="age">سن:</label>
+            {editUser ? (
+              <input
+                type="text"
+                value={userData.age}
+                id="age"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              />
+            ) : (
+              <p className="w-1/2 px-2">{userData.age}</p>
+            )}
           </div>
         </div>
 
@@ -172,7 +248,7 @@ function CardUser({ userData }) {
               onClick={saveRoleToDatabase}
             >
               <IoMdCheckboxOutline className="w-[22px] h-[22px]" />
-              تائید نهایی
+              تائید
             </button>
             <button
               className="w-1/2 bg-bgRed text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
@@ -184,22 +260,25 @@ function CardUser({ userData }) {
           </div>
         ) : (
           <div className="mt-10 flex gap-x-[5%] ">
+            {editUser ? (
+              <button
+                className="w-1/2 bg-green text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
+                onClick={saveEditUserToDatabase}
+              >
+                <IoMdCheckboxOutline className="w-[22px] h-[22px]" />
+                تائید
+              </button>
+            ) : (
+              <button
+                className="w-1/2 bg-yellowTisBee text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
+                onClick={editUserHandler}
+              >
+                <CiEdit className="w-[22px] h-[22px]" />
+                ویرایش
+              </button>
+            )}
             <button
-              className="w-1/3 bg-green text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
-              onClick={saveRoleToDatabase}
-            >
-              <IoMdCheckboxOutline className="w-[22px] h-[22px]" />
-              تائید نهایی
-            </button>
-            <button
-              className="w-1/3 bg-yellowTisBee text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
-              onClick={editUserHandler}
-            >
-              <CiEdit className="w-[22px] h-[22px]" />
-              ویرایش اطلاعات
-            </button>
-            <button
-              className="w-1/3 bg-bgRed text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
+              className="w-1/2 bg-bgRed text-textWhite p-2 text-[1.2rem] rounded-[10px] flex justify-center"
               onClick={deleteUserHandler}
             >
               <MdDeleteForever className="w-[22px] h-[22px]" />

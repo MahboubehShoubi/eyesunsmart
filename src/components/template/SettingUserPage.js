@@ -1,4 +1,3 @@
-
 import CardUser from "@/module/CardUser";
 
 // import { usePathname } from "next/navigation";
@@ -13,10 +12,15 @@ function SettingUserPage({ usersData }) {
   // console.log(findUrl);
 
   return (
-    <div className="pb-[50px] w-full flex flex-col gap-y-[30px]">
-      {usersData.map((user) => (
-        <CardUser key={user.id} userData={user} />
-      ))}
+    <div >
+      <div>
+        <h2 className="text-textWhite bg-grayTisAir px-3 py-1 text-[1.5rem]">مدیریت کاربران جدید</h2>
+      </div>
+      <div className="py-[30px] w-full flex flex-col gap-y-[30px]">
+        {usersData.map((user) => (
+          <CardUser key={user.id} userData={user} />
+        ))}
+      </div>
     </div>
   );
 }

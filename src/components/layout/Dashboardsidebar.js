@@ -8,6 +8,8 @@ import LogoutButton from "../element/LogoutButton";
 // Icons
 import { CgProfile } from "react-icons/cg";
 import { IoMdHome } from "react-icons/io";
+import { FaUserCog } from "react-icons/fa";
+import { HiUsers } from "react-icons/hi2";
 import { AiFillProduct } from "react-icons/ai";
 import { FaProjectDiagram } from "react-icons/fa";
 import { MdRebaseEdit } from "react-icons/md";
@@ -55,14 +57,14 @@ function Dashboardsidebar({ children, role, email }) {
                     href="/admin/user/setting"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
-                    <IoMdHome className="w-[20px] h-[20px]" />
+                    <FaUserCog className="w-[20px] h-[20px]" />
                     مدیریت کاربران جدید
                   </Link>
                   <Link
                     href="/admin/user/all"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
-                    <IoMdHome className="w-[20px] h-[20px]" />
+                    <HiUsers className="w-[20px] h-[20px]" />
                      مشاهده لیست همه کاربران
                   </Link>
                   <Link

@@ -19,13 +19,13 @@ function AllUserPage({ usersData }) {
     const { name, value } = e.target;
     setSearch((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const searchHandler = () => {
     if (!search.fullName && !search.idCode && !search.phone) {
-      toast.error("لطفا اطلاعات معتبر وارد کنید")
+      toast.error("لطفا اطلاعات معتبر وارد کنید");
       return;
     }
 
@@ -37,14 +37,14 @@ function AllUserPage({ usersData }) {
       );
     });
 
-    if(!result){
-      toast.error("این کاربر با این مشخصات وجو ندارد")
+    if (!result) {
+      toast.error("این کاربر با این مشخصات وجو ندارد");
     }
 
     if (JSON.stringify(result) !== JSON.stringify(searchUserData)) {
       setSearchUserData(result || null);
     } else {
-      toast.error("اطلاعات وارد شده تکراری است.")
+      toast.error("اطلاعات وارد شده تکراری است.");
     }
 
     setSearch({
@@ -120,7 +120,9 @@ function AllUserPage({ usersData }) {
       {/* نمایش نتیجه */}
       <div>
         {searchUserData ? (
-          <CardUser key={searchUserData.id} userData={searchUserData} />
+          <div className="py-[50px] w-full flex flex-col gap-y-[30px]">
+            <CardUser key={searchUserData.id} userData={searchUserData} />
+          </div>
         ) : (
           <div className="py-[50px] w-full flex flex-col gap-y-[30px]">
             {usersData.map((user) => (
@@ -129,7 +131,7 @@ function AllUserPage({ usersData }) {
           </div>
         )}
       </div>
-      <Toaster/>
+      <Toaster />
     </div>
   );
 }
