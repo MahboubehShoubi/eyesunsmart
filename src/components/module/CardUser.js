@@ -78,7 +78,7 @@ function CardUser({ userData }) {
               type="text"
               value={userData.fullName}
               id="fullName"
-              className=" w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              className=" w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
             />
           ) : (
             <p className="w-1/2 px-2">{userData.fullName}</p>
@@ -93,7 +93,7 @@ function CardUser({ userData }) {
               type="text"
               value={userData.idCode}
               id="idCode"
-              className=" w-2/3 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              className=" w-2/3 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
             />
           ) : (
             <p className="w-1/2 px-2">{userData.idCode}</p>
@@ -108,7 +108,7 @@ function CardUser({ userData }) {
               type="text"
               value={userData.phone}
               id="phone"
-              className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+              className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
             />
           ) : (
             <p className="w-1/2 px-2">{userData.phone}</p>
@@ -137,53 +137,53 @@ function CardUser({ userData }) {
         }`}
       >
         <div className="grid grid-cols-2 sm:grid-cols-12 gap-4 mt-5 items-center">
-          <div className="flex gap-x-2 col-span-4">
+          <div className="flex gap-x-2 col-span-4 items-center">
             <label className="text-bgRed" htmlFor="job">شغل:</label>
             {editUser ? (
               <input
                 type="text"
                 value={userData.job}
                 id="job"
-                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
               />
             ) : (
               <p className="w-1/2 px-2">{userData.job}</p>
             )}
           </div>
-          <div className="flex gap-x-2 col-span-3">
+          <div className="flex gap-x-2 col-span-3 items-center">
             <label className="text-bgRed" htmlFor="province">استان:</label>
             {editUser ? (
               <input
                 type="text"
                 value={userData.province}
                 id="province"
-                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
               />
             ) : (
               <p className="w-1/2 px-2">{userData.province}</p>
             )}
           </div>
-          <div className="flex gap-x-2 col-span-3">
+          <div className="flex gap-x-2 col-span-3 items-center">
             <label className="text-bgRed" htmlFor="city">شهر:</label>
             {editUser ? (
               <input
                 type="text"
                 value={userData.city}
                 id="city"
-                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
               />
             ) : (
               <p className="w-1/2 px-2">{userData.city}</p>
             )}
           </div>
-          <div className="flex gap-x-2 col-span-2">
+          <div className="flex gap-x-2 col-span-2 items-center">
             <label className="text-bgRed" htmlFor="age">سن:</label>
             {editUser ? (
               <input
                 type="text"
                 value={userData.age}
                 id="age"
-                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)]"
+                className="w-1/2 px-2 py-[2px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.3)] animate__animated animate__fadeIn animate__slower"
               />
             ) : (
               <p className="w-1/2 px-2">{userData.age}</p>
