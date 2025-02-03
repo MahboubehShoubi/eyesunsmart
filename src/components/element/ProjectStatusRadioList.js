@@ -14,7 +14,7 @@ function ProjectStatusRadioList({title, name, dataState, setDataState}) {
       <div className="w-full md:w-[85%] flex flex-col gap-2">
         <div className="w-fit flex gap-1">
           <label htmlFor="FirstStage" className="text-grayTisBee">
-            مشاوره و طراحی و ارائه فاکتور
+            مشاوره، طراحی و ارائه فاکتور
           </label>
           <input
             type="radio"
@@ -40,7 +40,7 @@ function ProjectStatusRadioList({title, name, dataState, setDataState}) {
         </div>
         <div className="w-fit flex gap-1">
           <label htmlFor="ThirdStage" className="text-grayTisBee">
-            نصب و راه‌اندازی و برنامه نویسی حرفه‌ای
+            نصب، راه‌اندازی و برنامه نویسی حرفه‌ای
           </label>
           <input
             type="radio"

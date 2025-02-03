@@ -161,7 +161,7 @@ function AddProjectPage({ data }) {
           className="bg-green text-textWhite text-[1.2rem] w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-x-1"
         >
           <FaEdit className="w-[20px] h-[20px]" />
-          ویرایـــــش
+          تایید
         </button>
       ) : (
         <button
