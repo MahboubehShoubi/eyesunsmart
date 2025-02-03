@@ -12,6 +12,9 @@ import TextInput from "@/element/TextInput";
 import Loader from "@/module/Loader";
 import Image from "next/image";
 
+import { MdAppRegistration } from "react-icons/md";
+import { FaEdit } from "react-icons/fa";
+
 function AddProductsPage({ data }) {
   const [productData, setProductData] = useState({
     firstCategory: "",
@@ -85,7 +88,6 @@ function AddProductsPage({ data }) {
     }
   };
 
-
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -96,8 +98,6 @@ function AddProductsPage({ data }) {
     }
   };
 
-
-  
   return (
     <div className="w-full flex flex-col gap-y-5 md:shadow-2xl py-[50px] px-[25px]">
       <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
@@ -180,15 +180,17 @@ function AddProductsPage({ data }) {
       ) : data ? (
         <button
           onClick={submitHandler}
-          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
+          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-2 items-baseline text-[1.3rem]"
         >
-          ویرایش محصول
+          <FaEdit className="w-[20px] h-[20px]" />
+          تائید
         </button>
       ) : (
         <button
           onClick={submitHandler}
-          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg"
+          className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-2 text-[1.3rem]"
         >
+          <MdAppRegistration className="w-[25px] h-[25px]" />
           ثبت محصول
         </button>
       )}

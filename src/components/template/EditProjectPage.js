@@ -7,7 +7,6 @@ import AdminCardProject from "@/module/AdminCardProject";
 import { IoSearchSharp } from "react-icons/io5";
 
 function EditProjectPage({ projectsData }) {
-
   const [search, setSearch] = useState({
     fullName: "",
     phone: "",
@@ -35,7 +34,6 @@ function EditProjectPage({ projectsData }) {
         (search.phone && project.employerPhone === search.phone)
       );
     });
-    
 
     if (!result) {
       toast.error("این کاربر با این مشخصات وجو ندارد");
@@ -59,14 +57,14 @@ function EditProjectPage({ projectsData }) {
 
   return (
     <div>
-      <div>
-        <h4 className="bg-grayTisAir text-textWhite text-[1.5rem] px-5 py-2">
+      <div className="w-full flex flex-col gap-y-5 md:shadow-2xl py-[50px] px-[25px]">
+        <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
           جستجوی پروژه
-        </h4>
+        </h3>
         <p className="mt-[20px] text-bgRed">
           استفاده از یکی از گزینه های زیر برای جستجو کافی است!
         </p>
-        <div className=" py-5 border-b-4 flex flex-col gap-y-5">
+        <div className=" py-5 flex flex-col gap-y-5">
           <div>
             <label htmlFor="fullName" className="w-[150px] inline-block">
               نام و نام خانوادگی :
@@ -106,7 +104,10 @@ function EditProjectPage({ projectsData }) {
       <div className="mt-[30px]">
         {searchProjectData ? (
           <div className="py-[50px] w-full flex flex-col gap-y-[30px]">
-            <AdminCardProject key={searchProjectData.id} project={searchProjectData} />
+            <AdminCardProject
+              key={searchProjectData.id}
+              project={searchProjectData}
+            />
           </div>
         ) : (
           <div className="w-full flex flex-col gap-y-10">

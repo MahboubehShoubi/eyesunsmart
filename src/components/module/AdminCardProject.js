@@ -59,7 +59,7 @@ function AdminCardProject({ project }) {
                   width={1000}
                   height={700}
                   alt="project image"
-                  className="w-full h-full"
+                  className="w-full h-full cursor-pointer"
                 />
               </div>
             ))}

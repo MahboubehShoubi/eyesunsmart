@@ -60,8 +60,8 @@ function AllUserPage({ usersData }) {
 
   return (
     <div>
-      <div>
-        <h4 className="bg-grayTisAir text-textWhite text-[1.5rem] px-5 py-2">
+      <div className="pt-[50px]">
+        <h4 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full">
           جستجوی کاربر
         </h4>
         <p className="mt-[20px] text-bgRed">

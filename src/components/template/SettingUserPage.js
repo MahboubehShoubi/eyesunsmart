@@ -12,9 +12,11 @@ function SettingUserPage({ usersData }) {
   // console.log(findUrl);
 
   return (
-    <div >
-      <div>
-        <h2 className="text-textWhite bg-grayTisAir px-3 py-1 text-[1.5rem]">مدیریت کاربران جدید</h2>
+    <div>
+      <div className="pt-[50px]">
+        <h2 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full">
+          مدیریت کاربران جدید
+        </h2>
       </div>
       <div className="py-[30px] w-full flex flex-col gap-y-[30px]">
         {usersData.map((user) => (
