@@ -20,13 +20,15 @@ function MainSettingUp() {
                 <span className="bg-bgRed text-textWhite text-[2rem]">01</span>
               </div>
               <div className="text-center">
-                <h4 className="text-[1.2rem] font-semibold">
-                  مشاوره و طراحی سفارشی{" "}
-                </h4>
+                <div className="h-[60px]">
+                  <h4 className="text-[1.2rem] font-semibold">
+                    مشاوره و طراحی و ارائه فاکتور
+                  </h4>
+                </div>
                 <p className="mt-3 font-light">
                   هر خانه و هر مشتری منحصربه‌فرد است. تیم متخصص ما پس از بررسی
                   نیازها و زیرساخت‌های خانه شما، راهکارهایی متناسب با سبک زندگی
-                  و انتظارات شما طراحی می‌کند.{" "}
+                  و انتظارات شما طراحی می‌کند.
                 </p>
               </div>
             </div>
@@ -36,9 +38,11 @@ function MainSettingUp() {
                 <span className="bg-bgRed text-textWhite text-[2rem]">02</span>
               </div>
               <div className="text-center">
-                <h4 className="text-[1.2rem] font-semibold">
-                  نصب و راه‌اندازی حرفه‌ای{" "}
-                </h4>
+                <div className="h-[60px]">
+                  <h4 className="text-[1.2rem] font-semibold">
+                    بازدیدهای مرحله ای از زیرساخت هوشمند
+                  </h4>
+                </div>
                 <p className="mt-3 font-light">
                   نصب سیستم‌های هوشمند باید به دقت و با مهارت انجام شود. ما
                   تضمین می‌کنیم تمامی تجهیزات شما با بالاترین کیفیت و به شکلی
@@ -52,13 +56,15 @@ function MainSettingUp() {
                 <span className="bg-bgRed text-textWhite text-[2rem]">03</span>
               </div>
               <div className="text-center">
-                <h4 className="text-[1.1rem] font-semibold">
-                  برنامه‌نویسی و شخصی‌سازی{" "}
-                </h4>
+                <div className="h-[60px]">
+                  <h4 className="text-[1.1rem] font-semibold">
+                     نصب و راه اندازی و برنامه نویسی حرفه‌ای
+                  </h4>
+                </div>
                 <p className="mt-3 font-light">
                   خانه هوشمند شما باید دقیقاً مطابق با نیازهای شما عمل کند. با
                   خدمات برنامه‌نویسی ما، می‌توانید سناریوهای خاص و تنظیمات
-                  دلخواه خود را برای تجهیزات هوشمندتان تعریف کنید.{" "}
+                  دلخواه خود را برای تجهیزات هوشمندتان تعریف کنید.
                 </p>
               </div>
             </div>
@@ -68,14 +74,16 @@ function MainSettingUp() {
                 <span className="bg-bgRed text-textWhite text-[2rem]">04</span>
               </div>
               <div className="text-center">
-                <h4 className="text-[1.2rem] font-semibold">
-                  آموزش و پشتیبانی
-                </h4>
+                <div className="h-[60px]">
+                  <h4 className="text-[1.2rem] font-semibold">
+                    آموزش و پشتیبانی
+                  </h4>
+                </div>
                 <p className="mt-3 font-light">
                   فناوری تنها زمانی مفید است که به درستی از آن استفاده شود. ما
                   تمامی آموزش‌های لازم برای بهره‌گیری از امکانات خانه هوشمند را
                   به شما ارائه می‌دهیم و در هر مرحله از استفاده، کنار شما خواهیم
-                  بود.{" "}
+                  بود.
                 </p>
               </div>
             </div>
@@ -84,13 +92,15 @@ function MainSettingUp() {
                 <span className="bg-bgRed text-textWhite text-[2rem]">05</span>
               </div>
               <div className="text-center">
-                <h4 className="text-[1.2rem] font-semibold">
-                  به‌روزرسانی و خدمات پس از فروش
-                </h4>
+                <div className="h-[60px]">
+                  <h4 className="text-[1.2rem] font-semibold">
+                    به‌روزرسانی و خدمات پس از فروش
+                  </h4>
+                </div>
                 <p className="mt-3 font-light">
                   فناوری هوشمند دائماً در حال پیشرفت است. خدمات ما شامل
                   به‌روزرسانی نرم‌افزارها، ارتقای سیستم‌ها و پشتیبانی 24/7 برای
-                  رفع هرگونه مشکل احتمالی است.{" "}
+                  رفع هرگونه مشکل احتمالی است.
                 </p>
               </div>
             </div>
