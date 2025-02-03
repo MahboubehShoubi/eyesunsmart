@@ -10,6 +10,7 @@ import { Toaster } from "react-hot-toast";
 //Icons
 import { MdAppRegistration } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
+import ProjectStatusRadioList from "@/element/ProjectStatusRadioList";
 
 function AddProjectPage({ data }) {
   const [projectData, setProjectData] = useState({
@@ -17,10 +18,12 @@ function AddProjectPage({ data }) {
     projectName: "",
     projectType: "",
     projectLocation: "",
+    Area:"",
+    NumberOfFloors:"",
     description: "",
-    projectState: "",
-    projectFile: "",
+    projectProgress: "",
     imageList: [],
+    // projectFile: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -94,13 +97,13 @@ function AddProjectPage({ data }) {
       <div className="w-full flex flex-col gap-y-5">
         <TextInput
           title="شماره مشتری"
-          name="projectType"
+          name="userPhone"
           dataState={projectData}
           setDataState={setProjectData}
         />
         <TextInput
           title="نام پروژه"
-          name="projectType"
+          name="projectName"
           dataState={projectData}
           setDataState={setProjectData}
         />
@@ -118,11 +121,29 @@ function AddProjectPage({ data }) {
           setDataState={setProjectData}
         />
         <TextInput
+          title="مساحت"
+          name="Area"
+          dataState={projectData}
+          setDataState={setProjectData}
+        />
+        <TextInput
+          title="تعداد طبقات"
+          name="NumberOfFloors"
+          dataState={projectData}
+          setDataState={setProjectData}
+        />
+        <TextInput
           title="توضیحات "
           name="description"
           dataState={projectData}
           setDataState={setProjectData}
           textarea={true}
+        />
+        <ProjectStatusRadioList
+          title="وضعیت پیشرفت"
+          name="projectProgress"
+          dataState={projectData}
+          setDataState={setProjectData}
         />
         <ImagesList
           title=" عکس های پروژه"
@@ -138,7 +159,7 @@ function AddProjectPage({ data }) {
           onClick={editHandler}
           className="bg-green text-textWhite text-[1.2rem] w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-x-1"
         >
-          <FaEdit className="w-[20px] h-[20px]"/>
+          <FaEdit className="w-[20px] h-[20px]" />
           ویرایـــــش
         </button>
       ) : (
