@@ -13,7 +13,7 @@ function TextInput({
   };
   return (
     <div className="flex flex-col md:flex-row">
-      <p className="w-full md:w-[15%] text-[1.2rem]">{title}</p>
+      <p className="w-full md:w-[15%] text-[1.2rem]">{title} :</p>
       {textarea ? (
         <textarea
           type="text"

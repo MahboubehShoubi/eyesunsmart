@@ -14,12 +14,12 @@ import ProjectStatusRadioList from "@/element/ProjectStatusRadioList";
 
 function AddProjectPage({ data }) {
   const [projectData, setProjectData] = useState({
-    userPhone: "",
-    projectName: "",
+    mployerFullName: "",
+    employerPhone: "",
     projectType: "",
     projectLocation: "",
-    Area:"",
-    NumberOfFloors:"",
+    area:"",
+    numberOfFloors:"",
     description: "",
     projectProgress: "",
     imageList: [],
@@ -95,15 +95,16 @@ function AddProjectPage({ data }) {
           : "در این صفحه شما می توانید پروژه های خود را ثبت کنید"}
       </p>
       <div className="w-full flex flex-col gap-y-5">
+        
         <TextInput
-          title="شماره مشتری"
-          name="userPhone"
+          title="کارفرما"
+          name="mployerFullName"
           dataState={projectData}
           setDataState={setProjectData}
         />
         <TextInput
-          title="نام پروژه"
-          name="projectName"
+          title="شماره تماس"
+          name="employerPhone"
           dataState={projectData}
           setDataState={setProjectData}
         />
@@ -122,13 +123,13 @@ function AddProjectPage({ data }) {
         />
         <TextInput
           title="مساحت"
-          name="Area"
+          name="area"
           dataState={projectData}
           setDataState={setProjectData}
         />
         <TextInput
           title="تعداد طبقات"
-          name="NumberOfFloors"
+          name="numberOfFloors"
           dataState={projectData}
           setDataState={setProjectData}
         />
