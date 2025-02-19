@@ -4,6 +4,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
+//Icons
+import { FaEdit } from "react-icons/fa";
+import { MdDeleteForever } from "react-icons/md";
+
+
+
 function AdminCardProject({ project }) {
   const [image, setImage] = useState();
 
@@ -45,6 +51,14 @@ function AdminCardProject({ project }) {
             <span className="text-bgRed">نوع پروژه : </span>
             <span>{project.projectType}</span>
           </p>
+          <p>
+            <span className="text-bgRed"> وضعیت پیشرفت : </span>
+            <span>{project.projectProgress} %</span>
+          </p>
+          <p>
+            <span className="text-bgRed"> فایل Backup : </span>
+            <p>{project.backupFile}</p>
+          </p>
         </div>
         <div className="w-full md:w-2/3 flex">
           <div className="w-full md:w-1/2 h-fit flex flex-wrap gap-5 ">
@@ -78,16 +92,18 @@ function AdminCardProject({ project }) {
 
       <div className="w-full flex justify-between gap-5 mt-5">
         <button
-          className="w-1/2 p-2 rounded-lg bg-green text-textWhite"
+          className="w-1/2 text-[20px] rounded-lg bg-green text-textWhite flex justify-center gap-x-2 py-2"
           onClick={() => editHandler(project.id)}
         >
-          ویرایش پروژه
+          <FaEdit className="w-[20px] h-[20px]"/>
+          ویرایش 
         </button>
         <button
-          className="w-1/2 p-2 rounded-lg bg-bgRed text-textWhite "
+          className="w-1/2 text-[20px] rounded-lg bg-bgRed text-textWhite flex justify-center gap-x-2 py-2"
           onClick={deleteHandler}
         >
-          حذف پروژه
+          <MdDeleteForever className="w-[22px] h-[22px]" />
+          حذف 
         </button>
       </div>
     </div>

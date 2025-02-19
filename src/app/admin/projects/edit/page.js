@@ -28,6 +28,7 @@ function EditProject() {
         "/image/example/img-(9).jpg",
         "/image/example/img-(10).jpg",
       ],
+      backupFile: "/image/example/img-(1).jpg",
     },
     {
       id:"02",
@@ -47,6 +48,7 @@ function EditProject() {
         "/image/example/img-(9).jpg",
         "/image/example/img-(10).jpg",
       ],
+      backupFile: "/image/example/img-(7).jpg",
     },
   ];
 
