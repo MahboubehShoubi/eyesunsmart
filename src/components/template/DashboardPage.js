@@ -7,12 +7,12 @@ function DashboardPage({ role, createdAt }) {
         <div>
           <h3 className="text-[1.5rem]">سلام ادمین عزیز ❤️</h3>
           <p className="bg-bgRed text-textWhite p-2 mt-3">
-            در پنل ادمین با استفاده از گزینه{" "}
+            در پنل ادمین با استفاده از گزینه
             <Link
               href="/admin/products/add"
               className="border-[1px] border-textWhite rounded-lg px-2 mx-1 w-fit text-grayTisAir hover:text-textWhite"
             >
-              افزودن محصولات{" "}
+              افزودن محصولات
             </Link>
             میتوانید محصولات خود را وارد کنید
           </p>
