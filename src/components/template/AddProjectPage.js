@@ -23,7 +23,7 @@ function AddProjectPage({ data }) {
     description: "",
     projectProgress: "",
     imageList: [],
-    // projectFile: "",
+    backupFile: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -33,6 +33,13 @@ function AddProjectPage({ data }) {
   useEffect(() => {
     // if (data) setProjectData(data);
   }, []);
+
+  const changeHandler = (e) => {
+    const value = e.target.files[0];
+    const name = e.target.name;
+    setProjectData({...projectData , [name] : value});
+  }
+
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -152,6 +159,15 @@ function AddProjectPage({ data }) {
           dataState={projectData}
           setDataState={setProjectData}
         />
+        <div className="w-full flex gap-x-5 items-end border-[2px] px-4 py-4 rounded-[5px] border-dashed">
+          <label htmlFor="backUpFile">فایل BackUp :</label>
+            <input
+              type="file"
+              id="backUpFile"
+              name="backupFile"
+              onChange={(e) => changeHandler(e)}
+            />
+          </div>
       </div>
       {loading ? (
         <Loader />

@@ -16,7 +16,7 @@ function ImagesList({ title, type, dataState, setDataState }) {
   };
   return (
     <div className="w-full flex flex-col gap-y-5">
-      <p>{title}</p>
+      <p>{title} :</p>
       <div className="w-full flex flex-col gap-y-5">
         {dataState[type].map((item, index) => (
           <div key={index}>
