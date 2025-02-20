@@ -57,54 +57,61 @@ function Dashboardsidebar({ children, role, email }) {
                     پنل ادمین
                   </Link>
                   <Link
+                    href="/admin/user"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  >
+                    <FaUserCog className="w-[20px] h-[20px]" />
+                    مدیریت کاربران 
+                  </Link>
+                  {/* <Link
                     href="/admin/user/setting"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <FaUserCog className="w-[20px] h-[20px]" />
                     مدیریت کاربران جدید
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/admin/user/all"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <HiUsers className="w-[20px] h-[20px]" />
                      مشاهده لیست همه کاربران
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/admin/products/add"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <AiFillProduct className="w-[20px] h-[20px]" />
                     افزودن محصولات
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/admin/products/edit"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <RiEdit2Fill className="w-[20px] h-[20px]" />
                     ویرایش محصولات
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/admin/projects/add"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <FaProjectDiagram className="w-[20px] h-[20px]" />
                     افزودن پروژه ها
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/admin/projects/edit"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <MdRebaseEdit className="w-[20px] h-[20px]" />
                     ویرایش پروژه ها
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/admin/customer"
                     className="text-navyBlue hover:text-secondery flex gap-x-1"
                   >
                     <FaUserTag className="w-[20px] h-[20px]" />
                        باشگاه مشتریان
-                  </Link>
+                  </Link> */}
                 </div>
               ) : (
                 <div className="flex flex-col h-fit gap-y-3">

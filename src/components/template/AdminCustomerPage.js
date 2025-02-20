@@ -10,7 +10,7 @@ function AdminCustomerPage({ customerData }) {
   const [searchCustomerData, setSearchCustomerData] = useState(null);
 
   useEffect(() => {
-    console.log("searchUserData updated:", searchCustomerData);
+    console.log("searchCustomerData updated:", searchCustomerData);
   }, [searchCustomerData]);
 
   return (
