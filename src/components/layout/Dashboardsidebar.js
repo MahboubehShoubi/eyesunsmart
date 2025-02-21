@@ -63,6 +63,13 @@ function Dashboardsidebar({ children, role, email }) {
                     <FaUserCog className="w-[20px] h-[20px]" />
                     مدیریت کاربران 
                   </Link>
+                  <Link
+                    href="/admin/products"
+                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  >
+                    <AiFillProduct className="w-[20px] h-[20px]" />
+                     مدیریت محصولات
+                  </Link>
                   
                   
                   {/* <Link

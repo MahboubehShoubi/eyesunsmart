@@ -6,10 +6,8 @@ import { usePathname } from 'next/navigation';
 
 
 //Icons
-import { FaUserCog } from "react-icons/fa";
 import { ImUserPlus } from "react-icons/im";
 import { HiUserGroup } from "react-icons/hi";
-import { HiUsers } from "react-icons/hi2";
 import { FaUserTag } from "react-icons/fa";
 import { FaBuildingUser } from "react-icons/fa6";
 
@@ -28,8 +26,11 @@ function AdminUserPage() {
   };
 
   useEffect(() => {
-    console.log("activ Tab :"  , active)
-  } , [active])
+
+    if(pathname === "/admin/user"){
+      setActive("");
+    }
+  } , [active , pathname])
 
 
   return (
