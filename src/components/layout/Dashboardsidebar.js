@@ -63,20 +63,8 @@ function Dashboardsidebar({ children, role, email }) {
                     <FaUserCog className="w-[20px] h-[20px]" />
                     مدیریت کاربران 
                   </Link>
-                  {/* <Link
-                    href="/admin/user/setting"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
-                  >
-                    <FaUserCog className="w-[20px] h-[20px]" />
-                    مدیریت کاربران جدید
-                  </Link> */}
-                  {/* <Link
-                    href="/admin/user/all"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
-                  >
-                    <HiUsers className="w-[20px] h-[20px]" />
-                     مشاهده لیست همه کاربران
-                  </Link> */}
+                  
+                  
                   {/* <Link
                     href="/admin/products/add"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
@@ -105,13 +93,7 @@ function Dashboardsidebar({ children, role, email }) {
                     <MdRebaseEdit className="w-[20px] h-[20px]" />
                     ویرایش پروژه ها
                   </Link> */}
-                  {/* <Link
-                    href="/admin/customer"
-                    className="text-navyBlue hover:text-secondery flex gap-x-1"
-                  >
-                    <FaUserTag className="w-[20px] h-[20px]" />
-                       باشگاه مشتریان
-                  </Link> */}
+                 
                 </div>
               ) : (
                 <div className="flex flex-col h-fit gap-y-3">
