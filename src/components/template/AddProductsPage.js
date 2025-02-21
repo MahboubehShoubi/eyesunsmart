@@ -100,7 +100,12 @@ function AddProductsPage({ data }) {
 
   return (
     <div className="w-full flex flex-col gap-y-5 md:shadow-2xl py-[50px] px-[25px]">
-      <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
+      <h3
+        className="text-textWhite px-5 py-2 text-[1.7rem] w-full "
+        style={{
+          backgroundImage: `linear-gradient(to left,#898989 , #898989,transparent 100% )`,
+        }}
+      >
         {data ? "ویرایش محصولات" : "افزودن محصولات"}
       </h3>
       <p className="w-full text-center px-5 py-2 bg-bgRed text-textWhite text-[1rem] md:text-[1.5rem] md:bg-transparent md:text-backgroundBlack">
@@ -191,7 +196,7 @@ function AddProductsPage({ data }) {
           className="bg-green text-textWhite w-full md:w-[350px] p-2 rounded-lg flex justify-center gap-2 text-[1.3rem]"
         >
           <MdAppRegistration className="w-[25px] h-[25px]" />
-          ثبت محصول
+          ثبت 
         </button>
       )}
 

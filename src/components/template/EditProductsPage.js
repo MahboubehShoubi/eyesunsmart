@@ -11,10 +11,9 @@ import { MdDeleteForever } from "react-icons/md";
 import { MdImageSearch } from "react-icons/md";
 
 function EditProductsPage() {
-
   const exampleList = [
     {
-      id:"01",
+      id: "01",
       image: "/image/example/img-1.png",
       name: "Luna TFT LCD Panel",
       description:
@@ -22,7 +21,7 @@ function EditProductsPage() {
       color: "طلایی",
     },
     {
-      id:"02",
+      id: "02",
       image: "/image/example/img-2.png",
       name: "Luna BedSide",
       description:
@@ -30,7 +29,7 @@ function EditProductsPage() {
       color: "مشکی",
     },
     {
-      id:"03",
+      id: "03",
       image: "/image/example/img-3.png",
       name: "Luna 9Gangs",
       description:
@@ -50,17 +49,20 @@ function EditProductsPage() {
   const searchHandler = () => {};
 
   const editHandler = (productId) => {
-    router.push(`/admin/products/edit/${productId}`)
+    router.push(`/admin/products/edit/${productId}`);
   };
 
   const deleteHandler = () => {};
 
-  
-
   return (
     <div className="w-full flex flex-col gap-y-5">
       <div className="w-full md:shadow-2xl pt-[50px] pb-[25px] px-[25px]">
-        <h3 className="text-textWhite bg-garyTisLock px-5 py-2 text-[1.7rem] w-full ">
+        <h3
+          className="text-textWhite px-5 py-2 text-[1.7rem] w-full"
+          style={{
+            backgroundImage: `linear-gradient(to left,#898989 , #898989,transparent 100% )`,
+          }}
+        >
           ویرایش محصولات
         </h3>
         <p className="w-full text-center px-5 py-2 bg-bgRed text-textWhite text-[1rem] md:text-[1.5rem] md:bg-transparent md:text-backgroundBlack">
@@ -85,8 +87,8 @@ function EditProductsPage() {
             onClick={searchHandler}
             className="w-[50%] py-2 bg-green text-textWhite rounded-[10px] flex justify-center items-center gap-2"
           >
-            جستجوی محصول
-            <MdImageSearch  className="text-[1.5rem]"/>
+            جستجو
+            <MdImageSearch className="text-[1.5rem]" />
           </button>
         </div>
       </div>
@@ -100,14 +102,14 @@ function EditProductsPage() {
                 className="text-green border-2 border-green px-20 py-2 text-[1.2rem] flex gap-x-3 items-center rounded-[10px]"
               >
                 <FaRegEdit />
-                ویرایش محصول
+                ویرایش 
               </button>
               <button
                 onClick={deleteHandler}
                 className="text-bgRed border-2 border-bgRed px-20 py-2 text-[1.2rem] flex gap-x-3 items-center rounded-[10px]"
               >
                 <MdDeleteForever />
-                حذف محصول
+                حذف 
               </button>
             </div>
           </div>

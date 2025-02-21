@@ -72,20 +72,7 @@ function Dashboardsidebar({ children, role, email }) {
                   </Link>
                   
                   
-                  {/* <Link
-                    href="/admin/products/add"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
-                  >
-                    <AiFillProduct className="w-[20px] h-[20px]" />
-                    افزودن محصولات
-                  </Link> */}
-                  {/* <Link
-                    href="/admin/products/edit"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
-                  >
-                    <RiEdit2Fill className="w-[20px] h-[20px]" />
-                    ویرایش محصولات
-                  </Link> */}
+                  
                   {/* <Link
                     href="/admin/projects/add"
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
