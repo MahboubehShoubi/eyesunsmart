@@ -15,6 +15,7 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { FaUserEdit } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
 import { MdSettingsSuggest } from "react-icons/md";
+import { FaCommentDots } from "react-icons/fa6";
 
 
 import DashboardMenu from "@/module/DashboardMenu";
@@ -98,8 +99,19 @@ function Dashboardsidebar({ children, role, email }) {
                         : "text-navyBlue hover:text-bgRed "
                     } `}
                   >
-                    <MdSettingsSuggest  className="w-[20px] h-[20px]" />
+                    <MdSettingsSuggest className="w-[20px] h-[20px]" />
                       پروژه های پیشنهادی
+                  </Link>
+                  <Link
+                    href="/admin/comments"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/admin/comments")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
+                  >
+                    <FaCommentDots className="w-[20px] h-[20px]" />
+                       نظرات کاربران 
                   </Link>
                   
                 </div>
