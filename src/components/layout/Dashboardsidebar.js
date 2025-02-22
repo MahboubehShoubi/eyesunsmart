@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import LogoutButton from "../element/LogoutButton";
 
@@ -9,23 +10,17 @@ import LogoutButton from "../element/LogoutButton";
 import { CgProfile } from "react-icons/cg";
 import { IoMdHome } from "react-icons/io";
 import { FaUserCog } from "react-icons/fa";
-import { HiUsers } from "react-icons/hi2";
 import { AiFillProduct } from "react-icons/ai";
 import { FaProjectDiagram } from "react-icons/fa";
-import { MdRebaseEdit } from "react-icons/md";
-import { RiEdit2Fill } from "react-icons/ri";
 import { FaUserEdit } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
-import { FaBuildingUser } from "react-icons/fa6";
-import { FaUserTag } from "react-icons/fa";
-
-
-
 
 import DashboardMenu from "@/module/DashboardMenu";
 
 function Dashboardsidebar({ children, role, email }) {
   const [showMenu, setShowMenu] = useState(false);
+
+  const pathname = usePathname();
 
   return (
     <div className="w-full py-[50px]">
@@ -51,43 +46,48 @@ function Dashboardsidebar({ children, role, email }) {
                 <div className="flex flex-col h-fit gap-y-3">
                   <Link
                     href="/dashboard"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/dashboard")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <IoMdHome className="w-[20px] h-[20px]" />
                     پنل ادمین
                   </Link>
                   <Link
                     href="/admin/user"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/admin/user") || pathname.includes("/admin/customer") || pathname.includes("/admin/colleague")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <FaUserCog className="w-[20px] h-[20px]" />
-                    مدیریت کاربران 
+                    مدیریت کاربران
                   </Link>
                   <Link
                     href="/admin/products"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/admin/products") 
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <AiFillProduct className="w-[20px] h-[20px]" />
-                     مدیریت محصولات
+                    مدیریت محصولات
                   </Link>
-                  
-                  
-                  
-                  {/* <Link
-                    href="/admin/projects/add"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                  <Link
+                    href="/admin/projects"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/admin/projects")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <FaProjectDiagram className="w-[20px] h-[20px]" />
-                    افزودن پروژه ها
-                  </Link> */}
-                  {/* <Link
-                    href="/admin/projects/edit"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
-                  >
-                    <MdRebaseEdit className="w-[20px] h-[20px]" />
-                    ویرایش پروژه ها
-                  </Link> */}
-                 
+                    مدیریت پروژه ها
+                  </Link>
                 </div>
               ) : (
                 <div className="flex flex-col h-fit gap-y-3">
@@ -110,7 +110,7 @@ function Dashboardsidebar({ children, role, email }) {
                     className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
                   >
                     <MdCastForEducation className="w-[20px] h-[20px]" />
-                    آموزش 
+                    آموزش
                   </Link>
                   {role === "CUSTOMERS" ? (
                     <Link
