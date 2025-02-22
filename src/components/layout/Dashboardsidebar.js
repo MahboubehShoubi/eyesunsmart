@@ -14,6 +14,8 @@ import { AiFillProduct } from "react-icons/ai";
 import { FaProjectDiagram } from "react-icons/fa";
 import { FaUserEdit } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
+import { MdSettingsSuggest } from "react-icons/md";
+
 
 import DashboardMenu from "@/module/DashboardMenu";
 
@@ -88,6 +90,18 @@ function Dashboardsidebar({ children, role, email }) {
                     <FaProjectDiagram className="w-[20px] h-[20px]" />
                     مدیریت پروژه ها
                   </Link>
+                  <Link
+                    href="/admin/suggested-projects"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/admin/suggested-projects")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
+                  >
+                    <MdSettingsSuggest  className="w-[20px] h-[20px]" />
+                      پروژه های پیشنهادی
+                  </Link>
+                  
                 </div>
               ) : (
                 <div className="flex flex-col h-fit gap-y-3">
