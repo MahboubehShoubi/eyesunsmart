@@ -1,9 +1,8 @@
 import ColleaguePage from '@/template/ColleaguePage';
-import React from 'react'
 
-function ColleagueId() {
+function ColleagueId({params : {colleagueId}}) {
   return (
-   <ColleaguePage />
+   <ColleaguePage colleagueId={colleagueId} />
   )
 }
 
