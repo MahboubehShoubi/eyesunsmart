@@ -1,10 +1,10 @@
 import ColleaguePage from '@/template/ColleaguePage';
 import React from 'react'
 
-function Colleague() {
+function ColleagueId() {
   return (
    <ColleaguePage />
   )
 }
 
-export default Colleague;
+export default ColleagueId;

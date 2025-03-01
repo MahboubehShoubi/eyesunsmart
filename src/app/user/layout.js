@@ -17,7 +17,7 @@ async function UserLayout({ children }) {
   return (
     <>
       <HeaderSubPage />
-      <Dashboardsidebar email={user.email} role={user.role}>
+      <Dashboardsidebar email={user.email} role={user.role} userId={user._id}>
         {children}
       </Dashboardsidebar>
       <Footer />

@@ -20,7 +20,7 @@ import { FaCommentDots } from "react-icons/fa6";
 
 import DashboardMenu from "@/module/DashboardMenu";
 
-function Dashboardsidebar({ children, role, email }) {
+function Dashboardsidebar({ children, role, email , userId }) {
   const [showMenu, setShowMenu] = useState(false);
 
   const pathname = usePathname();
@@ -119,37 +119,57 @@ function Dashboardsidebar({ children, role, email }) {
                 <div className="flex flex-col h-fit gap-y-3">
                   <Link
                     href="/dashboard"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/dashboard")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <IoMdHome className="w-[20px] h-[20px]" />
                     پنل کاربری
                   </Link>
                   <Link
                     href="/user/edit"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/user/edit")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <FaUserEdit className="w-[20px] h-[20px]" />
                     ویرایش اطلاعات
                   </Link>
                   <Link
                     href="/user/education"
-                    className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/user/education")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
                   >
                     <MdCastForEducation className="w-[20px] h-[20px]" />
                     آموزش
                   </Link>
                   {role === "CUSTOMERS" ? (
                     <Link
-                      href="/user/customer"
-                      className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                      href={`/user/customer/${userId}`}
+                      className={`flex items-center gap-x-1  ${
+                        pathname.includes(`/user/customer/${userId}`)
+                          ? "text-bgRed"
+                          : "text-navyBlue hover:text-bgRed "
+                      } `}
                     >
                       <IoMdHome className="w-[20px] h-[20px]" />
                       باشگاه مشتریان
                     </Link>
                   ) : role === "COLLEAGUE" ? (
                     <Link
-                      href="/user/colleague"
-                      className="text-navyBlue hover:text-secondery flex items-center gap-x-1"
+                      href={`/user/colleague/${userId}`}
+                      className={`flex items-center gap-x-1  ${
+                        pathname.includes(`/user/colleague/${userId}`)
+                          ? "text-bgRed"
+                          : "text-navyBlue hover:text-bgRed "
+                      } `}
                     >
                       <IoMdHome className="w-[20px] h-[20px]" />
                       باشگاه همکاران
