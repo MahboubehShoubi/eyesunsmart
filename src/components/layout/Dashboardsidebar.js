@@ -17,10 +17,9 @@ import { MdCastForEducation } from "react-icons/md";
 import { MdSettingsSuggest } from "react-icons/md";
 import { FaCommentDots } from "react-icons/fa6";
 
-
 import DashboardMenu from "@/module/DashboardMenu";
 
-function Dashboardsidebar({ children, role, email , userId }) {
+function Dashboardsidebar({ children, role, email, userId }) {
   const [showMenu, setShowMenu] = useState(false);
 
   const pathname = usePathname();
@@ -61,7 +60,9 @@ function Dashboardsidebar({ children, role, email , userId }) {
                   <Link
                     href="/admin/user"
                     className={`flex items-center gap-x-1  ${
-                      pathname.includes("/admin/user") || pathname.includes("/admin/customer") || pathname.includes("/admin/colleague")
+                      pathname.includes("/admin/user") ||
+                      pathname.includes("/admin/customer") ||
+                      pathname.includes("/admin/colleague")
                         ? "text-bgRed"
                         : "text-navyBlue hover:text-bgRed "
                     } `}
@@ -72,7 +73,7 @@ function Dashboardsidebar({ children, role, email , userId }) {
                   <Link
                     href="/admin/products"
                     className={`flex items-center gap-x-1  ${
-                      pathname.includes("/admin/products") 
+                      pathname.includes("/admin/products")
                         ? "text-bgRed"
                         : "text-navyBlue hover:text-bgRed "
                     } `}
@@ -100,7 +101,7 @@ function Dashboardsidebar({ children, role, email , userId }) {
                     } `}
                   >
                     <MdSettingsSuggest className="w-[20px] h-[20px]" />
-                      پروژه های پیشنهادی
+                    پروژه های پیشنهادی
                   </Link>
                   <Link
                     href="/admin/comments"
@@ -111,9 +112,8 @@ function Dashboardsidebar({ children, role, email , userId }) {
                     } `}
                   >
                     <FaCommentDots className="w-[20px] h-[20px]" />
-                       نظرات کاربران 
+                    نظرات کاربران
                   </Link>
-                  
                 </div>
               ) : (
                 <div className="flex flex-col h-fit gap-y-3">
@@ -126,7 +126,13 @@ function Dashboardsidebar({ children, role, email , userId }) {
                     } `}
                   >
                     <IoMdHome className="w-[20px] h-[20px]" />
-                    پنل کاربری
+                    {role === "USER"
+                      ? " پنل کاربری"
+                      : role === "CUSTOMERS"
+                      ? "پنل مشتری"
+                      : role === "COLLEAGUE"
+                      ? "پنل همکار"
+                      : null}
                   </Link>
                   <Link
                     href="/user/edit"
