@@ -7,6 +7,12 @@ import { usePathname } from "next/navigation";
 
 // import ProposedProject from "./ProposedProjectPage";
 
+//Icons
+import { FaDiagramProject } from "react-icons/fa6";
+import { GrProjects } from "react-icons/gr";
+
+
+
 function ColleaguePage({colleagueId}) {
 
   const pathname = usePathname();
@@ -42,7 +48,7 @@ function ColleaguePage({colleagueId}) {
           name="add product"
           onClick={activeHandler}
         >
-          {/* <AiFillProduct className="w-[20px] h-[20px]" /> */}
+          <FaDiagramProject className="w-[20px] h-[20px]" />
           پروژه های پیشنهادی 
         </Link>
         <Link
@@ -55,7 +61,7 @@ function ColleaguePage({colleagueId}) {
           name="edit product"
           onClick={activeHandler}
         >
-          {/* <RiEdit2Fill className="w-[20px] h-[20px]" /> */}
+          <GrProjects className="w-[20px] h-[20px]" />
            پروژه های ثبت شده
         </Link>
       </div>
