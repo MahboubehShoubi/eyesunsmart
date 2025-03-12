@@ -1,8 +1,8 @@
 import CustomerPage from "@/template/CustomerPage";
 import React from "react";
 
-function CustomerId() {
-  return <CustomerPage />;
+function CustomerId({CustomerId}) {
+  return <CustomerPage CustomerId={CustomerId}/>;
 }
 
 export default CustomerId;

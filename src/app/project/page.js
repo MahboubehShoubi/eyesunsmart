@@ -1,6 +1,6 @@
 import ProjectPage from "@/template/ProjectPage";
 
-function page() {
+function Project() {
 
   const projectList = [
     {
@@ -93,4 +93,4 @@ function page() {
   return <ProjectPage projectsData={projectList}/>;
 }
 
-export default page;
+export default Project;
