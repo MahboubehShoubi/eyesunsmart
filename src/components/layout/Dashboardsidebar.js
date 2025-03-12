@@ -148,7 +148,7 @@ function Dashboardsidebar({ children, role, email, userId }) {
                     <FaUserEdit className="w-[20px] h-[20px]" />
                     ویرایش اطلاعات
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/user/movie"
                     className={`flex items-center gap-x-1  ${
                       pathname.includes("/user/movie")
@@ -158,7 +158,7 @@ function Dashboardsidebar({ children, role, email, userId }) {
                   >
                     <RiMovieFill className="w-[20px] h-[20px]" />
                     فیلم های آموزشی
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/user/education"
                     className={`flex items-center gap-x-1  ${
