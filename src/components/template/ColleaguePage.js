@@ -23,7 +23,7 @@ function ColleaguePage({colleagueId}) {
     setActive(type);
   };
 
-  
+
   useEffect(() => {
     const userId  = pathname.split("/");
     setId(userId[3]);
@@ -35,7 +35,7 @@ function ColleaguePage({colleagueId}) {
   
 
   return (
-    <div>
+    <div className=" mb-5">
       <div
         className="w-full h-[50px] flex pt-[2px] rounded-r-[10px]"
         style={{

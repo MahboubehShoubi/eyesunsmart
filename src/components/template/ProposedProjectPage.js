@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+
 
 import ProjectInformation from "@/module/ProjectInformation";
 
@@ -12,6 +14,8 @@ function ProposedProjectPage({colleagueId}) {
 
     const [proposedProject, setProposedProject] = useState("");
     const [newProject, setNewProject] = useState("");
+
+    const pathname = usePathname();
 
     const router = useRouter();
   
@@ -28,8 +32,11 @@ function ProposedProjectPage({colleagueId}) {
   
   
     useEffect(() => {
+      const userId  = pathname.split("/");
+
       if(proposedProject === "true") setNewProject(""); 
-      if(newProject === "false") router.push(`/user/${colleagueId}`);
+      if(newProject === "false") router.push(`/user/colleague/${userId[3]}`);
+      
     }, [proposedProject, newProject]);
   
   
