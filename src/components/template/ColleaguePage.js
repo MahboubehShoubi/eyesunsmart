@@ -5,8 +5,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-// import ProposedProject from "./ProposedProjectPage";
-
 //Icons
 import { FaDiagramProject } from "react-icons/fa6";
 import { GrProjects } from "react-icons/gr";
@@ -14,22 +12,28 @@ import { GrProjects } from "react-icons/gr";
 
 
 function ColleaguePage({colleagueId}) {
-
+  
   const pathname = usePathname();
-
+  
   const [active, setActive] = useState("");
+  const [id , setId] = useState(colleagueId);
 
   const activeHandler = (e) => {
     const type = e.target.name;
     setActive(type);
   };
 
+  
   useEffect(() => {
-    if (pathname === "/admin/products") {
+    const userId  = pathname.split("/");
+    setId(userId[3]);
+
+    if (pathname === `/user/colleague/${colleagueId}`) {
       setActive("");
     }
   }, [active, pathname]);
   
+
   return (
     <div>
       <div
@@ -39,9 +43,9 @@ function ColleaguePage({colleagueId}) {
         }}
       >
         <Link
-          href="/user/colleague/project/proposed"
+          href={`/user/colleague/${id}/project/proposed`}
           className={
-            active === "add product" || pathname === "/user/colleague/project/proposed"
+            active === "add product" || pathname.includes("/project/proposed")
               ? " text-bgRed flex items-center gap-x-1 bg-textWhite py-2 px-6"
               : " text-textWhite flex items-center gap-x-1 py-2 px-6"
           }
@@ -52,9 +56,9 @@ function ColleaguePage({colleagueId}) {
           پروژه های پیشنهادی 
         </Link>
         <Link
-          href="/user/colleague/project/registered"
+          href={`/user/colleague/${id}/project/registered`}
           className={
-            active === "edit product" || pathname === "/user/colleague/project/registered"
+            active === "edit product" || pathname.includes("/project/registered")
               ? " text-bgRed flex items-center gap-x-1 bg-textWhite py-2 px-6"
               : " text-textWhite flex items-center gap-x-1 py-2 px-6"
           }
@@ -65,7 +69,6 @@ function ColleaguePage({colleagueId}) {
            پروژه های ثبت شده
         </Link>
       </div>
-      <div></div>
     </div>
   );
    
