@@ -154,7 +154,7 @@ function Dashboardsidebar({ children, role, email, userId }) {
                     } `}
                   >
                     <MdCastForEducation className="w-[20px] h-[20px]" />
-                    آموزش
+                    فیلم های آموزشی
                   </Link>
                   {role === "CUSTOMERS" ? (
                     <Link
