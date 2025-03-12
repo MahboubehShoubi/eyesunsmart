@@ -16,6 +16,9 @@ import { FaUserEdit } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
 import { MdSettingsSuggest } from "react-icons/md";
 import { FaCommentDots } from "react-icons/fa6";
+import { RiMovieFill } from "react-icons/ri";
+
+
 
 import DashboardMenu from "@/module/DashboardMenu";
 
@@ -146,6 +149,17 @@ function Dashboardsidebar({ children, role, email, userId }) {
                     ویرایش اطلاعات
                   </Link>
                   <Link
+                    href="/user/movie"
+                    className={`flex items-center gap-x-1  ${
+                      pathname.includes("/user/movie")
+                        ? "text-bgRed"
+                        : "text-navyBlue hover:text-bgRed "
+                    } `}
+                  >
+                    <RiMovieFill className="w-[20px] h-[20px]" />
+                    فیلم های آموزشی
+                  </Link>
+                  <Link
                     href="/user/education"
                     className={`flex items-center gap-x-1  ${
                       pathname.includes("/user/education")
@@ -154,7 +168,7 @@ function Dashboardsidebar({ children, role, email, userId }) {
                     } `}
                   >
                     <MdCastForEducation className="w-[20px] h-[20px]" />
-                    فیلم های آموزشی
+                      ثبت نام دوره‌های آموزشی
                   </Link>
                   {role === "CUSTOMERS" ? (
                     <Link
