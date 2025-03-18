@@ -55,7 +55,7 @@ function EditUserPage() {
             value={user.fullName}
             name="fullName"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className="p-2 w-[500px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]"
           />
         </div>
 
@@ -68,7 +68,7 @@ function EditUserPage() {
             value={user.phone}
             name="phone"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className="p-2 w-[500px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]"
           />
         </div>
 
@@ -79,7 +79,7 @@ function EditUserPage() {
             value={user.email}
             name="email"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className="shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 w-[500px]"
           />
         </div>
 
@@ -90,29 +90,29 @@ function EditUserPage() {
             value={user.idCode}
             name="idCode"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className="p-2 w-[500px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]"
           />
         </div>
 
         <div>
-          <label className=" w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]">شغل :</label>
+          <label className="w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]">شغل :</label>
           <input
             type="text"
             value={user.job}
             name="job"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className="p-2 w-[500px] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]"
           />
         </div>
 
         <div>
-          <label className=" w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]">تاریخ تولد :</label>
+          <label className="w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]">تاریخ تولد :</label>
           <input
             type="date"
             value={user.age}
             name="age"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className=" shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 w-[500px]"
           />
         </div>
 
@@ -123,24 +123,24 @@ function EditUserPage() {
             value={user.province}
             name="province"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className=" shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 w-[500px]"
           />
         </div>
 
         <div>
-          <label className=" w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]">شهر :</label>
+          <label className="w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]">شهر :</label>
           <input
             type="text"
             value={user.city}
             name="city"
             onChange={changeHandler}
-            className=" shadow-md border-none p-2 w-[500px]"
+            className="shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 w-[500px]"
           />
         </div>
 
         <div className=" flex items-baseline">
           <p className="w-[150px] inline-block bg-grayTisAir py-2 px-4 rounded-r-[10px]"> تعیین وضعیت :</p>
-          <div className="w-full md:w-[500px] flex md:justify-between md:items-end p-2 shadow-md">
+          <div className="w-full md:w-[500px] flex md:justify-between md:items-end p-2 shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)]">
             <div className="w-fit flex gap-x-2">
               <label htmlFor="User" className="">
                 کاربر عادی
@@ -188,9 +188,9 @@ function EditUserPage() {
       <div className=" w-full flex justify-center mt-10">
         <button
           onClick={editHandler}
-          className=" bg-green py-2 w-[500px] rounded-[10px]"
+          className=" text-[1.1rem] bg-green border-2 py-2 w-[250px] rounded-[10px] text-textWhite"
         >
-          ویرایش اطلاعات
+          ویرایش
         </button>
       </div>
     </div>
