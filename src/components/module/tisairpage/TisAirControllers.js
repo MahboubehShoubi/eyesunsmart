@@ -23,7 +23,7 @@ function TisAirControllers() {
       Image: "/image/tis-group/tis-air/controllers/TRV-Controller.jpg",
     },
   ];
-  return <ShowListMenu list={ControllersList} />;
+  return <ShowListMenu list={ControllersList} first="TisAir" second="Controller"/>;
 }
 
 export default TisAirControllers;

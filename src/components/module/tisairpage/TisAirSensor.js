@@ -17,7 +17,7 @@ function TisAirSensor() {
     },
   ];
 
-  return <ShowListMenu list={SensorList} />;
+  return <ShowListMenu list={SensorList} first="TisAir" second="Sensor"/>;
 
 }
 

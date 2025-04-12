@@ -31,7 +31,7 @@ function TisBeeController() {
       Image: "/image/tis-group/tis-bee/Controller/RGBW-Driver.jpg",
     },
   ];
-  return <ShowListMenu list={ControllerList} />;
+  return <ShowListMenu list={ControllerList} first="TisBee" second="Controller"/>;
 }
 
 export default TisBeeController;

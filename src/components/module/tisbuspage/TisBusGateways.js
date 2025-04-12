@@ -28,7 +28,7 @@ function TisBusGateways() {
     },
   ];
 
-  return <ShowListMenu list={GatewaysList} />;
+  return <ShowListMenu list={GatewaysList} first="TisBus" second="Gateways"/>;
 }
 
 export default TisBusGateways;

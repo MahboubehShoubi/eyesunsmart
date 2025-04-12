@@ -15,7 +15,7 @@ function OtherProductSensors() {
           Image: "/image/tis-group/tis-air/controllers/ACM-Switch.jpg",
         },
       ];
-      return <ShowListMenu list={SensorsList} />;
+      return <ShowListMenu list={SensorsList} first="OtherProduct" second="Sensors"/>;
 }
 
 export default OtherProductSensors;

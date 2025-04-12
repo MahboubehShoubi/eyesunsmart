@@ -17,7 +17,7 @@ function TisAirPanel() {
     },
   ];
 
-  return <ShowListMenu list={PanelList} />;
+  return <ShowListMenu list={PanelList} first="TisAir" second="Panel"/>;
 
 }
 

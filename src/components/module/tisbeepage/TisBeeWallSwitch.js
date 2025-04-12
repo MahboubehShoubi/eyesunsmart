@@ -19,7 +19,7 @@ function TisBeeWallSwitch() {
       Image: "/image/tis-group/tis-bee/Wall-Switch/Dion-Wall-Remote.jpg",
     },
   ];
-  return <ShowListMenu list={WallSwitchList} />;
+  return <ShowListMenu list={WallSwitchList} first="TisBee" second="WallSwitch"/>;
 }
 
 export default TisBeeWallSwitch;

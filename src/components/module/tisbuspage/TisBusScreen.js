@@ -24,7 +24,7 @@ function TisBusScreen() {
     },
   ];
 
-  return <ShowListMenu list={ScreensList} />;
+  return <ShowListMenu list={ScreensList} first="TisBus" second="Screen"/>;
 }
 
 export default TisBusScreen;

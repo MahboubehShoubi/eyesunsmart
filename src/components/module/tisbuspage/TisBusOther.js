@@ -32,7 +32,7 @@ function TisBusOther() {
     },
   ];
 
-  return <ShowListMenu list={OtherList} />;
+  return <ShowListMenu list={OtherList} first="TisBus" second="Other"/>;
 }
 
 export default TisBusOther;

@@ -17,7 +17,7 @@ function TisBusMotors() {
         
       ];
     
-      return <ShowListMenu list={MotorsList} />;
+      return <ShowListMenu list={MotorsList} first="TisBus" second="Motors"/>;
 }
 
 export default TisBusMotors;

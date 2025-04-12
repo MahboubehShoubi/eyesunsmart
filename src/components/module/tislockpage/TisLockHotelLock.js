@@ -24,7 +24,7 @@ function TisLockHotelLock() {
     },
   ];
 
-  return <ShowListMenu list={HotelLockList} />;
+  return <ShowListMenu list={HotelLockList} first="TisLock" second="HotelLock"/>;
 }
 
 export default TisLockHotelLock;

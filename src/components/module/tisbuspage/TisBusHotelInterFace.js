@@ -25,7 +25,7 @@ function TisBusHotelInterFace() {
     },
   ];
 
-  return <ShowListMenu list={HotelInterFaceList} />;
+  return <ShowListMenu list={HotelInterFaceList} first="TisBus" second="HotelInterFace"/>;
 
 }
 

@@ -12,7 +12,7 @@ function TisAirGateways() {
     },
   ];
 
-  return <ShowListMenu list={GatewaysList} />;
+  return <ShowListMenu list={GatewaysList} first="TisAir" second="Gateways"/>;
 
 }
 

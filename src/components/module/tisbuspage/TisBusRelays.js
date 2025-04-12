@@ -20,7 +20,7 @@ function TisBusRelays() {
     },
   ];
 
-  return <ShowListMenu list={RelaysList} />;
+  return <ShowListMenu list={RelaysList} first="TisBus" second="Relays"/>;
 }
 
 export default TisBusRelays;

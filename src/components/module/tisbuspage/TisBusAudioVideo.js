@@ -28,7 +28,7 @@ function TisBusAudioVideo() {
     },
   ];
 
-  return <ShowListMenu list={AudioVideoList} />;
+  return <ShowListMenu list={AudioVideoList} first="TisBus" second="Audio-video"/>;
 }
 
 export default TisBusAudioVideo;

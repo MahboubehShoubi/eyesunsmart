@@ -32,7 +32,7 @@ function TisBusBmsPms() {
     },
   ];
 
-  return <ShowListMenu list={BmsPmsList} />;
+  return <ShowListMenu list={BmsPmsList} first="TisBus" second="BmsPms"/>;
 }
 
 export default TisBusBmsPms;

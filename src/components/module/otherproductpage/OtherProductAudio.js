@@ -11,7 +11,7 @@ function OtherProductAudio() {
           Image: "/image/tis-group/tis-air/controllers/ACM-Switch.jpg",
         }
       ];
-      return <ShowListMenu list={AudioList} />;
+      return <ShowListMenu list={AudioList} first="OtherProduct" second="Audio"/>;
 }
 
 export default OtherProductAudio;

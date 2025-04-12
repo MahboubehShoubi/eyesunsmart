@@ -12,7 +12,7 @@ function OtherProductPanel() {
           Image: "/image/tis-group/tis-air/controllers/ACM-Switch.jpg",
         }
       ];
-      return <ShowListMenu list={PanelList} />;
+      return <ShowListMenu list={PanelList} first="OtherProduct" second="Panel"/>;
 }
 
-export default OtherProductPanel
+export default OtherProductPanel;

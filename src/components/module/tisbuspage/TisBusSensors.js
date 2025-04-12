@@ -24,7 +24,7 @@ function TisBusSensors() {
     },
   ];
 
-  return <ShowListMenu list={SensorsList} />;
+  return <ShowListMenu list={SensorsList} first="TisBus" second="Sensors"/>;
 }
 
 export default TisBusSensors;

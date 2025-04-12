@@ -24,7 +24,7 @@ function TisLockSmartLock() {
         },
       ];
     
-      return <ShowListMenu list={SmartLockList} />;
+      return <ShowListMenu list={SmartLockList} first="TisLock" second="SmartLock"/>;
 }
 
 export default TisLockSmartLock;

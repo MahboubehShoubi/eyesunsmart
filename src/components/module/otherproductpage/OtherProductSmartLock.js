@@ -8,7 +8,8 @@ function OtherProductSmartLock() {
           Image: "/image/tis-group/tis-air/controllers/ADS-Controller.jpg",
         }
       ];
-      return <ShowListMenu list={SmartLockList} />;
+      
+      return <ShowListMenu list={SmartLockList} first="OtherProduct" second="SmartLock"/>;
 
 }
 

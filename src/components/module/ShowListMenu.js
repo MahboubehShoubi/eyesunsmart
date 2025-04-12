@@ -1,13 +1,19 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import "animate.css";
 
-function ShowListMenu({ list }) {
+function ShowListMenu({ list , first , second}) {
   return (
     <div className="w-full md:w-fit py-10 flex flex-wrap justify-between gap-y-10 md:justify-center md:gap-x-5 md:flex-nowrap animate__animated animate__zoomIn">
       {list.map((item, index) => (
+        <Link
+        key={item.id}
+        href={`/products/product?first=${first}&second=${second}&third=${item.title}`}
+        className="w-[45%] md:w-[12%] h-[260px]"
+      >
         <div
-          className="w-[45%] md:w-[12%] h-[260px] flex flex-col items-center hover:cursor-pointer overflow-hidden shadow-lg md:shadow-none"
+          className="flex flex-col items-center hover:cursor-pointer overflow-hidden shadow-lg md:shadow-none"
           key={index}
         >
           <div className="w-[80%] md:w-[80%] h-[240px] md:h-[200px] flex justify-center items-center">
@@ -21,6 +27,7 @@ function ShowListMenu({ list }) {
           </div>
           <p className="w-full h-[20%] text-center">{item.title}</p>
         </div>
+        </Link>
       ))}
     </div>
   );

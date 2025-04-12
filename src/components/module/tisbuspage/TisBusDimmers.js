@@ -28,7 +28,7 @@ function TisBusDimmers() {
     },
   ];
 
-  return <ShowListMenu list={ScreensList} />;
+  return <ShowListMenu list={ScreensList} first="TisBus" second="Dimmers"/>;
 }
 
 export default TisBusDimmers;

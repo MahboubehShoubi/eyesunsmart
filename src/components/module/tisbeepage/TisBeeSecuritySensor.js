@@ -35,7 +35,7 @@ function TisBeeSecuritySensor() {
       Image: "/image/tis-group/tis-bee/Security-Sensor/Siren.jpg",
     },
   ];
-  return <ShowListMenu list={SecuritySensorList} />;
+  return <ShowListMenu list={SecuritySensorList} first="TisBee" second="SecuritySensor"/>;
 }
 
 export default TisBeeSecuritySensor;

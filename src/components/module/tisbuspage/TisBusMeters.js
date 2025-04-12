@@ -20,7 +20,7 @@ function TisBusMeters() {
         },
       ];
     
-      return <ShowListMenu list={MetersList} />;
+      return <ShowListMenu list={MetersList} first="TisBus" second="Meters"/>;
 }
 
 export default TisBusMeters;

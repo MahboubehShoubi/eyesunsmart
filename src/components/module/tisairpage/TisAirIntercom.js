@@ -21,7 +21,7 @@ function TisAirIntercom() {
     },
   ];
 
-  return <ShowListMenu list={IntercomList} />;
+  return <ShowListMenu list={IntercomList} first="TisAir" second="Intercom"/>;
 
 }
 
