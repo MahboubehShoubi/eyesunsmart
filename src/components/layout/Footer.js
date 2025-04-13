@@ -79,43 +79,43 @@ function Footer() {
                     <BiSolidLeftArrow className="text-bgRed" />
                     صفحه اصلی
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/"
                     className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
                     <BiSolidLeftArrow className="text-bgRed" />
                     محصولات
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href="/"
                     className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
                     <BiSolidLeftArrow className="text-bgRed" />
                     اموزش
-                  </Link>
+                  </Link> */}
                   <Link
-                    href="/"
+                    href="/services"
                     className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
                     <BiSolidLeftArrow className="text-bgRed" />
                     خدمات
                   </Link>
                   <Link
-                    href="/"
+                    href="/project"
                     className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
                     <BiSolidLeftArrow className="text-bgRed" />
                     پروژه ها
                   </Link>
                   <Link
-                    href="/"
+                    href="/about-us"
                     className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
                     <BiSolidLeftArrow className="text-bgRed" />
                     درباره ما
                   </Link>
                   <Link
-                    href="/"
+                    href="/contact"
                     className="text-textWhite text-[14px] hover:text-bgRed w-full flex items-center gap-x-2"
                   >
                     <BiSolidLeftArrow className="text-bgRed" />

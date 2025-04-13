@@ -189,7 +189,7 @@ function HeaderMain() {
                 <Link href="/project">پروژه ها</Link>
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
-                <Link href="/about">درباره ما</Link>
+                <Link href="/about-us">درباره ما</Link>
               </li>
               <li className=" w-full h-full flex justify-center items-center hover:text-secondery text-[1.2rem]">
                 <Link href="/contact">ارتباط با ما</Link>
@@ -357,7 +357,7 @@ function HeaderMain() {
               <li>
                 <Link
                   className=" inline-block bg-navyBlue"
-                  href="/about"
+                  href="/about-us"
                   onClick={() => isShow(false)}
                 >
                   درباره ما
