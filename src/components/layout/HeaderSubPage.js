@@ -25,7 +25,7 @@ function HeaderSubPage() {
   const { data } = useSession();
 
   return (
-    <div className="flex flex-col justify-center items-center h-fit">
+    <div className="flex flex-col justify-center items-center h-fit sticky top-0 z-[999]">
       {/*-------------------- باکس ورود و ثبت نام کاربر ------------------*/}
       {showSignup && (
         <div className="w-full h-full flex justify-center items-center absolute z-[100]">
@@ -71,8 +71,9 @@ function HeaderSubPage() {
       </div>
 
       {/* ----------------------------------باکس منو و لوگو ---------------------------------------*/}
-      <div className="w-full md:h-[100px] bg-navyBlue md:bg-textWhite md:shadow-xl">
-        <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full  px-5 py-2 md:px-0 md:py-0">
+      <div className=" relative w-full md:h-[100px]">
+        <div className="w-full h-full bg-navyBlue md:bg-[#ffffffec] absolute z-[-1] blur"></div>
+        <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full px-5 py-2 md:px-0 md:py-0">
           {/* --------------------------------همبرگر منو ----------------------------------------------*/}
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
