@@ -1,9 +1,9 @@
 import AboutUsPage from "@/template/AboutUsPage"
 
-function About() {
+function AboutUs() {
   return (
   <AboutUsPage />
   )
 }
 
-export default About
+export default AboutUs

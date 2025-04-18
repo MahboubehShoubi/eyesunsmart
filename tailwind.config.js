@@ -26,10 +26,10 @@ module.exports = {
       bgRed: "#E51B20",
       blueTisAir: "#A2DBF7",
       grayTisAir: "#C7C6C6",
-      orangTisBus:"#FCBD5A",
-      grayTisBee:"#565656",
-      yellowTisBee:"#FFCB01",
-      garyTisLock:"#898989",
+      orangTisBus: "#FCBD5A",
+      grayTisBee: "#565656",
+      yellowTisBee: "#FFCB01",
+      garyTisLock: "#898989",
     },
     fontSize: {
       titleFontSize: "1.2rem",
@@ -37,6 +37,9 @@ module.exports = {
       subTitle: "1.5rem",
     },
     extend: {
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
     },
   },
   plugins: [],
