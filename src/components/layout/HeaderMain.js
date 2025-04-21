@@ -73,9 +73,9 @@ function HeaderMain() {
       </div>
 
       {/* --------------------------باکس منو و لوگو --------------------------------*/}
-      <div className="w-full md:h-[100px] bg-navyBlue md:bg-textWhite">
+      <div className=" relative w-full md:h-[100px]">
+        <div className="w-full h-full bg-navyBlue md:bg-[#ffffffec] absolute z-[-1] blur"></div>
         <div className="container md:max-w-screen-xl flex justify-between items-center md:h-full px-5 py-2 md:px-0 md:py-0">
-          {/* ---------------------------همبرگر منو -------------------------------------*/}
           <div className="md:hidden w-fit sm:hover:cursor-pointer">
             {isShow ? (
               <RiMenuFold2Fill
@@ -379,17 +379,14 @@ function HeaderMain() {
         {/*-------------------------------------- سلایدر در حالت های دستکتاپ و موبایل -------------------------------------*/}
         <div className="h-[80vh] w-full" onClick={() => setIsShow(false)}>
           <Slider
-            silderInfo={
-              {
-                imageList: [
-                  "/image/slider/slider-2.jpg",
-                  "/image/slider/slider-3.jpg",
-                  "/image/slider/slider-4.jpg",
-                  "/image/slider/slider-5.jpg",
-                ]
-              }
-            }
-            
+            silderInfo={{
+              imageList: [
+                "/image/slider/slider-2.jpg",
+                "/image/slider/slider-3.jpg",
+                "/image/slider/slider-4.jpg",
+                "/image/slider/slider-5.jpg",
+              ],
+            }}
 
             //   {
             //     sliderName: "تیتر دوم",

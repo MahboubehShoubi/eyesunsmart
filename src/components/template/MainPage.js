@@ -11,7 +11,7 @@ function MainPage() {
       
       <MainServicess />
       <MainAbout />
-      <MainSettingUp />
+      <MainSettingUp main={true} />
       <MainDownload />
       <MainOurProject />
       <MainProduct />
