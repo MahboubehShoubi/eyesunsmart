@@ -1,7 +1,14 @@
+"use client";
+
+import { useState } from "react";
+import Slider from "../Slider"
 
 function MainBannerSlider() {
+  
+    const [isShow, setIsShow] = useState(false);
+  
   return (
-    <div className="h-[80vh] w-full" onClick={() => setIsShow(false)}>
+    <div className="h-[80vh] w-full mt-20 sm:mt-40" onClick={() => setIsShow(false)}>
               <Slider
                 silderInfo={{
                   imageList: [

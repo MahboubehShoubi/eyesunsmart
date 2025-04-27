@@ -5,10 +5,15 @@ import Image from "next/image";
 
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
-function ShowMenuMobile({isShow , setIsShow , subMenu , setSubMenu}) {
+function ShowMenuMobile({ isShow, setIsShow, subMenu, setSubMenu }) {
   return (
     <div className="relative w-full h-fit z-[2]">
-      <div onClick={(e) => setIsShow(false)} className={isShow ? "absolute w-full h-screen bg-backgroundBlack" : null}></div>    
+      <div
+        onClick={(e) => setIsShow(false)}
+        className={
+          isShow ? "absolute w-full h-screen bg-backgroundBlack" : null
+        }
+      ></div>
       {/* --------------------------- منو در حالت موبایل ----------------------- */}
       <div
         className={

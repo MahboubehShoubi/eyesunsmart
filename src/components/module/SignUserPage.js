@@ -7,19 +7,13 @@ import toast, { Toaster } from "react-hot-toast";
 import { MdClose } from "react-icons/md";
 import "animate.css";
 
-
-
-
-
 function SignInUpPage({ showSignup, setShowSignup }) {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
 
   const [loading, setLoading] = useState(false);
   const [login, setLogin] = useState(true);
-
 
   const signupHandler = async (e) => {
     e.preventDefault();
@@ -46,7 +40,6 @@ function SignInUpPage({ showSignup, setShowSignup }) {
     }
   };
 
-
   const signinHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -63,15 +56,20 @@ function SignInUpPage({ showSignup, setShowSignup }) {
     }
   };
 
-
   return (
-    <div className="w-full h-full flex justify-center items-center bg-backgroundBlack">
+    <div className="w-full h-[100vh] relative flex justify-center items-center">
       <div
+        onClick={(e) => setShowSignup(false)}
         className={
           showSignup
-            ? " container w-2/3 h-fit md:w-1/2 md:h-[60vh] md:max-w-screen-xl flex flex-col md:flex-row bg-backgroundWhite animate__animated animate__zoomIn rounded-3xl overflow-hidden"
-            : " container w-2/3 h-fit md:w-1/2 md:h-[60vh] md:max-w-screen-xl flex flex-col md:flex-row bg-backgroundWhite animate__animated animate__zoomOut rounded-3xl overflow-hidden"
+            ? "absolute w-full h-full bg-backgroundBlack z-[1001]"
+            : null
         }
+      ></div>
+
+      <div
+        className={`container absolute z-[1002] w-2/3 h-fit md:w-1/2 md:h-[60vh] md:max-w-screen-xl flex flex-col md:flex-row
+           bg-backgroundWhite overflow-hidden rounded-3xl animate__animated animate__zoomIn `}
       >
         {login ? (
           <div className="w-full md:w-1/2 md:h-full">
@@ -81,7 +79,9 @@ function SignInUpPage({ showSignup, setShowSignup }) {
                 onClick={(e) => setShowSignup(false)}
               />
             </div>
-            <h3 className="text-[1.6rem] md:text-[2rem] w-full text-center">فرم ورود</h3>
+            <h3 className="text-[1.6rem] md:text-[2rem] w-full text-center">
+              فرم ورود
+            </h3>
             <form className="w-full flex flex-col justify-center rounded-lg px-5 py-5 md:px-8 md:py-10 md:gap-y-5 gap-y-2">
               <input
                 className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
@@ -118,7 +118,9 @@ function SignInUpPage({ showSignup, setShowSignup }) {
                 onClick={(e) => setShowSignup(false)}
               />
             </div>
-            <h3 className="text-[1.6rem] md:text-[2rem] w-full text-center">فرم ثبت نام</h3>
+            <h3 className="text-[1.6rem] md:text-[2rem] w-full text-center">
+              فرم ثبت نام
+            </h3>
             <form className="w-full flex flex-col justify-center rounded-lg px-5 py-5 md:px-8 md:py-10 md:gap-y-5 gap-y-2">
               <input
                 className="border-[1px] px-2 py-1 rounded-lg text-[14px] md:text-[1rem]"
@@ -157,7 +159,7 @@ function SignInUpPage({ showSignup, setShowSignup }) {
         )}
 
         {login ? (
-          <div className="w-full md:w-1/2 md:h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue rounded-t-[10%] md:rounded-r-[30%] p-5">
+          <div className="w-full md:w-1/2 md:h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue md:rounded-r-[30%] p-5">
             <p className="text-textWhite text-[1.5rem]">سلام دوست من !</p>
             <p className="text-textWhite text-center">
               برای ایجاد حساب کاربری جدید از لینک زیر وارد شوید
@@ -170,7 +172,7 @@ function SignInUpPage({ showSignup, setShowSignup }) {
             </button>
           </div>
         ) : (
-          <div className="w-full md:w-1/2 md:h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue rounded-t-[10%] md:rounded-r-[30%] p-5">
+          <div className="w-full md:w-1/2 md:h-full flex flex-col justify-center items-center gap-y-4 bg-navyBlue md:rounded-r-[30%] p-5">
             <p className="text-textWhite text-[1.5rem]">سلام دوست من !</p>
             <p className="text-textWhite text-center">
               برای ورود به حساب کاربری از لینک زیر وارد شوید
