@@ -5,8 +5,8 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 function AboutInformation() {
   return (
-    <div className="w-full flex py-[100px] relative">
-      <div className=" absolute z-[-1] w-1/2 h-full left-0">
+    <div className="w-full flex sm:py-[100px] pt-[50px] pb-[180px] relative overflow-hidden px-5 sm:px-0">
+      <div className=" absolute z-[-1] w-1/2 h-full left-0 hidden sm:block">
         <Image
           src={`/image/about/shape-1.png`}
           width={1000}
@@ -15,8 +15,8 @@ function AboutInformation() {
           className="w-full h-full object-center scale-[200%]"
         />
       </div>
-      <div className="container max-w-screen-xl flex">
-        <div className="w-1/2 pt-[50px]">
+      <div className="container max-w-screen-xl flex flex-col gap-[30px] sm:flex-row">
+        <div className="w-full sm:w-1/2 pt-[50px]">
           <div className="flex gap-[8px] items-center">
             <div className="w-[35px] h-[3px] bg-bgRed"></div>
             <h2 className="text-[1.2rem] text-bgRed">حوزه کاری </h2>
@@ -31,27 +31,30 @@ function AboutInformation() {
             و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
             زیادی در شصت و سه درصد گذشته حال و آینده،
           </p>
-          <div className="w-2/3 flex flex-wrap mt-[20px] gap-y-5">
-            <div className="w-1/2 flex gap-x-2 items-center">
+          <div className="w-full flex flex-col mt-[50px] gap-y-5">
+            <div className="w-full flex gap-x-2 items-center">
               <IoIosCheckmarkCircleOutline className="text-bgRed w-[35px] h-[35px] items-center justify-center" />
-              <p className="text-[1.2rem]">نمونه متن </p>
+              <p className="text-[1.2rem]">
+                هوشمند سازی / اعلان حریق / سیستم ایمنی
+              </p>
             </div>
-            <div className="w-1/2 flex gap-x-2 items-center">
+
+            <div className="w-full flex gap-x-2 items-center">
               <IoIosCheckmarkCircleOutline className="text-bgRed w-[35px] h-[35px] items-center justify-center" />
-              <p className="text-[1.2rem]">نمونه متن </p>
+              <p className="text-[1.2rem]">ژنراتور / موتور برق / استابلایزر</p>
             </div>
-            <div className="w-1/2 flex gap-x-2 items-center">
+            <div className="w-full flex gap-x-2 items-center">
               <IoIosCheckmarkCircleOutline className="text-bgRed w-[35px] h-[35px] items-center justify-center" />
-              <p className="text-[1.2rem]">نمونه متن </p>
+              <p className="text-[1.2rem]">پیمان کاری برق و لاین نوری</p>
             </div>
-            <div className="w-1/2 flex gap-x-2 items-center">
+            <div className="w-full flex gap-x-2 items-center">
               <IoIosCheckmarkCircleOutline className="text-bgRed w-[35px] h-[35px] items-center justify-center" />
-              <p className="text-[1.2rem]">نمونه متن </p>
+              <p className="text-[1.2rem]">پنل خورشیدی</p>
             </div>
           </div>
         </div>
-        <div className="w-1/2 relative h-[450px]">
-          <div className="w-8/12 h-full absolute left-0 outline outline-[8px] outline-offset-2 outline-bgRed rounded-[10px] p-1">
+        <div className="relative w-full sm:w-1/2 h-[300px] sm:h-[450px] mt-[30px] sm:mt-0">
+          <div className="absolute w-full sm:w-8/12 h-full left-0 outline outline-[8px] outline-offset-2 outline-bgRed rounded-[10px] p-1">
             <Image
               src="/image/about/smart-home.jpg"
               width={1000}
@@ -69,8 +72,14 @@ function AboutInformation() {
             className="w-full h-full object-cover"
           />
         </div> */}
-          <div className=" absolute bottom-[-100px] right-[100px] w-[300px] h-[300px] outline outline-[12px] outline-textWhite rounded-full overflow-hidden">
-            <CircularText />
+          <div className="w-full flex justify-center">
+            <div
+              className=" absolute bottom-[-180px] w-[250px] h-[250px] 
+          sm:bottom-[-100px] sm:right-[100px] sm:w-[300px] sm:h-[300px] 
+          outline outline-[12px] outline-textWhite rounded-full overflow-hidden"
+            >
+              <CircularText />
+            </div>
           </div>
         </div>
       </div>

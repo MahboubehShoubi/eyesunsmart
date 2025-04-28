@@ -5,7 +5,7 @@ import MainSettingUp from "@/module/mainpage/MainSettingUp";
 
 function AboutUsPage() {
   return (
-    <div className="w-full">
+    <div className="w-full sm:mt-40 mt-20">
       <AboutBanner />
       <AboutInformation />
       <MainSettingUp />
