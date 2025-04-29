@@ -39,7 +39,7 @@ function MainSettingUp({ main = false }) {
             <div
               onMouseOver={() => setShow1(true)}
               onMouseOut={() => setShow1(false)}
-              className={`w-[70%] sm:w-[19%] h-[350px] grid grid-rows-7 sm:mt-[30px] cursor-pointer`}
+              className={`w-[70%] sm:w-[18%] h-[350px] grid grid-rows-7 sm:mt-[30px] cursor-pointer`}
             >
               <div className="row-start-1 row-span-3 w-full flex justify-center items-center ">
                 <div className=" relative w-[100px] h-[100px] flex justify-center items-center bg-textWhite rounded-full shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]">
@@ -64,7 +64,7 @@ function MainSettingUp({ main = false }) {
                   و انتظارات شما طراحی می‌کند.
                 </p>
                 <p
-                  className={`font-light text-center ${
+                  className={`font-light text-justify ${
                     !main ? " h-full" : "hidden"
                   }`}
                 >
@@ -78,7 +78,7 @@ function MainSettingUp({ main = false }) {
             <div
               onMouseOver={() => setShow2(true)}
               onMouseOut={() => setShow2(false)}
-              className="w-[70%] sm:w-[19%] h-[350px] grid grid-rows-7 sm:mt-[-170px] cursor-pointer"
+              className="w-[70%] sm:w-[18%] h-[350px] grid grid-rows-7 sm:mt-[-170px] cursor-pointer"
             >
               <div className="row-start-1 row-span-3 w-full flex justify-center items-center ">
                 <div className=" relative w-[100px] h-[100px] flex justify-center items-center bg-textWhite rounded-full shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]">
@@ -102,8 +102,8 @@ function MainSettingUp({ main = false }) {
                   کاملاً یکپارچه نصب و راه‌اندازی شوند.
                 </p>
                 <p
-                  className={`font-light text-center ${
-                    !main ? " h-full" : "hidden"
+                  className={`font-light text-justify ${
+                    !main ? " h-full mt-3" : "hidden"
                   }`}
                 >
                   نصب سیستم‌های هوشمند باید به دقت و با مهارت انجام شود. ما
@@ -116,7 +116,7 @@ function MainSettingUp({ main = false }) {
             <div
               onMouseOver={() => setShow3(true)}
               onMouseOut={() => setShow3(false)}
-              className={`w-[70%] sm:w-[19%] h-[350px] grid grid-rows-7 sm:mt-[30px] cursor-pointer`}
+              className={`w-[70%] sm:w-[18%] h-[350px] grid grid-rows-7 sm:mt-[30px] cursor-pointer`}
             >
               <div className="row-start-1 row-span-3 w-full flex justify-center items-center ">
                 <div className=" relative w-[100px] h-[100px] flex justify-center items-center bg-textWhite rounded-full shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]">
@@ -140,8 +140,8 @@ function MainSettingUp({ main = false }) {
                   دلخواه خود را برای تجهیزات هوشمندتان تعریف کنید.
                 </p>
                 <p
-                  className={`font-light text-center ${
-                    !main ? " h-full" : "hidden"
+                  className={`font-light text-justify ${
+                    !main ? " h-full mt-3" : "hidden"
                   }`}
                 >
                   خانه هوشمند شما باید دقیقاً مطابق با نیازهای شما عمل کند. با
@@ -154,7 +154,7 @@ function MainSettingUp({ main = false }) {
             <div
               onMouseOver={() => setShow4(true)}
               onMouseOut={() => setShow4(false)}
-              className="w-[70%] sm:w-[19%] h-[350px] grid grid-rows-7 sm:mt-[-170px] cursor-pointer"
+              className="w-[70%] sm:w-[18%] h-[350px] grid grid-rows-7 sm:mt-[-170px] cursor-pointer"
             >
               <div className="row-start-1 row-span-3 w-full flex justify-center items-center ">
                 <div className=" relative w-[100px] h-[100px] flex justify-center items-center bg-textWhite rounded-full shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]">
@@ -179,7 +179,7 @@ function MainSettingUp({ main = false }) {
                   بود.
                 </p>
                 <p
-                  className={`font-light text-center ${
+                  className={`font-light text-justify ${
                     !main ? " h-full" : "hidden"
                   }`}
                 >
@@ -194,7 +194,7 @@ function MainSettingUp({ main = false }) {
             <div
               onMouseOver={() => setShow5(true)}
               onMouseOut={() => setShow5(false)}
-              className={`w-[70%] sm:w-[19%] h-[350px] grid grid-rows-7 sm:mt-[30px] cursor-pointer`}
+              className={`w-[70%] sm:w-[18%] h-[350px] grid grid-rows-7 sm:mt-[30px] cursor-pointer`}
             >
               <div className="row-start-1 row-span-3 w-full flex justify-center items-center ">
                 <div className=" relative w-[100px] h-[100px] flex justify-center items-center bg-textWhite rounded-full shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]">
@@ -218,8 +218,8 @@ function MainSettingUp({ main = false }) {
                   رفع هرگونه مشکل احتمالی است.
                 </p>
                 <p
-                  className={`font-light text-center ${
-                    !main ? " h-full" : "hidden"
+                  className={`font-light text-justify ${
+                    !main ? " h-full mt-3" : "hidden"
                   }`}
                 >
                   فناوری هوشمند دائماً در حال پیشرفت است. خدمات ما شامل
