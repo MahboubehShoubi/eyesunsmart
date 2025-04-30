@@ -19,7 +19,7 @@ function OtherProductPage() {
   ];
 
   return (
-    <div className="w-full md:mt-20 md:mb-20">
+    <div className="w-full mt-28 sm:mt-20 sm:mb-20">
       <div className="container w-full md:max-w-screen-xl px-5">
         <div className="w-full flex justify-center">
           <Image

@@ -35,8 +35,8 @@ function ShowMenuMobile({ isShow, setIsShow, subMenu, setSubMenu }) {
           <li className="w-full hover:text-secondery text-[1.2rem] relative">
             <span
               className="flex items-center"
-              onMouseEnter={() => setSubMenu(true)}
-              onMouseLeave={() => setSubMenu(false)}
+              // onMouseEnter={() => setSubMenu(true)}
+              // onMouseLeave={() => setSubMenu(false)}
               onClick={() => setSubMenu(!subMenu)}
             >
               محصولات
@@ -98,6 +98,20 @@ function ShowMenuMobile({ isShow, setIsShow, subMenu, setSubMenu }) {
                   />
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/products/other"
+                  onClick={() => setIsShow(false)}
+                >
+                  <Image
+                    className="w-[100px]"
+                    src="/image/tis-group/other.png"
+                    width={1000}
+                    height={700}
+                    alt="brandImg"
+                  />
+                </Link>
+              </li>
             </ul>
           </li>
           {/* <li>
@@ -130,7 +144,7 @@ function ShowMenuMobile({ isShow, setIsShow, subMenu, setSubMenu }) {
           <li>
             <Link
               className=" inline-block bg-navyBlue"
-              href="/about"
+              href="/about-us"
               onClick={() => isShow(false)}
             >
               درباره ما

@@ -16,11 +16,11 @@ function TisAirPage() {
   const TisAirList = ["panel" , "controllers" , "sensors" , "intercom" , "gateways"]
 
   return (
-    <div className="w-full md:mt-20 md:mb-20">
-      <div className="container w-full md:max-w-screen-xl px-5">
+    <div className="w-full mt-28 sm:mt-20 sm:mb-20">
+      <div className="container w-full sm:max-w-screen-xl px-5">
         <div className="w-full flex justify-center">
           <Image
-            className="w-[200px] md:w-[400px]"
+            className="w-[200px] sm:w-[400px]"
             src="/image/tis-group/air.png"
             width={1000}
             height={700}
@@ -31,8 +31,8 @@ function TisAirPage() {
           {TisAirList.map((item , index) => (<button
             className={
               tisAir === `${item}`
-                ? "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-grayTisAir text-navyBlue "
-                : "w-[115px] md:w-[200px] py-2 md:py-4 rounded-full text-[13px] md:text-[1rem] bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
+                ? "w-[115px] sm:w-[200px] py-2 sm:py-4 rounded-full text-[13px] sm:text-[1rem] bg-grayTisAir text-navyBlue "
+                : "w-[115px] sm:w-[200px] py-2 sm:py-4 rounded-full text-[13px] sm:text-[1rem] bg-blueTisAir text-navyBlue hover:bg-grayTisAir"
             }
             onClick={(e) => setTisAir(item)}
             key={index}
