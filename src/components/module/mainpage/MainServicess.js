@@ -9,35 +9,34 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { BsFillHouseGearFill } from "react-icons/bs";
 import { FaShopify } from "react-icons/fa";
 import { GiOpenBook } from "react-icons/gi";
-import { GiNetworkBars } from "react-icons/gi";
 import { MdOutlineWifiPassword } from "react-icons/md";
 
 function MainServicess() {
   return (
-    <div className=" relative w-full mt-[50px] md:mt-[100px] h-fit">
-      <div className=" container md:max-w-screen-xl relative md:h-[150vh] grid md:grid-rows-5">
-        <div className="w-full md:row-start-1 md:row-end-6 grid grid-cols-1 md:grid-cols-12 md:grid-rows-[7vh_60vh_50vh_33vh] ">
-          <div className=" md:col-start-1 md:col-end-8 md:row-start-2 md:row-end-3 rounded-[60px] md:rounded-l-[0] bg-bgRed p-[40px]">
+    <div className=" relative w-full px-3 sm:px-0 mt-[50px] sm:mt-[100px] h-fit">
+      <div className=" container sm:max-w-screen-xl relative sm:h-[150vh] grid sm:grid-rows-5">
+        <div className="w-full sm:row-start-1 sm:row-end-6 grid grid-cols-1 sm:grid-cols-12 sm:grid-rows-[7vh_60vh_50vh_33vh] ">
+          <div className=" sm:col-start-1 sm:col-end-8 sm:row-start-2 sm:row-end-3 rounded-[60px] sm:rounded-l-[0] bg-bgRed p-[40px]">
             <div className="flex items-center gap-x-2">
               <span className="w-[30px] h-[2px] bg-textWhite"></span>
-              <span className="text-textWhite text-[1.1rem] md:text-titleFontSize">
+              <span className="text-textWhite text-[1.1rem] sm:text-titleFontSize">
                 خدمات ما
               </span>
             </div>
 
-            <h2 className=" text-[1.5rem] md:text-mainTitleFontSize text-textWhite mt-5">
+            <h2 className=" text-[1.5rem] sm:text-mainTitleFontSize text-textWhite mt-5">
               خدمات خانه هوشمند
             </h2>
-            <h2 className=" text-[1.5rem] md:text-mainTitleFontSize text-textWhite">
+            <h2 className=" text-[1.5rem] sm:text-mainTitleFontSize text-textWhite">
               تجربه زندگی مدرن و هوشمند
             </h2>
-            <p className="text-[13px] md:text-[1rem] text-textWhite mt-5 text-justify">
+            <p className="text-[13px] sm:text-[1rem] text-textWhite mt-5 text-justify">
               خانه شما شایسته بهترین‌هاست! خدمات خانه هوشمند ما طراحی شده‌اند تا
               آسایش، امنیت و بهره‌وری را به زندگی شما بیاورند. از طراحی و نصب
               گرفته تا پشتیبانی و آموزش، تمامی نیازهای شما برای داشتن یک خانه
               هوشمند در یک مکان ارائه می‌شود.
             </p>
-            <div className="md:hidden rounded-[30px] overflow-hidden mt-10">
+            <div className="sm:hidden rounded-[30px] overflow-hidden mt-10">
               <Image
                 className="w-full h-full object-cover"
                 src="/image/main/main-services/img.jpg"
@@ -47,7 +46,7 @@ function MainServicess() {
               />
             </div>
           </div>
-          <div className="hidden md:block md:col-start-8 md:col-end-13 md:row-start-1 md:row-end-4 rounded-[40px] overflow-hidden">
+          <div className="hidden sm:block sm:col-start-8 sm:col-end-13 sm:row-start-1 sm:row-end-4 rounded-[40px] overflow-hidden">
             <Image
               className="w-full h-full object-cover"
               src="/image/main/main-services/img.jpg"
@@ -58,10 +57,10 @@ function MainServicess() {
           </div>
         </div>
 
-        <div className="relative md:absolute z-[2] row-start-3 row-end-6 w-full grid grid-cols-1 gap-8 md:grid-cols-3 md:grid-rows-2 justify-between content-between px-[20px] md:px-[50px]">
-          <div className="md:col-start-1 md:col-span-1 md:row-start-1 md:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
+        <div className="relative sm:absolute z-[2] row-start-3 row-end-6 w-full grid grid-cols-1 gap-8 sm:grid-cols-3 sm:grid-rows-2 justify-between content-between px-[20px] sm:px-[50px]">
+          <div className="sm:col-start-1 sm:col-span-1 sm:row-start-1 sm:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
             <FaShopify className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
-            <h3 className=" text-[1.3rem] md:text-subTitle text-navyBlue">
+            <h3 className=" text-[1.3rem] sm:text-subTitle text-navyBlue">
               فروش سیستم های هوشمند
             </h3>
             <p className="text-textGray text-[14px] text-justify">
@@ -70,9 +69,9 @@ function MainServicess() {
               مدرن‌تر کنند.{" "}
             </p>
           </div>
-          <div className=" md:col-start-2 md:col-span-1 md:row-start-1 md:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
+          <div className=" sm:col-start-2 sm:col-span-1 sm:row-start-1 sm:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
             <BsFillHouseGearFill className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
-            <h3 className="text-[1.3rem] md:text-subTitle text-navyBlue">
+            <h3 className="text-[1.3rem] sm:text-subTitle text-navyBlue">
               نصب و راه اندازی سیستم های هوشمند
             </h3>
             <p className="text-textGray text-[14px] text-justify">
@@ -83,9 +82,9 @@ function MainServicess() {
             </p>
           </div>
 
-          <div className=" md:col-start-1 md:col-span-1 md:row-start-2 md:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
+          <div className=" sm:col-start-1 sm:col-span-1 sm:row-start-2 sm:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
             <MdOutlineWifiPassword className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
-            <h3 className="text-[1.3rem] md:text-subTitle text-navyBlue">
+            <h3 className="text-[1.3rem] sm:text-subTitle text-navyBlue">
               برنامه نویسی سیستم های هوشمند
             </h3>
             <p className="text-textGray text-[14px] text-justify">
@@ -94,9 +93,9 @@ function MainServicess() {
               تا عملکرد سیستم‌های هوشمند را به طور کامل شخصی‌سازی کنید.{" "}
             </p>
           </div>
-          <div className=" md:col-start-2 md:col-span-1 md:row-start-2 md:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
+          <div className=" sm:col-start-2 sm:col-span-1 sm:row-start-2 sm:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
             <RiCustomerService2Fill className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
-            <h3 className="text-[1.3rem] md:text-subTitle text-navyBlue">
+            <h3 className="text-[1.3rem] sm:text-subTitle text-navyBlue">
               خدمات پس از فروش
             </h3>
             <p className="text-textGray text-[14px] text-justify">
@@ -106,7 +105,7 @@ function MainServicess() {
               خانه‌تان اطمینان حاصل کنید.{" "}
             </p>
           </div>
-          <div className=" md:col-start-3 md:col-span-1 md:row-start-2 md:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
+          <div className=" sm:col-start-3 sm:col-span-1 sm:row-start-2 sm:row-span-1 bg-backgroundWhite rounded-3xl px-[30px] py-[30px] hover:shadow-lg">
             <GiOpenBook className="w-[55px] h-[55px] bg-navyBlue text-textWhite p-2 rounded-full hover:bg-secondery cursor-pointer" />
             <h3 className="text-subTitle text-navyBlue">
               آموزش سیستم های هوشمند
