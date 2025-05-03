@@ -4,12 +4,12 @@ import React from "react";
 import {
   Player,
   ControlBar,
-  ReplayControl,
-  ForwardControl,
-  CurrentTimeDisplay,
-  TimeDivider,
-  PlaybackRateMenuButton,
-  VolumeMenuButton,
+  // ReplayControl,
+  // ForwardControl,
+  // CurrentTimeDisplay,
+  // TimeDivider,
+  // PlaybackRateMenuButton,
+  // VolumeMenuButton,
 } from "video-react";
 
 import "node_modules/video-react/dist/video-react.css";
@@ -18,7 +18,7 @@ const VideoPlayer = ({ width, height, src, poster }) => {
   return (
     <Player
       autoPlay
-      loop="true"
+      loop={true}
       poster={poster}
       src={src}
       fluid={false}
