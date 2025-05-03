@@ -2,7 +2,7 @@ import VideoPlayer from "@/module/VideoPlayer";
 
 function ServicessMainSection() {
   return (
-    <div className=" container w-full md:max-w-screen-xl">
+    <div className="container w-full sm:max-w-screen-xl pb-20">
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2 sm:grid-rows-1 mt-[50px] gap-10 sm:gap-0 px-5">
         <div className="col-span-full row-start-2 row-span-1  sm:col-start-1 sm:col-end-2 sm:row-span-full pl-5 text-justify">
           <div className="flex flex-col gap-y-2">
@@ -133,8 +133,8 @@ function ServicessMainSection() {
         />
       </div>
 
-      <div className="w-full grid grid-cols-2 grid-rows-1 mt-[50px]">
-        <div className="col-start-1 col-end-2 row-span-full grid grid-cols-2 grid-rows-12 gap-4">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2 sm:grid-rows-1 mt-[50px] gap-10 sm:gap-0 px-5">
+        <div className=" col-span-full row-start-2 row-span-1 sm:col-start-1 sm:col-end-2 sm:row-span-full grid grid-cols-2 grid-rows-12 gap-4">
           <div className=" col-start-1 col-end-2 row-start-1 row-end-4 border-4 rounded-[10px]"></div>
           <div className=" col-start-1 col-end-2 row-start-4 row-end-8 border-4 rounded-[10px]"></div>
           <div className=" col-start-1 col-end-2 row-start-8 row-end-13 border-4 rounded-[10px]"></div>
@@ -143,7 +143,7 @@ function ServicessMainSection() {
           <div className=" col-start-2 col-end-3 row-start-9 row-end-13 border-4 rounded-[10px]"></div>
         </div>
 
-        <div className="col-start-2 col-end-3 row-span-full pr-5 text-justify">
+        <div className="col-span-full row-start-1 row-span-1 sm:col-start-2 sm:col-end-3 sm:row-span-full pr-5 text-justify">
           <div className="flex flex-col gap-y-2">
             <h3 className="text-[1.5rem]">چرا سیستم‌های هوشمند ما؟</h3>
             <div>
