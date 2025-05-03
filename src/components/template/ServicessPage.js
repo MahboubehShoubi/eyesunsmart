@@ -1,43 +1,25 @@
 import MainServicess from "@/module/mainpage/MainServicess";
 import VideoPlayer from "@/module/VideoPlayer";
 import Counter from "@/utils/Counter";
-import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
 
 // Icons
 import { IoLocationOutline } from "react-icons/io5";
 import { BsClockHistory } from "react-icons/bs";
 import { MdSettingsPhone } from "react-icons/md";
+import ServicessBanner from "@/module/servicessPage/ServicessBanner";
 
 function ServicessPage() {
   return (
     <>
-      <div className="w-full h-[40vh] relative flex justify-center">
-        <Image
-          src="/image/servicess-page/background.jpg"
-          className=" absolute w-full h-full object-cover brightness-50"
-          width={1000}
-          height={700}
-          alt="background"
-        />
-        <div className=" absolute z-[2] container w-full h-full md:max-w-screen-xl flex flex-col justify-center">
-          <p className="w-fit text-textWhite  text-[3rem]">جزئیات خدمات</p>
-          <p className="text-textWhite flex gap-2">
-            <Link href="/" className="text-yellowTisBee">
-              صفحه اصلی
-            </Link>
-            <span>-</span>
-            <span>جزئیات خدمات</span>
-          </p>
-        </div>
-      </div>
+      <ServicessBanner />
       <div className="w-full my-20">
         <div className=" container w-full md:max-w-screen-xl">
           <MainServicess />
 
-          <div className="w-full grid grid-cols-2 grid-rows-1 mt-[50px]">
-            <div className="col-start-1 col-end-2 row-span-full pl-5 text-justify">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 grid-rows-2 sm:grid-rows-1 mt-[50px] gap-10 sm:gap-0 px-5">
+            <div className="col-span-full row-start-2 row-span-1  sm:col-start-1 sm:col-end-2 sm:row-span-full pl-5 text-justify">
               <div className="flex flex-col gap-y-2">
                 <h3 className="text-[1.5rem]">چرا سیستم‌های هوشمند ما؟</h3>
                 <div>
@@ -160,7 +142,7 @@ function ServicessPage() {
                 </div>
               </div>
             </div>
-            <div className="col-start-2 col-end-3 row-span-full grid grid-cols-2 grid-rows-12 gap-4">
+            <div className="col-span-full row-start-1 row-span-1 sm:col-start-2 sm:col-end-3 sm:row-span-full grid grid-cols-2 grid-rows-12 gap-4">
               <div className=" col-start-1 col-end-2 row-start-1 row-end-4 border-4 rounded-[10px]"></div>
               <div className=" col-start-1 col-end-2 row-start-4 row-end-8 border-4 rounded-[10px]"></div>
               <div className=" col-start-1 col-end-2 row-start-8 row-end-13 border-4 rounded-[10px]"></div>
