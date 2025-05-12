@@ -12,11 +12,11 @@ import { BsBuildingFillCheck } from "react-icons/bs";
 
 function CardProjectSlider({ data }) {
   return (
-    <div className="w-full h-[400px] flex shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 rounded-xl my-[50px]">
-      <div className="w-3/5 rounded-lg overflow-hidden">
+    <div className="w-full sm:h-[400px] flex flex-col sm:flex-row shadow-[0px_0px_20px_0px_rgba(0,0,0,0.3)] p-2 rounded-xl mb-[50px] sm:my-[50px]">
+      <div className=" w-full sm:w-3/5 h-[40vh] sm:h-full rounded-lg overflow-hidden">
         <Slider silderInfo={data} />
       </div>
-      <div className="w-2/5 h-full flex flex-col py-5 px-3 divide-y">
+      <div className="w-full sm:w-2/5 h-full flex flex-col py-5 px-3 divide-y">
         <p className="flex gap-x-2 items-center pb-2">
           <PiMapPinAreaFill className="text-bgRed w-[1.1rem] h-[1.1rem]" />
           مکان پروژه :{" "}
