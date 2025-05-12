@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import DashboardMenu from "@/module/DashboardMenu";
 import LogoutButton from "../element/LogoutButton";
 
 // Icons
@@ -16,19 +17,21 @@ import { FaUserEdit } from "react-icons/fa";
 import { MdCastForEducation } from "react-icons/md";
 import { MdSettingsSuggest } from "react-icons/md";
 import { FaCommentDots } from "react-icons/fa6";
-import { RiMovieFill } from "react-icons/ri";
 
 
-
-import DashboardMenu from "@/module/DashboardMenu";
 
 function Dashboardsidebar({ children, role, email, userId }) {
+  const [isShow , setIsShow] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const pathname = usePathname();
 
+  // useEffect(() => {
+  //   setIsShow(false);
+  // } , [])
+
   return (
-    <div className="w-full py-[50px]">
+    <div className="w-full py-[50px] mt-20 sm:mt-40">
       <div className=" container w-full md:max-w-screen-xl flex flex-col gap-y-5 md:flex-row md:gap-x-5">
         <div className=" md:hidden w-full flex">
           <div className="w-1/2">
@@ -36,6 +39,8 @@ function Dashboardsidebar({ children, role, email, userId }) {
               role={role}
               showMenu={showMenu}
               setShowMenu={setShowMenu}
+              isShow={isShow}
+              setIsShow={setIsShow}
             />
           </div>
           <div className="w-1/2" onClick={() => setShowMenu(false)}></div>
