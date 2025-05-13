@@ -32,8 +32,8 @@ function Dashboardsidebar({ children, role, email, userId }) {
 
   return (
     <div className="w-full py-[50px] mt-20 sm:mt-40">
-      <div className=" container w-full md:max-w-screen-xl flex flex-col gap-y-5 md:flex-row md:gap-x-5">
-        <div className=" md:hidden w-full flex">
+      <div className=" container w-full sm:max-w-screen-xl flex flex-col gap-y-5 sm:flex-row sm:gap-x-5">
+        <div className=" sm:hidden w-full flex">
           <div className="w-1/2">
             <DashboardMenu
               role={role}
@@ -208,7 +208,7 @@ function Dashboardsidebar({ children, role, email, userId }) {
         </div>
         <div
           onClick={() => setShowMenu(false)}
-          className=" w-full md:w-9/12 h-fit"
+          className="w-full sm:w-9/12 h-fit px-5 sm:px-0"
         >
           {children}
         </div>

@@ -2,8 +2,8 @@ import React from "react";
 
 function AdminUser() {
   return (
-    <div className="mt-[30px]">
-      <p className="text-[20px]">
+    <>
+      <p className="text-[20px] mt-[30px] w-full">
          با انتخاب هر کدام از گزینه های بالا می توانید به اطلاعات
         مربوطه دسترسی داشته باشید
       </p>
@@ -47,7 +47,7 @@ function AdminUser() {
           به ویرایش اطلاعات داشته باشید عمل ویرایش روی اطلاعات را انجام دهید
         </p>
       </div>
-    </div>
+    </>
   );
 }
 

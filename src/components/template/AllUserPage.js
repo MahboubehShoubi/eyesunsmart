@@ -18,7 +18,7 @@ function AllUserPage({ usersData }) {
   }, [searchUserData]);
 
   return (
-    <div>
+    <>
       <SearchUser
         usersData={usersData}
         searchUserData={searchUserData}
@@ -42,7 +42,7 @@ function AllUserPage({ usersData }) {
         )}
       </div>
       <Toaster />
-    </div>
+    </>
   );
 }
 
