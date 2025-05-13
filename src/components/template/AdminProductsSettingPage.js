@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import { AiFillProduct } from "react-icons/ai";
 import { RiEdit2Fill } from "react-icons/ri";
 
-
 function AdminProductsSettingPage() {
   const pathname = usePathname();
 
@@ -28,18 +27,20 @@ function AdminProductsSettingPage() {
   return (
     <div>
       <div
-        className="w-full h-[50px] flex pt-[2px] rounded-r-[10px]"
+        className="w-full h-fit sm:h-[50px] flex pt-[2px] sm:rounded-r-[10px] bg-bgRed rounded-[10px] sm:bg-transparent"
         style={{
           backgroundImage: `linear-gradient(to left,#e00303 , #E51B20,transparent 100% )`,
         }}
       >
         <Link
           href="/admin/products/add"
-          className={
-            active === "add product" || pathname === "/admin/products/add"
-              ? " text-bgRed flex items-center gap-x-1 bg-textWhite py-2 px-6"
-              : " text-textWhite flex items-center gap-x-1 py-2 px-6"
-          }
+          className={` text-[0.8rem] sm:text-[1rem] flex flex-col sm:flex-row items-center justify-center gap-x-1 py-2 px-6 
+            ${
+              active === "add product" || pathname === "/admin/products/add"
+                ? " text-bgRed bg-textWhite"
+                : " text-textWhite"
+            }
+          `}
           name="add product"
           onClick={activeHandler}
         >
@@ -48,11 +49,13 @@ function AdminProductsSettingPage() {
         </Link>
         <Link
           href="/admin/products/edit"
-          className={
-            active === "edit product" || pathname === "/admin/products/edit"
-              ? " text-bgRed flex items-center gap-x-1 bg-textWhite py-2 px-6"
-              : " text-textWhite flex items-center gap-x-1 py-2 px-6"
-          }
+          className={` text-[0.8rem] sm:text-[1rem] flex flex-col sm:flex-row items-center justify-center gap-x-1 py-2 px-6 
+           ${
+             active === "edit product" || pathname === "/admin/products/edit"
+               ? " text-bgRed bg-textWhite"
+               : " text-textWhite"
+           }
+          `}
           name="edit product"
           onClick={activeHandler}
         >
